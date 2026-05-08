@@ -510,7 +510,7 @@
     .join-note-dark { background: var(--green); color: var(--paper); border-color: var(--line); }
     .join-note-dark .label { background: transparent; color: var(--paper); border-color: var(--paper); box-shadow: 2px 2px 0 rgba(255,253,248,.85); }
     .join-note-dark p, .join-note-dark li { color: rgba(255,253,248,.76); }
-    .join-steps { display: grid; gap: 14px; }
+    .join-steps { display: grid; gap: 12px; }
     .join-step { display: grid; grid-template-columns: 76px 1fr; gap: 20px; padding: 24px; }
     .join-no { width: 52px; height: 52px; display: grid; place-items: center; border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); font-size: 15px; font-weight: 950; box-shadow: 3px 3px 0 rgba(36,33,29,.12); }
     .join-step-final .join-no { background: var(--orange); color: var(--paper); }
@@ -540,33 +540,33 @@
       .nav-label-desktop { display: none; }
       .nav-label-mobile { display: inline; }
 
-      .hero { padding: 82px 0 44px; align-items: flex-start; }
-      .hero-grid { gap: 24px; }
+      .hero { padding: 78px 0 38px; align-items: flex-start; }
+      .hero-grid { gap: 20px; }
       .label { font-size: 10px; padding: 6px 9px; box-shadow: 1.5px 1.5px 0 rgba(36,33,29,.18); }
-      .hero h1 { margin: 12px 0 12px; font-size: clamp(40px, 14vw, 54px); line-height: .98; letter-spacing: -.08em; }
-      .hero-lead { font-size: 15px; line-height: 1.5; margin-bottom: 18px; max-width: 330px; }
+      .hero h1 { margin: 10px 0 10px; font-size: clamp(38px, 13.4vw, 52px); line-height: .98; letter-spacing: -.08em; }
+      .hero-lead { font-size: 14.5px; line-height: 1.52; margin-bottom: 16px; max-width: 320px; }
       .hero-lead .desktop-copy { display: none; }
-      .hero-actions { display: grid; grid-template-columns: 1fr; gap: 9px; margin-bottom: 16px; }
-      .hero-actions .btn { width: 100%; min-height: 46px; padding: 0 14px; font-size: 14px; white-space: normal; text-align: center; line-height: 1.35; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 14px; }
+      .hero-actions .btn { width: 100%; min-height: 46px; padding: 0 12px; font-size: 13.5px; white-space: normal; text-align: center; line-height: 1.35; }
       .hero-actions .btn-ghost { min-height: 42px; font-size: 13.5px; box-shadow: none; background: transparent; }
       .hero-chips { grid-template-columns: repeat(3, 1fr); gap: 7px; }
       .info-chip { padding: 8px 5px; font-size: 10.5px; letter-spacing: -.02em; }
 
-      .poster-card { min-height: auto; max-width: 350px; margin: 0 auto; padding: 14px; box-shadow: 5px 5px 0 rgba(36,33,29,.12); }
+      .poster-card { min-height: auto; max-width: 320px; margin: 0 auto; padding: 12px; box-shadow: 5px 5px 0 rgba(36,33,29,.12); }
       .poster-card::after { inset: 10px; }
       .poster-card::before { width: 180px; height: 180px; right: -72px; top: 44px; opacity: .48; }
       .poster-brand { font-size: 12px; }
       .poster-meta-small { font-size: 8px; line-height: 1.25; }
-      .poster-number { margin-top: 18px; font-size: clamp(82px, 26vw, 104px); }
-      .poster-title { margin-top: 10px; font-size: 19px; max-width: 210px; line-height: 1.12; }
-      .poster-line { margin: 14px 0 10px; }
-      .poster-bottom { grid-template-columns: 1fr 1fr; gap: 7px; }
-      .poster-box { min-height: auto; padding: 9px; }
+      .poster-number { margin-top: 14px; font-size: clamp(74px, 23vw, 92px); }
+      .poster-title { margin-top: 9px; font-size: 18px; max-width: 196px; line-height: 1.14; }
+      .poster-line { margin: 12px 0 8px; }
+      .poster-bottom { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .poster-box { min-height: auto; padding: 8px; }
       .poster-box strong { font-size: 11px; margin-bottom: 4px; }
       .poster-box span { font-size: 9px; line-height: 1.28; }
       .poster-seal { width: 46px; height: 46px; right: 16px; bottom: 16px; font-size: 7px; border-width: 1.5px; }
 
-      .section-head { gap: 14px; margin-bottom: 26px; }
+      .section-head { gap: 12px; margin-bottom: 22px; }
       .kicker { font-size: 11px; }
       .section-title { font-size: clamp(30px, 9vw, 42px); line-height: 1.06; }
       .section-desc { font-size: 15px; line-height: 1.55; margin-top: 12px; }
@@ -643,10 +643,10 @@
     @media (max-width: 640px) {
       .join-note { padding: 20px; }
       .join-note h3 { font-size: 20px; }
-      .join-step { grid-template-columns: 1fr; gap: 14px; padding: 20px; }
+      .join-step { grid-template-columns: 1fr; gap: 12px; padding: 18px; }
       .join-no { width: max-content; height: auto; padding: 8px 12px; font-size: 13px; }
       .join-step h3 { font-size: 19px; }
-      .join-step p, .join-step li, .join-note p, .join-note li { font-size: 13px; line-height: 1.52; word-break: keep-all; }
+      .join-step p, .join-step li, .join-note p, .join-note li { font-size: 13px; line-height: 1.58; word-break: keep-all; }
     }
 
   
