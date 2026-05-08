@@ -530,33 +530,152 @@
   </footer>
 
   <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal">
+    <div class="modal track-modal">
       <div class="modal-top">
         <div><span class="label" id="modal-tag">TRACK</span><h3 id="modal-title">트랙명</h3></div>
         <button class="close-btn" type="button" onclick="closeModal()" aria-label="닫기"><i data-lucide="x" width="20"></i></button>
       </div>
-      <p id="modal-desc"></p>
+      <div class="modal-body" id="modal-body"></div>
     </div>
   </div>
 
   <script>
     const trackDetails = {
-      reading: { tag: 'Reading Play', title: '낭독극', desc: '문장과 목소리로 쓰는 10주입니다. 내가 쓴 문장을 나의 호흡으로 읽어내며 나를 설명하는 언어를 다시 찾습니다.' },
-      dance: { tag: 'Dance Theater', title: '무용극', desc: '감각과 움직임으로 쓰는 12주입니다. 잘 추는 것이 아니라, 내 몸의 속도와 감정을 알아차리는 경험을 만듭니다.' },
-      trpg: { tag: 'Tabletop RPG', title: 'TRPG', desc: '가상의 세계에서 역할을 맡고 선택을 내려보는 10주입니다. 현실에서 망설였던 선택을 안전하게 연습합니다.' },
-      lab: { tag: 'Redefine Lab', title: 'Redefine Lab & 클럽', desc: '취향과 실험을 확장하는 자율 활동입니다. 작은 제작과 기록으로 나의 시간을 남깁니다.' },
-      writer: { tag: 'Writer\'s Room', title: 'Writer\'s Room', desc: '혼자 쓰는 글이 부담스럽다면 공동 집필 방식을 통해 문장을 엮어보는 건 어떨까요? 릴레이 글쓰기, 이중시점 이야기 등을 통해 다른 사람과 자연스럽게 교감하며 책 한 권을 완성합니다.' },
-      band: { tag: 'Band Session', title: 'Band Session', desc: '악기를 잘 다루지 않아도 괜찮습니다. 하나의 리듬을 맞추고 소리를 겹치며 함께 만들어지는 감각을 경험합니다. 언어가 아닌 소리를 매개로 안전한 연결감을 느낄 수 있습니다.' },
-      atelier: { tag: 'Atelier', title: 'Atelier', desc: '좋아하는 것, 오래 바라보게 되는 것, 나만의 감각이 담긴 것을 작은 제품이나 오브제로 만들어봅니다. 자유로운 분위기 속에서 결과물을 만들어내며 소소한 성취감을 경험합니다.' },
-      club: { tag: 'Night Club', title: '직장인 야간 클럽', desc: '회사는 다니고 있지만, 회사 밖 유의미한 관계가 단절된 직장인 고립 청년들을 위한 모임입니다. 퇴근 후 평일 저녁, 부담 없는 활동과 네트워킹을 통해 일상의 에너지를 다시 채웁니다.' }
+      reading: {
+        tag: 'Reading Play',
+        title: '낭독극',
+        lead: '문장과 목소리로 나를 설명하는 10주 집중 트랙입니다.',
+        desc: '내가 쓴 문장과 누군가의 문장을 나의 호흡으로 읽어내며, 말하기의 부담을 낮추고 나를 설명하는 언어를 다시 찾아갑니다.',
+        activities: ['짧은 텍스트 읽기와 감정 표현 연습', '나의 경험을 바탕으로 한 문장 만들기', '목소리와 호흡을 활용한 장면 구성', '마지막 공유회에서 낭독 장면 준비'],
+        recommended: ['말로 설명하는 것은 어렵지만 표현은 해보고 싶은 사람', '글과 목소리를 통해 나를 천천히 발견하고 싶은 사람', '무대가 두렵지만 작은 장면은 만들어보고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '강사 정보 추후 공개',
+          role: '낭독극·표현 워크숍 진행자',
+          bio: '참여자의 속도에 맞춰 말하기, 읽기, 장면 만들기를 안전하게 이끌 전문가를 연결할 예정입니다.'
+        }
+      },
+      dance: {
+        tag: 'Dance Theater',
+        title: '무용극',
+        lead: '감각과 움직임으로 지금의 나를 알아차리는 12주 집중 트랙입니다.',
+        desc: '잘 추는 것을 목표로 하지 않습니다. 내 몸의 속도, 긴장, 리듬을 살피며 말로 정리되지 않는 감정을 움직임과 장면으로 다뤄봅니다.',
+        activities: ['몸의 감각을 깨우는 가벼운 움직임', '공간과 리듬을 활용한 표현 연습', '혼자 또는 함께 만드는 짧은 장면', '마지막 공유회를 위한 움직임 구성'],
+        recommended: ['말보다 몸의 감각이 먼저 떠오르는 사람', '긴장을 낮추며 내 몸의 속도를 알고 싶은 사람', '움직임으로 감정과 관계를 탐색해보고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '강사 정보 추후 공개',
+          role: '무용극·움직임 기반 표현 워크숍 진행자',
+          bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 장면 만들기를 단계적으로 안내할 전문가를 연결할 예정입니다.'
+        }
+      },
+      trpg: {
+        tag: 'Tabletop RPG',
+        title: 'TRPG',
+        lead: '가상의 세계에서 역할과 선택을 안전하게 연습하는 10주 집중 트랙입니다.',
+        desc: '현실에서 바로 결정하기 어려웠던 선택을 가상의 역할 안에서 시도해봅니다. 정답을 맞히는 게임이 아니라, 내가 어떤 선택을 하는 사람인지 발견하는 경험입니다.',
+        activities: ['캐릭터 만들기와 세계관 이해', '상황 속 선택과 역할 수행', '팀원과 함께 문제를 풀어가는 이야기 진행', '나의 선택을 돌아보는 짧은 기록'],
+        recommended: ['상상과 이야기를 통해 나를 표현하고 싶은 사람', '현실의 선택은 부담스럽지만 역할 안에서는 시도해보고 싶은 사람', '혼자보다 팀 안에서 천천히 관계를 만들고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '진행자 정보 추후 공개',
+          role: 'TRPG 진행자·스토리 퍼실리테이터',
+          bio: '처음 참여하는 사람도 안전하게 역할과 선택을 경험할 수 있도록 세계관, 규칙, 진행 흐름을 안내할 전문가를 연결할 예정입니다.'
+        }
+      },
+      atelier: {
+        tag: 'Atelier',
+        title: 'Atelier',
+        lead: '취향과 감각을 작은 오브제나 제작물로 남기는 자율 Lab입니다.',
+        desc: '좋아하는 것, 오래 바라보게 되는 것, 나만의 감각이 담긴 것을 작게 만들어봅니다. 완성도보다 내가 무엇에 끌리는지 발견하는 과정에 집중합니다.',
+        activities: ['취향과 감각 키워드 수집', '작은 오브제나 제품 아이디어 만들기', '재료와 형태를 활용한 미니 제작', '제작물에 담긴 의미를 짧게 기록하기'],
+        recommended: ['말보다 만드는 활동이 편한 사람', '내 취향과 감각을 눈에 보이는 형태로 남기고 싶은 사람', '작은 성취감을 쌓아보고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '강사 정보 추후 공개',
+          role: '제작·취향 탐색 워크숍 진행자',
+          bio: '참여자의 관심을 작은 결과물로 연결할 수 있도록 재료 탐색과 제작 과정을 안내할 전문가를 연결할 예정입니다.'
+        }
+      },
+      writer: {
+        tag: 'Writer\'s Room',
+        title: 'Writer\'s Room',
+        lead: '혼자 쓰기 어려운 문장을 함께 엮어보는 공동 글쓰기 Lab입니다.',
+        desc: '혼자 긴 글을 완성해야 하는 부담을 줄이고, 짧은 문장과 장면을 서로 이어봅니다. 릴레이 글쓰기, 이중시점 이야기 등을 통해 자연스럽게 교감합니다.',
+        activities: ['짧은 문장과 장면 쓰기', '릴레이 글쓰기와 공동 편집', '서로의 문장에서 키워드 발견하기', '작은 글 묶음 또는 기록물 만들기'],
+        recommended: ['글쓰기는 해보고 싶지만 혼자 시작하기 어려운 사람', '내 이야기를 직접적으로 말하기보다 문장으로 남기고 싶은 사람', '타인의 문장과 느슨하게 연결되고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '강사 정보 추후 공개',
+          role: '글쓰기·기록 워크숍 진행자',
+          bio: '처음 쓰는 사람도 부담 없이 문장을 꺼낼 수 있도록 질문, 기록, 공동 편집 과정을 안내할 전문가를 연결할 예정입니다.'
+        }
+      },
+      band: {
+        tag: 'Band Session',
+        title: 'Band Session',
+        lead: '악기를 잘 다루지 않아도 소리와 리듬으로 연결되는 합주 Lab입니다.',
+        desc: '정교한 연주보다 함께 리듬을 맞추는 감각에 집중합니다. 언어가 아닌 소리를 매개로 안전한 연결감과 협업의 감각을 경험합니다.',
+        activities: ['간단한 리듬과 소리 만들기', '서로의 소리를 듣고 맞추는 합주', '감정과 분위기를 소리로 표현하기', '작은 세션 또는 공유 장면 준비'],
+        recommended: ['말보다 음악이나 리듬으로 마음을 꺼내고 싶은 사람', '악기 경험은 적지만 함께 소리를 만들어보고 싶은 사람', '협업의 감각을 부담 없이 경험하고 싶은 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '강사 정보 추후 공개',
+          role: '음악·밴드 세션 진행자',
+          bio: '악기 경험이 없어도 참여할 수 있도록 리듬, 소리, 합주 경험을 안전하게 이끌 전문가를 연결할 예정입니다.'
+        }
+      },
+      club: {
+        tag: 'Night Club',
+        title: '직장인 야간 클럽',
+        lead: '퇴근 후 평일 저녁, 느슨한 연결과 회복을 위한 야간 모임입니다.',
+        desc: '회사는 다니고 있지만 회사 밖 유의미한 관계가 단절된 직장인 청년을 위한 활동입니다. 부담 없는 대화와 작은 활동으로 일상의 에너지를 다시 채웁니다.',
+        activities: ['퇴근 후 가벼운 체크인', '부담 없는 취향·관심 기반 활동', '느슨한 네트워킹과 회복의 시간', '일상 리듬을 위한 짧은 기록'],
+        recommended: ['회사 밖 관계가 줄어들었다고 느끼는 직장인 청년', '퇴근 후 혼자 있기보다 느슨한 연결이 필요한 사람', '깊은 모임보다 가벼운 회복 시간이 필요한 사람'],
+        instructor: {
+          label: '함께하는 전문가',
+          name: '운영진 정보 추후 공개',
+          role: '야간 클럽 운영 퍼실리테이터',
+          bio: '직장인 참여자의 일정과 컨디션을 고려해 안전한 대화와 활동 흐름을 안내할 운영진을 연결할 예정입니다.'
+        }
+      }
     };
+
+    function renderList(items) {
+      return items.map((item) => `<li>${item}</li>`).join('');
+    }
 
     function openModal(id) {
       const data = trackDetails[id];
       if (!data) return;
       document.getElementById('modal-tag').textContent = data.tag;
       document.getElementById('modal-title').textContent = data.title;
-      document.getElementById('modal-desc').innerHTML = data.desc;
+      document.getElementById('modal-body').innerHTML = `
+        <p class="modal-lead">${data.lead}</p>
+        <p class="modal-desc-text">${data.desc}</p>
+        <div class="modal-info-grid">
+          <section class="modal-info-block">
+            <h4>이 트랙에서 하는 것</h4>
+            <ul>${renderList(data.activities)}</ul>
+          </section>
+          <section class="modal-info-block">
+            <h4>이런 사람에게 추천</h4>
+            <ul>${renderList(data.recommended)}</ul>
+          </section>
+        </div>
+        <section class="instructor-card">
+          <div class="instructor-photo" aria-label="강사 프로필 이미지 준비 중">
+            <i data-lucide="user-round" width="24"></i>
+            <span>IMAGE<br>COMING SOON</span>
+          </div>
+          <div class="instructor-info">
+            <span>${data.instructor.label}</span>
+            <h4>${data.instructor.name}</h4>
+            <strong>${data.instructor.role}</strong>
+            <p>${data.instructor.bio}</p>
+          </div>
+        </section>
+      `;
       document.getElementById('modal-backdrop').classList.add('show');
       document.body.style.overflow = 'hidden';
       lucide.createIcons();

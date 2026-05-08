@@ -638,11 +638,112 @@
 
     .modal-backdrop { position: fixed; inset: 0; z-index: 300; display: none; place-items: center; background: rgba(31,28,24,.62); padding: 18px; }
     .modal-backdrop.show { display: grid; }
-    .modal { width: min(560px, 100%); max-height: 86svh; overflow: auto; background: var(--paper); border: 2px solid var(--line); box-shadow: 8px 8px 0 rgba(31,28,24,.22); padding: 26px; border-radius: 14px; }
-    .modal-top { display: flex; justify-content: space-between; align-items: start; gap: 18px; border-bottom: 1px solid var(--soft-line); padding-bottom: 16px; margin-bottom: 16px; }
+    .modal { width: min(680px, 100%); max-height: 86svh; overflow: auto; background: var(--paper); border: 2px solid var(--line); box-shadow: 8px 8px 0 rgba(31,28,24,.22); padding: 26px; border-radius: 14px; }
+    .modal-top { display: flex; justify-content: space-between; align-items: start; gap: 18px; border-bottom: 1px solid var(--soft-line); padding-bottom: 16px; margin-bottom: 18px; }
     .close-btn { border: 1.5px solid var(--line); background: var(--paper); width: 38px; height: 38px; display: grid; place-items: center; cursor: pointer; }
     .modal h3 { margin: 8px 0 6px; font-size: 32px; letter-spacing: -.065em; }
     .modal p { color: var(--muted); line-height: 1.65; font-weight: 650; word-break: keep-all; }
+
+    .modal-body { display: grid; gap: 18px; }
+    .modal-lead {
+      margin: 0;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 900;
+      letter-spacing: -.04em;
+    }
+    .modal-desc-text { margin: 0; }
+    .modal-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .modal-info-block {
+      padding: 18px;
+      border: 1px solid var(--soft-line);
+      border-radius: 14px;
+      background: rgba(247,241,232,.72);
+    }
+    .modal-info-block h4 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 950;
+      letter-spacing: -.035em;
+    }
+    .modal-info-block ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+    .modal-info-block li {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+    .modal-info-block li::before {
+      content: '•';
+      color: var(--orange);
+      font-weight: 950;
+      margin-right: 7px;
+    }
+    .instructor-card {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: stretch;
+      padding: 16px;
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 4px 4px 0 rgba(36,33,29,.1);
+    }
+    .instructor-photo {
+      min-height: 132px;
+      border: 1px dashed rgba(36,33,29,.38);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--muted);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      gap: 8px;
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 950;
+      letter-spacing: .06em;
+    }
+    .instructor-photo svg { color: var(--green); }
+    .instructor-info { display: flex; flex-direction: column; justify-content: center; }
+    .instructor-info span {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .instructor-info h4 {
+      margin: 8px 0 6px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.16;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+    .instructor-info strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+      word-break: keep-all;
+    }
+    .instructor-info p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.55;
+    }
 
     .footer { padding: 42px 0; background: var(--ink); color: rgba(255,253,248,.56); text-align: center; font-size: 13px; font-weight: 750; }
 
@@ -786,6 +887,11 @@
       .footer { font-size: 11px; padding: 32px 0; }
       .modal { padding: 20px; box-shadow: 5px 5px 0 rgba(31,28,24,.2); }
       .modal h3 { font-size: 27px; }
+      .modal-info-grid { grid-template-columns: 1fr; }
+      .modal-info-block { padding: 16px; }
+      .instructor-card { grid-template-columns: 1fr; padding: 14px; }
+      .instructor-photo { min-height: 120px; }
+      .modal-lead { font-size: 16px; }
     }
   
     @media (max-width: 980px) {
