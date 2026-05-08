@@ -648,3 +648,85 @@
       .join-step h3 { font-size: 19px; }
       .join-step p, .join-step li, .join-note p, .join-note li { font-size: 13px; line-height: 1.52; word-break: keep-all; }
     }
+    
+    /* Mobile visual tuning - safe override */
+@media (max-width: 640px) {
+  .hero {
+    padding: 72px 0 38px;
+  }
+
+  .hero-grid {
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 13vw, 50px);
+    line-height: 1;
+  }
+
+  .hero-lead {
+    max-width: 320px;
+    font-size: 14.5px;
+    line-height: 1.52;
+  }
+
+  .poster-card {
+    max-width: 330px;
+    padding: 13px;
+  }
+
+  .poster-number {
+    font-size: clamp(76px, 24vw, 98px);
+  }
+
+  .poster-title {
+    max-width: 200px;
+    font-size: 18px;
+    line-height: 1.14;
+  }
+
+  .poster-box {
+    padding: 8px;
+  }
+
+  .poster-box strong {
+    font-size: 10.5px;
+  }
+
+  .poster-box span {
+    font-size: 8.8px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-head {
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: clamp(29px, 8.6vw, 40px);
+  }
+
+  .join-grid {
+    gap: 14px;
+  }
+
+  .join-note,
+  .join-step {
+    padding: 18px;
+  }
+
+  .join-step h3 {
+    font-size: 18px;
+  }
+
+  .join-step p,
+  .join-step li,
+  .join-note p,
+  .join-note li {
+    font-size: 12.8px;
+    line-height: 1.5;
+  }
+}
