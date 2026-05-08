@@ -445,6 +445,156 @@
     .grid-card:hover h4 { color: var(--orange); }
     .grid-card:hover .row-action { color: var(--orange); transform: translateY(-2px); }
 
+
+
+    /* 클럽 활동 섹션 */
+    .clubs {
+      background:
+        linear-gradient(180deg, rgba(255,253,248,.52), rgba(247,241,232,.88));
+      border-top: 1px solid rgba(216,202,185,.65);
+      border-bottom: 1px solid rgba(216,202,185,.65);
+    }
+
+    .club-note {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 24px 26px;
+      background: var(--paper);
+    }
+
+    .club-note-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .club-note h3 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.18;
+      letter-spacing: -.055em;
+      font-weight: 950;
+      word-break: keep-all;
+    }
+
+    .club-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.62;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+
+    .club-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .club-card {
+      position: relative;
+      min-height: 250px;
+      padding: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .club-card::after {
+      content: '';
+      position: absolute;
+      right: -36px;
+      top: -36px;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      opacity: .72;
+      z-index: 0;
+    }
+
+    .club-card > * { position: relative; z-index: 1; }
+
+    .club-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px solid var(--soft-line);
+      background: var(--bg);
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+
+    .club-icon svg { width: 22px; height: 22px; }
+
+    .club-tag {
+      display: inline-flex;
+      width: max-content;
+      max-width: 100%;
+      padding: 5px 8px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(36,33,29,.18);
+      background: rgba(247,241,232,.76);
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -.01em;
+    }
+
+    .club-card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.16;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+
+    .club-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+
+    .club-card-dark {
+      background: var(--green);
+      color: var(--paper);
+      border-color: var(--line);
+    }
+
+    .club-card-dark::after {
+      background: var(--orange);
+      opacity: .72;
+    }
+
+    .club-card-dark .club-icon {
+      background: rgba(255,253,248,.12);
+      border-color: rgba(255,253,248,.28);
+      color: var(--paper);
+    }
+
+    .club-card-dark .club-tag {
+      background: rgba(255,253,248,.12);
+      border-color: rgba(255,253,248,.28);
+      color: rgba(255,253,248,.78);
+    }
+
+    .club-card-dark p { color: rgba(255,253,248,.76); }
+
     .guide-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 30px; align-items: start; }
     .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .process-step { padding: 21px; min-height: 190px; }
@@ -524,6 +674,8 @@
       .hero-grid { gap: 34px; }
       .poster-card { min-height: 430px; }
       .empathy-grid, .process { grid-template-columns: repeat(2, 1fr); }
+      .club-grid { grid-template-columns: repeat(2, 1fr); }
+      .club-note { grid-template-columns: 1fr; }
       .journey-grid, .expected-grid { grid-template-columns: 1fr; }
       .benefits-grid { grid-template-columns: 1fr 1fr; }
       .hero-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(520px, 100%); }
@@ -727,6 +879,42 @@
   .join-note p,
   .join-note li {
     font-size: 12.8px;
+    line-height: 1.5;
+  }
+}
+/* Club activity mobile tuning */
+@media (max-width: 640px) {
+  .club-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .club-note {
+    padding: 20px;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .club-note h3 {
+    font-size: 20px;
+  }
+
+  .club-note p {
+    font-size: 13px;
+    line-height: 1.52;
+  }
+
+  .club-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .club-card h3 {
+    font-size: 19px;
+  }
+
+  .club-card p {
+    font-size: 13px;
     line-height: 1.5;
   }
 }
