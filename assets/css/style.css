@@ -1578,3 +1578,265 @@
     scroll-margin-top: 88px;
   }
 }
+/* Mobile menu */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-more {
+  display: none;
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-inner {
+  width: min(100% - 28px, 480px);
+  margin: 0 auto;
+  padding: 12px;
+  background: rgba(255, 253, 248, 0.96);
+  border: 1px solid rgba(36, 33, 29, 0.18);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.mobile-menu-label {
+  display: block;
+  margin: 2px 4px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  border: 1px solid transparent;
+}
+
+.mobile-menu a:hover {
+  border-color: rgba(36, 33, 29, 0.14);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.mobile-menu a::after {
+  content: "↗";
+  font-size: 12px;
+  color: var(--orange);
+}
+
+/* Evidence section */
+.evidence {
+  background:
+    linear-gradient(180deg, rgba(24, 59, 45, 0.035), rgba(255, 253, 248, 0)),
+    var(--paper);
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.evidence-stat {
+  padding: 24px;
+  min-height: 210px;
+}
+
+.evidence-stat strong {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--orange);
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+}
+
+.evidence-stat h3 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.evidence-stat p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.voice-card {
+  padding: 24px;
+  min-height: 180px;
+}
+
+.voice-card span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+}
+
+.voice-card p {
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.55;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+.evidence-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* Mobile nav / anchor position tuning */
+@media (max-width: 640px) {
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 600;
+  }
+
+  .nav-inner {
+    height: 60px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .nav-more {
+    display: inline-flex;
+  }
+
+  .nav-apply {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .mobile-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    opacity: 0;
+    transition: max-height 0.28s ease, opacity 0.2s ease, padding-bottom 0.2s ease;
+  }
+
+  .mobile-menu.open {
+    max-height: 360px;
+    opacity: 1;
+    padding-bottom: 12px;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  #about,
+  #journey,
+  #tracks,
+  #clubs,
+  #guides,
+  #expected,
+  #evidence,
+  #redefine-day,
+  #info,
+  #faq,
+  #ai-guide,
+  #apply {
+    scroll-margin-top: 92px;
+  }
+
+  .evidence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .evidence-stat {
+    min-height: auto;
+    padding: 16px 14px;
+  }
+
+  .evidence-stat strong {
+    margin-bottom: 12px;
+    font-size: 28px;
+    letter-spacing: -0.07em;
+  }
+
+  .evidence-stat h3 {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .evidence-stat p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+
+  .voice-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .voice-card {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .voice-card span {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  .voice-card p {
+    font-size: 15px;
+    line-height: 1.48;
+  }
+
+  .evidence-note {
+    font-size: 11px;
+  }
+}
