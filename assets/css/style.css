@@ -447,7 +447,7 @@
 
 
 
-    /* 상시 프로그램 섹션 */
+    /* 클럽 활동 섹션 */
     .clubs {
       background:
         linear-gradient(180deg, rgba(255,253,248,.52), rgba(247,241,232,.88));
@@ -594,44 +594,6 @@
     }
 
     .club-card-dark p { color: rgba(255,253,248,.76); }
-    .program-card { cursor: pointer; }
-    .program-card .program-action {
-      margin-top: auto;
-      padding-top: 18px;
-      color: var(--green);
-    }
-    .program-card:hover .program-action { transform: translateY(-2px); }
-    .club-card-dark .program-action { color: rgba(255,253,248,.86); }
-
-
-    .program-card { min-height: 285px; }
-    .program-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: auto;
-      padding-top: 18px;
-    }
-    .program-tags span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      padding: 5px 9px;
-      border: 1px solid rgba(36,33,29,.18);
-      border-radius: 999px;
-      background: rgba(255,253,248,.58);
-      color: var(--green);
-      font-size: 10.5px;
-      line-height: 1.2;
-      font-weight: 900;
-      letter-spacing: -.015em;
-      white-space: nowrap;
-    }
-    .program-tags-light span {
-      border-color: rgba(255,253,248,.28);
-      background: rgba(255,253,248,.12);
-      color: rgba(255,253,248,.86);
-    }
 
     .guide-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 30px; align-items: start; }
     .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
@@ -1063,10 +1025,29 @@
   }
 }
 
-
-/* Program structure refinement - safe override */
-@media (max-width: 640px) {
-  .program-card { min-height: auto; }
-  .program-tags { padding-top: 14px; gap: 6px; }
-  .program-tags span { font-size: 10px; min-height: 26px; padding: 5px 8px; }
+/* Program structure & care system refinements */
+.program-card { cursor: pointer; }
+.program-action { margin-top: auto; padding-top: 18px; }
+.program-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
 }
+.program-examples span {
+  display: inline-flex;
+  padding: 5px 8px;
+  border: 1px solid rgba(255,253,248,.3);
+  border-radius: 999px;
+  color: rgba(255,253,248,.86);
+  background: rgba(255,253,248,.1);
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+.club-card:not(.club-card-dark) .program-examples span {
+  border-color: rgba(36,33,29,.18);
+  color: var(--muted);
+  background: rgba(247,241,232,.76);
+}
+
