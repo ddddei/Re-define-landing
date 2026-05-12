@@ -1552,3 +1552,29 @@
     grid-template-columns: minmax(0, 1.04fr) minmax(360px, .84fr);
   }
 }
+/* Mobile nav / anchor position tuning */
+@media (max-width: 640px) {
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  #about,
+  #journey,
+  #tracks,
+  #clubs,
+  #guides,
+  #expected,
+  #redefine-day,
+  #info,
+  #faq,
+  #ai-guide,
+  #apply {
+    scroll-margin-top: 88px;
+  }
+}
