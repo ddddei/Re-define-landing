@@ -1856,3 +1856,113 @@
 .btn-ghost.btn-disabled:hover {
   box-shadow: none;
 }
+
+/* Categorized FAQ */
+.faq-category-wrap {
+  max-width: 840px;
+  margin: 0 auto 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.faq-tab {
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1.5px solid rgba(36, 33, 29, .22);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, .76);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.faq-tab:hover {
+  transform: translateY(-2px);
+  border-color: rgba(36, 33, 29, .42);
+  box-shadow: 3px 3px 0 rgba(36, 33, 29, .1);
+}
+
+.faq-tab.active {
+  background: var(--green);
+  border-color: var(--line);
+  color: var(--paper);
+  box-shadow: 4px 4px 0 rgba(36, 33, 29, .16);
+}
+
+.faq-category-list {
+  min-height: 430px;
+}
+
+.faq-panel {
+  display: none;
+  gap: 9px;
+}
+
+.faq-panel.active {
+  display: grid;
+}
+
+.faq-category-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 4px;
+  padding: 14px 18px;
+  border: 1px solid rgba(36, 33, 29, .14);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, .55);
+}
+
+.faq-category-head span {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.faq-category-head strong {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 950;
+  letter-spacing: -.035em;
+  word-break: keep-all;
+}
+
+@media (max-width: 640px) {
+  .faq-category-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+
+  .faq-tab {
+    min-height: 40px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .faq-category-list {
+    min-height: auto;
+  }
+
+  .faq-category-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 13px 15px;
+  }
+
+  .faq-category-head span {
+    font-size: 10px;
+  }
+
+  .faq-category-head strong {
+    font-size: 14px;
+  }
+}
