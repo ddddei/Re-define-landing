@@ -594,6 +594,15 @@
     }
 
     .club-card-dark p { color: rgba(255,253,248,.76); }
+    .program-card { cursor: pointer; }
+    .program-card .program-action {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--green);
+    }
+    .program-card:hover .program-action { transform: translateY(-2px); }
+    .club-card-dark .program-action { color: rgba(255,253,248,.86); }
+
 
     .program-card { min-height: 285px; }
     .program-tags {
