@@ -1840,3 +1840,18 @@
     font-size: 11px;
   }
 }
+/* Disabled external link buttons */
+.btn-disabled,
+.btn-disabled:hover {
+  cursor: not-allowed;
+  opacity: 0.86;
+  transform: none;
+}
+
+.btn-disabled:hover {
+  box-shadow: 4px 4px 0 rgba(36, 33, 29, .2);
+}
+
+.btn-ghost.btn-disabled:hover {
+  box-shadow: none;
+}
