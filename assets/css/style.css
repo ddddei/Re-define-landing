@@ -1407,3 +1407,148 @@
     font-size: 10.4px;
   }
 }
+
+/* =========================================================
+   Desktop line-break tuning
+   - 웹 화면에서 제목/설명 줄바꿈이 너무 짧게 끊기는 현상 보정
+   - 모바일 튜닝은 기존 규칙을 유지
+   ========================================================= */
+@media (min-width: 981px) {
+  .container {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .section-head {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 46px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  .section-head > div {
+    max-width: 900px;
+  }
+
+  .section-title {
+    font-size: clamp(34px, 3.75vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.058em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+
+  .section-desc {
+    max-width: 860px;
+    font-size: 16px;
+    line-height: 1.62;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 6.6vw, 92px);
+    line-height: .96;
+    letter-spacing: -0.078em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .hero-lead {
+    max-width: 650px;
+    font-size: clamp(17px, 1.45vw, 20px);
+    line-height: 1.58;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .about h2 {
+    font-size: clamp(38px, 4.55vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .about p {
+    max-width: 680px;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .poster-title {
+    font-size: clamp(25px, 2.65vw, 36px);
+    line-height: 1.1;
+    letter-spacing: -0.064em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .empathy-quote {
+    max-width: 900px;
+  }
+
+  .club-note {
+    grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+  }
+
+  .day-hero {
+    grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr);
+  }
+
+  .day-hero h3 {
+    max-width: 560px;
+    font-size: clamp(25px, 2.55vw, 35px);
+    line-height: 1.12;
+    letter-spacing: -0.058em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .day-hero p,
+  .club-note p,
+  .join-step p,
+  .join-note p,
+  .benefit-card p,
+  .expected-card p,
+  .day-card p,
+  .club-card p {
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .benefit-card h3,
+  .journey-card h3,
+  .club-card h3,
+  .day-card h3,
+  .expected-card h3,
+  .join-step h3,
+  .join-note h3,
+  .row-text h4,
+  .grid-card h4 {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+
+  .journey-card p,
+  .day-card p,
+  .club-card p {
+    line-height: 1.55;
+  }
+}
+
+@media (min-width: 1180px) {
+  .section-title {
+    font-size: clamp(38px, 3.45vw, 52px);
+  }
+
+  .section-head {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.04fr) minmax(360px, .84fr);
+  }
+}
