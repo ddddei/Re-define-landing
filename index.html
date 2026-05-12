@@ -317,6 +317,27 @@
       </div>
     </section>
 
+    <section class="section" id="ai-guide">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">AI Guide</span>
+          <div>
+            <h2 class="section-title">나에게 어떤 활동이 어울릴까요?</h2>
+            <p class="section-desc">요즘 상태나 관심을 적으면, 어울릴 수 있는 활동을 가볍게 살펴봅니다. 진단이나 상담이 아니라 참고용 안내입니다.</p>
+          </div>
+        </div>
+        <div class="soft-card ai-box">
+          <textarea id="ai-input" placeholder="예: 사람 만나는 건 부담스럽지만, 무언가 만들어보고 싶어요."></textarea>
+          <div class="hero-actions" style="justify-content:flex-end; margin:16px 0 0;"><button class="btn" id="ai-btn" type="button">활동 추천 받아보기 <i data-lucide="arrow-right" width="17"></i></button></div>
+          <div class="ai-result" id="ai-result">
+            <strong id="ai-empathy"></strong>
+            <div class="result-tags"><span class="tag" id="ai-track"></span><span class="tag" id="ai-lab"></span></div>
+            <p id="ai-reason"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="guides">
       <div class="container">
         <div class="section-head">
@@ -642,27 +663,6 @@
           </div>
           <div class="faq-more-wrap">
             <a href="NOTION_FAQ_URL_HERE" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">참여 전 안내문 자세히 보기 <i data-lucide="external-link" width="16"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ai-guide">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">AI Guide</span>
-          <div>
-            <h2 class="section-title">나에게 어떤 활동이 어울릴까요?</h2>
-            <p class="section-desc">요즘 상태나 관심을 적으면, 어울릴 수 있는 활동을 가볍게 살펴봅니다. 진단이나 상담이 아니라 참고용 안내입니다.</p>
-          </div>
-        </div>
-        <div class="soft-card ai-box">
-          <textarea id="ai-input" placeholder="예: 사람 만나는 건 부담스럽지만, 무언가 만들어보고 싶어요."></textarea>
-          <div class="hero-actions" style="justify-content:flex-end; margin:16px 0 0;"><button class="btn" id="ai-btn" type="button">활동 추천 받아보기 <i data-lucide="arrow-right" width="17"></i></button></div>
-          <div class="ai-result" id="ai-result">
-            <strong id="ai-empathy"></strong>
-            <div class="result-tags"><span class="tag" id="ai-track"></span><span class="tag" id="ai-lab"></span></div>
-            <p id="ai-reason"></p>
           </div>
         </div>
       </div>
