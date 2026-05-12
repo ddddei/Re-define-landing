@@ -595,6 +595,130 @@
 
     .club-card-dark p { color: rgba(255,253,248,.76); }
 
+
+    /* Redefine Day 섹션 */
+    .redefine-day {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(217,95,36,.10), transparent 30%),
+        linear-gradient(180deg, rgba(247,241,232,.95), rgba(255,253,248,.72));
+      border-top: 1px solid rgba(216,202,185,.72);
+      border-bottom: 1px solid rgba(216,202,185,.72);
+    }
+
+    .day-hero {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 26px;
+      align-items: center;
+      padding: 28px 30px;
+      margin-bottom: 18px;
+      background: var(--paper);
+    }
+
+    .day-label {
+      display: inline-flex;
+      width: max-content;
+      margin-bottom: 12px;
+      padding: 6px 9px;
+      border: 1.5px solid var(--line);
+      background: var(--orange);
+      color: var(--paper);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 950;
+      letter-spacing: .08em;
+    }
+
+    .day-hero h3 {
+      margin: 0;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -.065em;
+      font-weight: 950;
+      word-break: keep-all;
+    }
+
+    .day-hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.68;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+
+    .day-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .day-card {
+      position: relative;
+      min-height: 250px;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .day-card strong {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .day-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      border: 1px solid var(--soft-line);
+      background: var(--green-soft);
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .day-icon svg { width: 22px; height: 22px; }
+
+    .day-card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.16;
+      letter-spacing: -.055em;
+      font-weight: 950;
+      word-break: keep-all;
+    }
+
+    .day-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+
+    .day-card-dark {
+      background: var(--green);
+      color: var(--paper);
+      border-color: var(--line);
+    }
+
+    .day-card-dark strong { color: var(--orange-soft); }
+
+    .day-card-dark .day-icon {
+      background: rgba(255,253,248,.12);
+      border-color: rgba(255,253,248,.26);
+      color: var(--paper);
+    }
+
+    .day-card-dark p { color: rgba(255,253,248,.76); }
+
+
     .guide-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 30px; align-items: start; }
     .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .process-step { padding: 21px; min-height: 190px; }
@@ -1051,3 +1175,45 @@
   background: rgba(247,241,232,.76);
 }
 
+
+
+
+@media (max-width: 900px) {
+  .day-hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .day-hero {
+    padding: 22px 20px;
+    margin-bottom: 14px;
+  }
+
+  .day-hero h3 {
+    font-size: 23px;
+  }
+
+  .day-hero p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .day-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .day-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .day-card h3 {
+    font-size: 20px;
+  }
+}
