@@ -1218,267 +1218,133 @@
   }
 }
 
-/* Final mobile compression pass - keeps desktop design unchanged */
+/* Mobile line-break and compact card tuning - safe override */
 @media (max-width: 640px) {
-  :root {
-    --mobile-section: 44px;
+  /* 한국어 문장/제목이 글자 단위로 끊기지 않도록 보정 */
+  .hero h1,
+  .section-title,
+  .about h2,
+  .poster-title,
+  .group-head h3,
+  .row-text h4,
+  .grid-card h4,
+  .club-note h3,
+  .club-card h3,
+  .day-hero h3,
+  .day-card h3,
+  .benefit-card h3,
+  .expected-card h3,
+  .join-note h3,
+  .join-step h3,
+  details.faq summary {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-wrap: balance;
   }
 
-  .container {
-    width: 100%;
-    padding: 0 14px;
-  }
-
-  .section {
-    padding: 44px 0;
-  }
-
-  .section-head {
-    gap: 10px;
-    margin-bottom: 20px;
+  /* 모바일에서 너무 과한 자간/폰트 크기로 생기는 어색한 줄바꿈 완화 */
+  .hero h1 {
+    font-size: clamp(34px, 11.8vw, 46px);
+    line-height: 1.04;
+    letter-spacing: -0.065em;
+    max-width: 335px;
   }
 
   .section-title {
-    font-size: clamp(27px, 8.1vw, 37px);
-    line-height: 1.08;
-  }
-
-  .section-desc {
-    font-size: 14px;
-    line-height: 1.48;
-    margin-top: 10px;
-  }
-
-  .nav-inner {
-    height: 52px;
-    padding: 0 12px;
-  }
-
-  .brand {
-    font-size: 18px;
-  }
-
-  .nav .btn {
-    min-height: 34px;
-    padding: 0 11px;
-    border-radius: 9px;
-    font-size: 11.5px;
-    box-shadow: 3px 3px 0 rgba(36, 33, 29, .18);
-  }
-
-  .hero {
-    padding: 66px 0 30px;
-    min-height: auto;
-  }
-
-  .hero-grid {
-    gap: 16px;
-  }
-
-  .hero h1 {
-    margin: 10px 0 10px;
-    font-size: clamp(34px, 12.6vw, 48px);
-    line-height: 1;
-  }
-
-  .hero-lead {
-    max-width: none;
-    margin-bottom: 14px;
-    font-size: 14px;
-    line-height: 1.47;
-  }
-
-  .hero-actions {
-    gap: 8px;
-    margin-bottom: 13px;
-  }
-
-  .hero-actions .btn {
-    min-height: 42px;
-    font-size: 13px;
-  }
-
-  .hero-chips {
-    gap: 6px;
-  }
-
-  .info-chip {
-    padding: 7px 5px;
-    font-size: 10px;
-  }
-
-  .poster-card {
-    width: 100%;
-    max-width: 310px;
-    min-height: auto;
-    padding: 12px;
-    box-shadow: 4px 4px 0 rgba(36, 33, 29, .1);
-  }
-
-  .poster-card::after {
-    inset: 8px;
-  }
-
-  .poster-card::before {
-    width: 148px;
-    height: 148px;
-    right: -60px;
-    top: 38px;
-  }
-
-  .poster-number {
-    margin-top: 14px;
-    font-size: clamp(70px, 23vw, 92px);
-  }
-
-  .poster-title {
-    max-width: 190px;
-    margin-top: 8px;
-    font-size: 17px;
-    line-height: 1.12;
-  }
-
-  .poster-line {
-    margin: 11px 0 8px;
-  }
-
-  .poster-box {
-    padding: 7px;
-  }
-
-  .poster-box strong {
-    font-size: 10px;
-  }
-
-  .poster-box span {
-    font-size: 8.5px;
-  }
-
-  .poster-seal {
-    width: 40px;
-    height: 40px;
-    right: 13px;
-    bottom: 13px;
-    font-size: 6.5px;
-  }
-
-  .empathy-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .empathy-card,
-  .benefit-card,
-  .expected-card,
-  .process-step,
-  .info-box {
-    min-height: auto;
-    padding: 16px;
-  }
-
-  .empathy-card h3,
-  .benefit-card h3,
-  .expected-card h3 {
-    font-size: 18px;
-    margin-bottom: 7px;
-  }
-
-  .empathy-card p,
-  .benefit-card p,
-  .expected-card p {
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .icon-soft,
-  .club-icon,
-  .day-icon {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-  }
-
-  .icon-soft svg,
-  .club-icon svg,
-  .day-icon svg,
-  .row-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .about-poster {
-    display: none;
+    font-size: clamp(27px, 7.4vw, 36px);
+    line-height: 1.14;
+    letter-spacing: -0.052em;
   }
 
   .about h2 {
-    font-size: clamp(28px, 8.5vw, 38px);
-    margin: 16px 0 12px;
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1.14;
+    letter-spacing: -0.055em;
   }
 
-  .about p {
-    font-size: 14px;
-    line-height: 1.5;
+  .section-desc,
+  .hero-lead,
+  .about p,
+  .club-note p,
+  .day-hero p,
+  .join-step p,
+  .join-note p,
+  details.faq p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
-  .journey-grid,
-  .expected-grid,
-  .benefits-grid {
+  /* CTA 버튼 문구가 애매하게 두 줄로 갈라지지 않도록 보정 */
+  .hero-actions .btn {
+    white-space: nowrap;
+    font-size: 13.5px;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-actions .btn-ghost {
+    font-size: 13px;
+  }
+
+  /* Redefine Lab: 모바일에서도 2열 2줄 유지 + 카드 높이 압축 */
+  .lab-tracks {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 10px;
   }
 
-  .journey-card {
-    padding: 18px;
+  .grid-card {
+    min-height: 132px;
+    padding: 15px 9px 14px;
+    gap: 7px;
+    justify-content: center;
   }
 
-  .journey-no {
-    font-size: 58px;
+  .grid-card .row-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
   }
 
-  .tag-row {
-    margin: 10px 0 10px;
-    gap: 5px;
+  .grid-card .row-icon svg {
+    width: 17px;
+    height: 17px;
   }
 
-  .tag {
-    padding: 5px 7px;
+  .grid-card h4 {
+    font-size: 14px;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+  }
+
+  .grid-card p {
+    max-width: 12em;
+    margin: 0 auto;
+    font-size: 10.8px;
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .grid-card .row-action {
+    margin-top: 3px;
     font-size: 10px;
   }
 
-  .journey-card h3 {
-    font-size: 19px;
-  }
-
-  .journey-card p {
-    font-size: 12.5px;
-    line-height: 1.46;
-  }
-
-  .card-line {
-    margin-top: 13px;
-    height: 3px;
-  }
-
-  .tracks-split {
-    gap: 24px;
-  }
-
-  .group-head {
-    margin-bottom: 12px;
-    padding-bottom: 10px;
-  }
-
-  .main-tracks,
-  .lab-tracks,
-  .club-grid,
-  .day-grid,
-  .join-steps {
-    gap: 10px;
-  }
-
+  /* 메인 트랙 카드도 모바일에서 과하게 넓고 높아 보이지 않게 정리 */
   .row-card {
-    padding: 14px;
+    padding: 15px 14px;
     gap: 12px;
+  }
+
+  .row-text h4 {
+    font-size: 16.5px;
+    letter-spacing: -0.035em;
+  }
+
+  .row-text p {
+    font-size: 11.5px;
+    line-height: 1.38;
   }
 
   .row-icon {
@@ -1486,197 +1352,58 @@
     height: 38px;
   }
 
-  .grid-card {
-    padding: 15px 10px;
-    gap: 7px;
+  .row-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .grid-card .row-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .row-text h4,
-  .grid-card h4 {
-    font-size: 15.5px;
-  }
-
-  .row-text p,
-  .grid-card p {
-    font-size: 11.5px;
-    line-height: 1.35;
-  }
-
-  .club-note,
-  .day-hero {
-    padding: 16px;
-    gap: 10px;
-    margin-bottom: 10px;
-    box-shadow: 3px 3px 0 rgba(31, 28, 24, .14);
-  }
-
-  .club-note-label,
-  .day-label {
-    margin-bottom: 8px;
-    font-size: 10px;
-  }
-
-  .club-note h3,
-  .day-hero h3 {
-    font-size: 19px;
-    line-height: 1.16;
-  }
-
-  .club-note p,
-  .day-hero p {
-    font-size: 12.5px;
-    line-height: 1.48;
-  }
-
-  .club-card,
-  .day-card {
-    min-height: auto;
-    padding: 16px;
-  }
-
+  /* 카드형 섹션 제목 줄바꿈 안정화 */
   .club-card h3,
-  .day-card h3 {
-    font-size: 18px;
-    margin-bottom: 7px;
+  .day-card h3,
+  .benefit-card h3,
+  .expected-card h3,
+  .join-step h3 {
+    letter-spacing: -0.04em;
   }
 
-  .club-card p,
+  /* 긴 카드 설명은 줄 수를 제한해 모바일 스크롤 피로도 완화 */
+  .program-card p,
   .day-card p {
     display: -webkit-box;
-    overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .club-tag {
-    margin-bottom: 9px;
-    font-size: 9.5px;
-  }
-
-  .program-action {
-    padding-top: 12px;
-  }
-
-  .program-examples {
-    margin-top: 10px;
-    gap: 5px;
-  }
-
-  .program-examples span {
-    padding: 4px 7px;
-    font-size: 9.5px;
-  }
-
-  .day-card strong {
-    margin-bottom: 12px;
-    font-size: 10.5px;
-  }
-
-  .join-grid {
-    gap: 12px;
-  }
-
-  .join-note,
-  .join-step {
-    padding: 16px;
-  }
-
-  .join-note h3,
-  .join-step h3 {
-    font-size: 18px;
-    margin-bottom: 7px;
-  }
-
-  .join-note ul,
-  .join-step ul {
-    margin-top: 10px;
-    gap: 5px;
-  }
-
-  .join-step p,
-  .join-step li,
-  .join-note p,
-  .join-note li {
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .join-no {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
-
-  details.faq {
-    padding: 14px 15px;
-    border-radius: 12px;
-  }
-
-  details.faq summary {
-    font-size: 13px;
-  }
-
-  details.faq p {
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .ai-box,
-  .modal {
-    padding: 16px;
-  }
-
-  .modal {
-    max-height: min(86vh, 720px);
-    overflow-y: auto;
-  }
-
-  .modal h3 {
-    font-size: 23px;
-  }
-
-  .modal-lead {
-    font-size: 14px;
-    line-height: 1.48;
-  }
-
-  .modal-info-block,
-  .instructor-card {
-    padding: 13px;
-  }
-
-  .apply {
-    padding: 52px 0;
-  }
-
-  .apply h2 {
-    font-size: clamp(31px, 9.5vw, 44px);
-  }
-
-  .apply p {
-    font-size: 14px;
-    line-height: 1.48;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 390px) {
-  .lab-tracks {
-    grid-template-columns: 1fr;
+  .container {
+    width: min(100vw - 24px, 1180px);
+  }
+
+  .section-title {
+    font-size: clamp(26px, 7.2vw, 33px);
   }
 
   .hero h1 {
-    font-size: clamp(32px, 12.2vw, 44px);
+    font-size: clamp(33px, 11.2vw, 44px);
   }
 
-  .poster-card {
-    max-width: 292px;
+  .lab-tracks {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px;
+  }
+
+  .grid-card {
+    min-height: 124px;
+    padding: 14px 8px;
+  }
+
+  .grid-card h4 {
+    font-size: 13.3px;
+  }
+
+  .grid-card p {
+    font-size: 10.4px;
   }
 }
