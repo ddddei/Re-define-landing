@@ -1966,3 +1966,157 @@
     font-size: 14px;
   }
 }
+
+/* Hero poster final clean version
+   - 히어로 우측 포스터는 정보표가 아니라 브랜드 포스터 역할로 정리
+   - 장식 요소는 연한 원형 배경만 남기고, 오렌지 선/도트/스탬프는 제거
+*/
+.poster-card-clean {
+  min-height: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poster-card-clean::before {
+  width: 260px;
+  height: 260px;
+  right: -86px;
+  top: 112px;
+  background: rgba(217, 95, 36, 0.14);
+  opacity: 1;
+  z-index: 0;
+}
+
+.poster-card-clean::after {
+  inset: 18px;
+  border-color: rgba(36, 33, 29, 0.20);
+}
+
+.poster-card-clean .poster-top,
+.poster-card-clean .poster-number,
+.poster-card-clean .poster-title,
+.poster-card-clean .poster-line,
+.poster-card-clean .poster-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.poster-card-clean .poster-number {
+  margin-top: 44px;
+  font-size: clamp(126px, 15vw, 178px);
+  line-height: 0.78;
+  letter-spacing: -0.11em;
+}
+
+.poster-card-clean .poster-title {
+  margin-top: 26px;
+  max-width: 360px;
+  font-size: clamp(26px, 2.65vw, 36px);
+  line-height: 1.12;
+  letter-spacing: -0.062em;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+.poster-card-clean .poster-line {
+  margin: 26px 0 16px;
+}
+
+.poster-card-clean .poster-bottom {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-right: 0;
+}
+
+.poster-card-clean .poster-box {
+  min-height: 86px;
+  padding: 14px;
+  background: rgba(247, 241, 232, 0.66);
+}
+
+.poster-card-clean .poster-box strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.22;
+  font-weight: 950;
+  word-break: keep-all;
+}
+
+.poster-card-clean .poster-box span {
+  display: block;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.38;
+  font-weight: 760;
+  word-break: keep-all;
+}
+
+/* 이전 히어로 포스터 장식은 최종안에서 사용하지 않음 */
+.poster-card-clean .poster-seal,
+.poster-card-clean .poster-corner-accent,
+.poster-card-refined .poster-seal,
+.poster-card-refined .poster-corner-accent,
+.poster-accent,
+.poster-accent-bar,
+.poster-accent-dot {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .poster-card-clean {
+    min-height: auto;
+    max-width: 330px;
+    padding: 16px;
+  }
+
+  .poster-card-clean::before {
+    width: 168px;
+    height: 168px;
+    right: -62px;
+    top: 78px;
+  }
+
+  .poster-card-clean::after {
+    inset: 10px;
+  }
+
+  .poster-card-clean .poster-number {
+    margin-top: 26px;
+    font-size: clamp(82px, 26vw, 108px);
+  }
+
+  .poster-card-clean .poster-title {
+    margin-top: 16px;
+    max-width: 250px;
+    font-size: 19px;
+    line-height: 1.12;
+  }
+
+  .poster-card-clean .poster-line {
+    margin: 18px 0 10px;
+  }
+
+  .poster-card-clean .poster-bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+
+  .poster-card-clean .poster-box {
+    min-height: auto;
+    padding: 9px;
+  }
+
+  .poster-card-clean .poster-box strong {
+    font-size: 10.5px;
+    margin-bottom: 5px;
+  }
+
+  .poster-card-clean .poster-box span {
+    font-size: 9px;
+    line-height: 1.32;
+  }
+}
