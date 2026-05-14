@@ -2120,3 +2120,49 @@
     line-height: 1.32;
   }
 }
+
+/* Mobile spacing final override */
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    max-width: 1180px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .nav-inner {
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .poster-card,
+  .poster-card-clean {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal {
+    width: calc(100% - 32px);
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .modal {
+    width: calc(100% - 28px);
+  }
+}
