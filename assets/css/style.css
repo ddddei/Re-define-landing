@@ -430,21 +430,24 @@
     .row-text { flex: 1; }
     .row-text h4 { margin: 0 0 4px; font-size: 20px; font-weight: 950; transition: color .2s; }
     .row-text p { margin: 0; font-size: 13px; color: var(--muted); font-weight: 650; line-height: 1.4; }
-    .row-action { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 12px; font-weight: 850; transition: all .2s; white-space: nowrap; }
+    .row-action { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 28px; padding: 6px 10px; border: 1px solid rgba(36,33,29,.14); border-radius: 999px; background: rgba(255,253,248,.58); color: var(--muted); box-shadow: none; font-size: 11px; line-height: 1; font-weight: 900; transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease; white-space: nowrap; }
+    .row-action span { display: inline-flex; align-items: center; line-height: 1; }
+    .row-action svg,
+    .row-action i { display: block; width: 12px; height: 12px; flex: 0 0 12px; stroke-width: 2.25; }
 
     .row-card:hover .row-icon { background: var(--green-soft); color: var(--green); border-color: rgba(24,59,45,.2); }
     .row-card:hover .row-text h4 { color: var(--green); }
-    .row-card:hover .row-action { color: var(--green); transform: translateX(4px); }
+    .row-card:hover .row-action { color: var(--green); border-color: rgba(24,59,45,.22); background: rgba(235,244,233,.72); transform: translateX(2px); }
 
     .grid-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px 16px; cursor: pointer; gap: 10px; flex: 1; }
     .grid-card .row-icon { margin: 0 auto; width: 46px; height: 46px; }
     .grid-card h4 { margin: 0; font-size: 17px; font-weight: 950; transition: color .2s; }
     .grid-card p { margin: 0; font-size: 12px; color: var(--muted); font-weight: 650; line-height: 1.4; }
-    .grid-card .row-action { margin-top: 8px; font-size: 11px; }
+    .grid-card .row-action { align-self: center; margin-top: 8px; font-size: 11px; }
 
     .grid-card:hover .row-icon { background: var(--orange-soft); color: var(--orange); border-color: rgba(217,95,36,.2); }
     .grid-card:hover h4 { color: var(--orange); }
-    .grid-card:hover .row-action { color: var(--orange); transform: translateY(-2px); }
+    .grid-card:hover .row-action { color: var(--orange); border-color: rgba(217,95,36,.22); background: rgba(255,244,236,.72); transform: translateY(-1px); }
 
 
 
@@ -1171,8 +1174,24 @@
 }
 
 /* Program structure & care system refinements */
-.program-card { cursor: pointer; }
-.program-action { margin-top: auto; padding-top: 18px; }
+.program-card { display: flex; flex-direction: column; cursor: pointer; }
+.program-action { align-self: flex-start; margin-top: auto; padding-top: 0; }
+.program-examples + .program-action { margin-top: 18px; }
+.club-card-dark .program-action {
+  border-color: rgba(255,253,248,.22);
+  background: rgba(255,253,248,.12);
+  color: rgba(255,253,248,.9);
+}
+.program-card:hover .program-action {
+  border-color: rgba(24,59,45,.22);
+  background: rgba(255,253,248,.78);
+  color: var(--green);
+}
+.club-card-dark:hover .program-action {
+  border-color: rgba(255,253,248,.3);
+  background: rgba(255,253,248,.16);
+  color: var(--paper);
+}
 .program-examples {
   display: flex;
   flex-wrap: wrap;
@@ -2166,29 +2185,12 @@
     margin-right: 0;
   }
 
-  #tracks .row-action,
-  #clubs .program-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    min-height: 34px;
-    padding: 7px 10px;
-    border: 1.5px solid var(--line);
-    border-radius: 999px;
-    background: var(--paper);
-    color: var(--ink);
-    box-shadow: 2px 2px 0 rgba(36,33,29,.14);
-    font-size: 11px;
-    line-height: 1.2;
-    font-weight: 950;
-    transform: none;
-  }
-
   #tracks .row-action span,
   #tracks .grid-card .row-action span,
   #clubs .program-action span {
-    display: inline;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
   }
 
   #tracks .row-card {
@@ -2198,19 +2200,25 @@
 
   #tracks .row-card .row-action,
   #tracks .grid-card .row-action {
-    width: 100%;
+    width: auto;
     margin-top: 8px;
   }
 
-  #clubs .program-action {
-    width: 100%;
+  #tracks .grid-card .row-action {
+    align-self: center;
+  }
+
+  #clubs .program-card .program-action {
+    width: auto;
     margin-top: auto;
   }
 
-  #tracks .row-card:hover .row-action,
-  #tracks .grid-card:hover .row-action {
-    color: var(--ink);
-    transform: none;
+  #clubs .program-card .program-examples + .program-action {
+    margin-top: 18px;
+  }
+
+  #clubs .program-card .program-examples {
+    margin-bottom: 0;
   }
 
   .modal {
