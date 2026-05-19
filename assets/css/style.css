@@ -2579,3 +2579,179 @@
   line-height: 1.6;
   font-weight: 700;
 }
+/* Softer card system: reduce closed borders and separate structure with shadow. */
+.soft-card {
+  border-color: rgba(36, 33, 29, 0.075);
+  box-shadow:
+    0 14px 34px rgba(31, 28, 24, 0.052),
+    0 1px 0 rgba(255, 255, 255, 0.62) inset;
+}
+
+.soft-card:hover {
+  border-color: rgba(24, 59, 45, 0.16);
+  box-shadow:
+    0 18px 46px rgba(31, 28, 24, 0.075),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+}
+
+/* Brutal cards keep hierarchy without the original heavy outline. */
+.brutal-card {
+  border-width: 1px;
+  border-color: rgba(36, 33, 29, 0.12);
+  box-shadow: 0 18px 42px rgba(31, 28, 24, 0.066);
+}
+
+/* Section note cards: avoid a boxed-in feeling. */
+.club-note,
+.day-hero,
+.evidence-overview {
+  border-color: rgba(36, 33, 29, 0.085);
+  box-shadow:
+    0 18px 44px rgba(31, 28, 24, 0.052),
+    0 1px 0 rgba(255, 255, 255, 0.64) inset;
+}
+
+/* FAQ: lighter closed borders */
+details.faq {
+  border-color: rgba(36, 33, 29, 0.09);
+  box-shadow: 0 10px 26px rgba(31, 28, 24, 0.035);
+}
+
+details.faq:hover {
+  border-color: rgba(24, 59, 45, 0.16);
+  box-shadow: 0 14px 34px rgba(31, 28, 24, 0.055);
+}
+
+/* Small chips and tags: keep labels legible with quieter separators. */
+.info-chip,
+.tag,
+.club-tag,
+.evidence-stat-label {
+  border-color: rgba(36, 33, 29, 0.115);
+}
+
+.club-card-dark .club-tag {
+  border-color: rgba(255, 253, 248, 0.2);
+}
+
+/* Journey cards: let the progress line and depth carry the structure. */
+.journey-card.brutal-card {
+  gap: 24px;
+  padding: 29px;
+  border-width: 1px;
+  border-color: rgba(36, 33, 29, 0.07);
+  background: linear-gradient(180deg, var(--paper), rgba(247, 241, 232, 0.54));
+  box-shadow:
+    0 18px 42px rgba(31, 28, 24, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.62) inset;
+}
+
+.journey-card .tag {
+  border-width: 1px;
+  border-color: rgba(36, 33, 29, 0.11);
+}
+
+.journey-card .card-line {
+  height: 3px;
+  opacity: 0.78;
+}
+
+/* Action pills: keep text and arrow optically centered. */
+.row-action,
+.program-action {
+  min-height: 30px;
+  padding: 0 11px;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+}
+
+.row-action span,
+.program-action span {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.row-action svg,
+.row-action i,
+.program-action svg,
+.program-action i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  line-height: 1;
+  transform: translateY(-0.5px);
+}
+
+#clubs .program-card .program-action {
+  margin-top: 16px;
+}
+
+#clubs .program-card .program-examples {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+#clubs .program-card .program-examples + .program-action {
+  margin-top: 12px;
+}
+
+/* Mobile: make the softened cards feel flatter and cleaner */
+@media (max-width: 640px) {
+  .soft-card,
+  .brutal-card,
+  .club-note,
+  .day-hero,
+  .evidence-overview,
+  details.faq {
+    border-color: rgba(36, 33, 29, 0.075);
+    box-shadow: 0 10px 24px rgba(31, 28, 24, 0.04);
+  }
+
+  .soft-card:hover {
+    box-shadow: 0 10px 24px rgba(31, 28, 24, 0.04);
+  }
+
+  .info-chip,
+  .tag,
+  .club-tag,
+  .evidence-stat-label {
+    border-color: rgba(36, 33, 29, 0.1);
+  }
+
+  .club-card-dark .club-tag {
+    border-color: rgba(255, 253, 248, 0.18);
+  }
+
+  .journey-card.brutal-card {
+    gap: 20px;
+    padding: 22px;
+    border-color: rgba(36, 33, 29, 0.065);
+    box-shadow: 0 10px 24px rgba(31, 28, 24, 0.04);
+  }
+
+  .journey-card .tag {
+    border-color: rgba(36, 33, 29, 0.1);
+  }
+
+  .journey-card .card-line {
+    height: 2px;
+    opacity: 0.74;
+  }
+
+  .row-action,
+  .program-action {
+    min-height: 30px;
+    padding: 0 10px;
+  }
+
+  #clubs .program-card .program-action {
+    margin-top: 14px;
+  }
+
+  #clubs .program-card .program-examples + .program-action {
+    margin-top: 10px;
+  }
+}
