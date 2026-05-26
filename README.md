@@ -61,6 +61,7 @@ RE-DEFINE-LANDING/
       ├─ apple-touch-icon.png
       ├─ android-chrome-192x192.png
       ├─ android-chrome-512x512.png
+      ├─ og-redefine-v2.png
       └─ og-redefine.png
 ```
 
@@ -276,6 +277,12 @@ FAQ 카테고리 예시:
 - FAQ 탭
 - 하단 CTA
 - 카드 내부 pill 정렬
+
+### 7-4. 모달 스타일
+
+- 모달 내부는 강한 닫힌 테두리보다 배경, 여백, 약한 그림자를 중심으로 유지합니다.
+- `dashed border`는 되도록 사용하지 않습니다.
+- X 버튼은 부드러운 인상을 유지하되 클릭 가능한 요소임이 보여야 합니다.
 
 ---
 
@@ -503,6 +510,8 @@ Codex CLI에 작업을 맡길 때는 아래 문장을 앞에 붙이는 것을 �
 [x] index.html의 og:image / twitter:image v2 경로 반영
 [x] Slack 공유 미리보기에서 새 OG 이미지 확인
 [x] 섹션 간 연결감 보정 시도 후 원복
+[x] 경험 트랙 “낭독극” → “연극치유” 명칭 및 모달 내용 정리
+[x] 모달 내부 강한 테두리 스타일 완화
 ```
 
 ### 15-2. 추가 확인 필요 항목
