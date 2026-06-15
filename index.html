@@ -306,6 +306,29 @@
       </div>
     </section>
 
+    <section class="section staff-operators" id="staff-operators">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">PROJECT RE:DEFINE TEAM</span>
+          <div>
+            <h2 class="section-title">함께 운영하는 사람들</h2>
+            <p class="section-desc">리디파인은 청년동 운영진과 트랙 운영자가 함께 참여자의 속도에 맞는 경험을 만들어갑니다.</p>
+            <p class="section-desc staff-operators-desc">청년동 운영진은 참여 안내, 공간 운영, 커뮤니티 운영을 함께 담당합니다.</p>
+          </div>
+        </div>
+
+        <div class="soft-card staff-summary" role="button" tabindex="0" onclick="openStaffModal()" onkeydown="handleStaffSummaryKeydown(event)">
+          <div>
+            <span>청년동 운영진</span>
+            <p>프로그램 전체의 안내, 공간, 커뮤니티 운영은 별도의 운영진이 함께 맡습니다.</p>
+          </div>
+          <button class="btn btn-ghost" type="button" onclick="event.stopPropagation(); openStaffModal()">
+            운영진 자세히 보기 <i data-lucide="arrow-up-right" width="18"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="section clubs" id="clubs">
       <div class="container">
         <div class="section-head">
@@ -772,15 +795,17 @@
         instructors: [
           {
             label: '함께하는 전문가',
-            name: '진행자 1',
+            name: '김다솜',
             role: '무용극·움직임 기반 표현 워크숍 진행자',
-            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.'
+            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.',
+            image: 'assets/images/people/dance-kim-dasom.png'
           },
           {
             label: '함께하는 전문가',
-            name: '진행자 2',
+            name: 'Rhee M J',
             role: '무용극·움직임 기반 표현 워크숍 진행자',
-            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.'
+            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.',
+            image: 'assets/images/people/dance-rhee-mj.png'
           }
         ]
       },
@@ -812,7 +837,8 @@
           label: '함께하는 전문가',
           name: '옥민아',
           role: 'Writer’s Room Lab 진행자',
-          bio: '일상의 언어를 글로 꺼내고, 나만의 원고로 정리하는 과정을 함께 안내합니다.'
+          bio: '일상의 언어를 글로 꺼내고, 나만의 원고로 정리하는 과정을 함께 안내합니다.',
+          image: 'assets/images/people/writer-ok-mina.png'
         }
       },
       band: {
@@ -825,9 +851,10 @@
         recommended: ['말보다 음악이나 리듬으로 마음을 꺼내고 싶은 사람', '악기 경험은 적지만 함께 소리를 만들어보고 싶은 사람', '협업의 감각을 부담 없이 경험하고 싶은 사람'],
         instructor: {
           label: '함께하는 전문가',
-          name: '강사 정보 추후 공개',
+          name: '조완',
           role: '음악·밴드 세션 진행자',
-          bio: '싱어송라이터 조완입니다. 밴드음악을 아주 좋아합니다.'
+          bio: '싱어송라이터 조완입니다. 밴드음악을 아주 좋아합니다.',
+          image: 'assets/images/people/band_cho_wan.png'
         }
       },
       workerLab: {
@@ -922,17 +949,57 @@
       }
     };
 
+    const staffDetails = [
+      {
+        name: '정재원',
+        role: '프로젝트 리디파인 총괄 기획 및 경험 설계 디자인, 성과 관리',
+        area: '전체 프로그램 기획 및 관리',
+        quote: '"도망쳐서 도착한 곳에 낙원이란 있을 수 없는거야"',
+        image: 'assets/images/people/staff-jung-jaewon.png'
+      },
+      {
+        name: '허정민',
+        role: '예산 관리, 프로그램 기획 및 운영',
+        area: '예산 관리, 프로그램 기획 및 운영',
+        quote: '"관악산 날다람쥐 지망생"',
+        image: 'assets/images/people/staff-heo-jungmin.png'
+      },
+      {
+        name: '한필구',
+        role: '커뮤니티 운영, 공간 운영, 홍보 및 기록',
+        area: '온라인 커뮤니티(디스코드) 운영, 경험트랙 TRPG 운영 등',
+        quote: '"재밌는 사람들과, 재밌는 일을 만들고 있습니다"',
+        image: 'assets/images/people/staff-han-pilgoo.png'
+      }
+    ];
+
     function renderList(items) {
       return items.map((item) => `<li>${item}</li>`).join('');
+    }
+
+    function renderStaffCards() {
+      return staffDetails.map((staff) => `
+        <article class="staff-modal-card">
+          <img src="${staff.image}" alt="${staff.name} 프로필 사진" class="staff-modal-photo">
+          <div class="staff-modal-info">
+            <span>청년동 운영진</span>
+            <h4>${staff.name}</h4>
+            <strong>${staff.role}</strong>
+            <p>${staff.area}</p>
+            <blockquote>${staff.quote}</blockquote>
+          </div>
+        </article>
+      `).join('');
     }
 
     function renderInstructorCards(data) {
       const instructors = data.instructors || [data.instructor];
       return instructors.map((instructor) => `
         <section class="instructor-card">
-          <div class="instructor-photo" aria-label="강사 프로필 이미지 준비 중">
-            <i data-lucide="user-round" width="24"></i>
-            <span>IMAGE<br>COMING SOON</span>
+          <div class="instructor-photo" aria-label="${instructor.image ? `${instructor.name} 프로필 이미지` : '강사 프로필 이미지 준비 중'}">
+            ${instructor.image
+              ? `<img src="${instructor.image}" alt="${instructor.name} 프로필 사진">`
+              : '<i data-lucide="user-round" width="24"></i><span>IMAGE<br>COMING SOON</span>'}
           </div>
           <div class="instructor-info">
             <span>${instructor.label}</span>
@@ -969,6 +1036,27 @@
       document.body.style.overflow = 'hidden';
       lucide.createIcons();
     }
+
+    function openStaffModal() {
+      document.getElementById('modal-tag').textContent = 'PROJECT RE:DEFINE TEAM';
+      document.getElementById('modal-title').textContent = '청년동 운영진';
+      document.getElementById('modal-body').innerHTML = `
+        <p class="modal-lead">리디파인은 청년동 운영진과 함께 참여 안내, 공간 운영, 커뮤니티 운영을 준비합니다.</p>
+        <div class="staff-modal-list">
+          ${renderStaffCards()}
+        </div>
+      `;
+      document.getElementById('modal-backdrop').classList.add('show');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function handleStaffSummaryKeydown(event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      openStaffModal();
+    }
+
     function closeModal() {
       document.getElementById('modal-backdrop').classList.remove('show');
       document.body.style.overflow = '';

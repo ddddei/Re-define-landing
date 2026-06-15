@@ -518,6 +518,99 @@
     .grid-card:hover h4 { color: var(--orange); }
     .grid-card:hover .row-action { color: var(--orange); border-color: rgba(217,95,36,.22); background: rgba(255,244,236,.72); transform: translateY(-1px); }
 
+    .staff-operators {
+      background: linear-gradient(180deg, rgba(247,241,232,.2), rgba(255,253,248,.72));
+    }
+    .staff-operators-desc { margin-top: 8px; }
+    .staff-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 24px;
+      cursor: pointer;
+    }
+    .staff-summary:hover,
+    .staff-summary:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(24,59,45,.28);
+      box-shadow: 0 14px 34px rgba(31,28,24,.065);
+    }
+    .staff-summary:focus-visible { outline: 2px solid rgba(24,59,45,.42); outline-offset: 3px; }
+    .staff-summary span,
+    .staff-modal-info span {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .staff-summary p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 700;
+      word-break: keep-all;
+    }
+    .staff-modal-list {
+      display: grid;
+      gap: 12px;
+    }
+    .staff-modal-card {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 16px;
+      align-items: stretch;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(247,241,232,.46);
+    }
+    .staff-modal-photo {
+      width: 104px;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      background: var(--bg);
+    }
+    .staff-modal-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .staff-modal-info h4 {
+      margin: 8px 0 6px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.16;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+    .staff-modal-info strong {
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 900;
+      word-break: keep-all;
+    }
+    .staff-modal-info p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 750;
+      word-break: keep-all;
+    }
+    .staff-modal-info blockquote {
+      margin: 8px 0 0;
+      color: var(--green);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 850;
+      word-break: keep-all;
+    }
+
 
 
     /* 클럽 활동 섹션 */
@@ -952,8 +1045,10 @@
       line-height: 1.2;
       font-weight: 950;
       letter-spacing: .06em;
+      overflow: hidden;
     }
     .instructor-photo svg { color: var(--green); }
+    .instructor-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
     .instructor-info { display: flex; flex-direction: column; justify-content: center; }
     .instructor-info span {
       color: var(--orange);
@@ -1017,6 +1112,7 @@
       .empathy-grid, .process { grid-template-columns: repeat(2, 1fr); }
       .club-grid { grid-template-columns: repeat(2, 1fr); }
       .club-note { grid-template-columns: 1fr; }
+      .staff-summary { align-items: flex-start; flex-direction: column; }
       .journey-grid, .expected-grid { grid-template-columns: 1fr; }
       .benefits-grid { grid-template-columns: 1fr 1fr; }
       .hero-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(520px, 100%); }
@@ -1157,6 +1253,8 @@
       .modal-info-block { padding: 16px; }
       .instructor-card { grid-template-columns: 1fr; padding: 14px; }
       .instructor-photo { min-height: 120px; }
+      .staff-modal-card { grid-template-columns: 1fr; }
+      .staff-modal-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; }
       .modal-lead { font-size: 16px; }
     }
   
