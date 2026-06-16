@@ -2474,6 +2474,45 @@
     margin-right: 0;
   }
 
+  .hero {
+    overflow-x: clip;
+  }
+
+  .hero-grid,
+  .hero-copy,
+  .hero-actions,
+  .hero-chips {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-actions .btn {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-chips {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-chips .info-chip {
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .hero .poster-card-clean {
+    overflow: hidden;
+  }
+
   #tracks .row-action span,
   #tracks .grid-card .row-action span,
   #clubs .program-action span {
