@@ -826,6 +826,22 @@
       word-break: keep-all;
     }
 
+    .discord-club-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .club-card-sub {
+      margin-top: 14px !important;
+      padding-top: 14px;
+      border-top: 1px solid rgba(36,33,29,.1);
+      color: var(--green) !important;
+      font-weight: 750 !important;
+    }
+
+    .discord-club-note {
+      margin: 18px 0 0;
+    }
+
     .club-card-dark {
       background: var(--green);
       color: var(--paper);
