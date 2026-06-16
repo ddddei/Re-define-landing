@@ -399,6 +399,53 @@
     .icon-soft { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 13px; background: var(--green-soft); color: var(--green); margin-bottom: 22px; }
     .benefit-card h3 { margin: 0 0 10px; font-size: 25px; line-height: 1.15; letter-spacing: -.06em; font-weight: 950; }
     .benefit-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.58; font-weight: 650; word-break: keep-all; }
+    .onboarding-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      margin-top: 18px;
+      padding: 26px;
+      cursor: pointer;
+      background: linear-gradient(135deg, rgba(255,253,248,.98), rgba(235,244,233,.7));
+    }
+    .onboarding-card .icon-soft { margin: 0; }
+    .onboarding-card-label {
+      display: inline-flex;
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .onboarding-card h3 {
+      margin: 0 0 8px;
+      font-size: 27px;
+      line-height: 1.12;
+      letter-spacing: -.06em;
+      font-weight: 950;
+    }
+    .onboarding-card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 900;
+      word-break: keep-all;
+    }
+    .onboarding-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.62;
+      font-weight: 650;
+      word-break: keep-all;
+    }
+    .onboarding-card:hover .icon-soft { background: var(--orange-soft); color: var(--orange); }
+    .onboarding-card:hover .row-action { color: var(--green); border-color: rgba(24,59,45,.22); background: rgba(235,244,233,.72); transform: translateX(2px); }
 
     .journey { background: var(--paper); border-top: 1px solid var(--soft-line); border-bottom: 1px solid var(--soft-line); }
     .journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -1181,6 +1228,16 @@
       .tap-hint-pill svg { width: 14px; height: 14px; flex: 0 0 auto; }
       .empathy-quote { padding-left: 16px; }
       .poster-bottom, .empathy-grid, .benefits-grid, .process, .expected-grid { grid-template-columns: 1fr; }
+      .onboarding-card {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 22px;
+      }
+      .onboarding-card .row-action {
+        justify-self: flex-start;
+        margin-top: 0;
+      }
       .soft-card:hover { transform: none; }
       .empathy-card { min-height: auto; padding: 20px; }
       .empathy-card h3 { font-size: 18px; margin: 14px 0 7px; }
