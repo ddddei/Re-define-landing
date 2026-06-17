@@ -45,6 +45,24 @@
         "logo": "https://www.project-redefine.com/assets/images/logos/gmyouthzone.jpg"
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Project RE:DEFINE 긍정심리학 기반 프로그램",
+        "description": "Project RE:DEFINE의 1~3주차 공통 온보딩 과정으로, 참여자가 일정에 맞는 반을 선택해 주 1회 참여합니다.",
+        "url": "https://www.project-redefine.com/",
+        "startDate": "2026-07-18",
+        "endDate": "2026-08-14",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "organizer": {
+          "@type": "Organization",
+          "name": "광명시 청년동",
+          "url": "https://www.project-redefine.com/"
+        },
+        "inLanguage": "ko-KR"
+      }
+    </script>
     <meta name="theme-color" content="#F7F1E8" />
 
     <link rel="icon" href="./assets/images/favicon.ico" sizes="any" />
@@ -242,6 +260,9 @@
               디스코드에서 분위기를 익히고, 1~3주차 공통 온보딩에서 나의 현재
               상태와 참여 방식을 살펴봅니다. 그다음 경험 트랙과 Redefine Lab을
               선택하며 16주를 나에게 맞는 방식으로 구성합니다.
+              Project RE:DEFINE은 광명시 청년동에서 운영하는 지역특화
+              청년사업으로, 관계 회복·일상 회복·표현의 경험을 통해 나에게 맞는
+              다음 장면을 찾아가는 16주 프로그램입니다.
             </p>
           </div>
           <aside class="about-poster" aria-label="브랜드 선언 포스터">
@@ -1654,24 +1675,40 @@
               <img
                 src="./assets/images/logos/youth-policy-office.png"
                 alt="국무조정실 청년정책조정실 로고"
+                width="2262"
+                height="685"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="partner-logo-card partner-logo-card-wide">
               <img
                 src="./assets/images/logos/national-youth-support-center.png"
                 alt="중앙청년지원센터 로고"
+                width="1728"
+                height="660"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="partner-logo-card">
               <img
                 src="./assets/images/logos/korea-youth-foundation.png"
                 alt="청년재단 로고"
+                width="286"
+                height="128"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="partner-logo-card partner-logo-card-square">
               <img
                 src="./assets/images/logos/gmyouthzone.jpg"
                 alt="광명시 청년동 로고"
+                width="1392"
+                height="1201"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -1732,6 +1769,8 @@
               role: "박사과정",
               image: "assets/images/people/im-uijin.jpg",
               alt: "임의진 진행자 프로필 사진",
+              width: 1568,
+              height: 2090,
             },
             {
               name: "최명원",
@@ -1739,6 +1778,8 @@
               role: "박사과정",
               image: "assets/images/people/choi-myeongwon.jpg",
               alt: "최명원 진행자 프로필 사진",
+              width: 3856,
+              height: 5398,
             },
             {
               name: "박정은",
@@ -1746,6 +1787,8 @@
               role: "박사 수료",
               image: "assets/images/people/park-jeongeun.jpg",
               alt: "박정은 진행자 프로필 사진",
+              width: 413,
+              height: 531,
             },
             {
               name: "신유경",
@@ -1753,6 +1796,8 @@
               role: "박사과정",
               image: "assets/images/people/shin-yugyeong.jpg",
               alt: "신유경 진행자 프로필 사진",
+              width: 2872,
+              height: 4021,
             },
           ],
         },
@@ -1954,7 +1999,7 @@
           .map(
             (staff) => `
         <article class="staff-modal-card">
-          <img src="${staff.image}" alt="${staff.name} 프로필 사진" class="staff-modal-photo">
+          <img src="${staff.image}" alt="${staff.name} 프로필 사진" class="staff-modal-photo" width="1000" height="1000" loading="lazy" decoding="async">
           <div class="staff-modal-info">
             <span>청년동 운영진</span>
             <h4>${staff.name}</h4>
@@ -1978,7 +2023,7 @@
               .map(
                 (instructor) => `
             <article class="positive-facilitator-card">
-              <img src="${instructor.image}" alt="${instructor.alt}">
+              <img src="${instructor.image}" alt="${instructor.alt}" width="${instructor.width}" height="${instructor.height}" loading="lazy" decoding="async">
               <div>
                 <strong>${instructor.name}</strong>
                 <span>${instructor.schedule}</span>
@@ -2000,7 +2045,7 @@
           <div class="instructor-photo" aria-label="${instructor.image ? `${instructor.name} 프로필 이미지` : "강사 프로필 이미지 준비 중"}">
             ${
               instructor.image
-                ? `<img src="${instructor.image}" alt="${instructor.name} 프로필 사진">`
+                ? `<img src="${instructor.image}" alt="${instructor.name} 프로필 사진" width="1000" height="1000" loading="lazy" decoding="async">`
                 : '<i data-lucide="user-round" width="24"></i><span>IMAGE<br>COMING SOON</span>'
             }
           </div>
