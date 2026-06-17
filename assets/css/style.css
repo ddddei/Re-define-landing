@@ -1033,53 +1033,73 @@
     .apply p { margin: 0 auto 32px; max-width: 620px; color: rgba(255,253,248,.78); font-size: 19px; line-height: 1.62; font-weight: 650; word-break: keep-all; }
 
     .partners {
-      background: var(--paper);
-      border-top: 1px solid rgba(216,202,185,.72);
-      border-bottom: 1px solid rgba(216,202,185,.72);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+      margin: 0 auto 24px;
+      padding: 18px 20px;
+      border: 1px solid rgba(255,253,248,.14);
+      background: rgba(255,253,248,.06);
     }
 
-    .partners-head {
-      display: grid;
-      grid-template-columns: .72fr 1.28fr;
-      gap: 34px;
-      align-items: end;
-      margin-bottom: 30px;
+    .partners-copy {
+      text-align: left;
+      min-width: 170px;
+    }
+
+    .partners-copy h2 {
+      margin: 0;
+      color: var(--paper);
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 950;
+      letter-spacing: -.035em;
+    }
+
+    .partners-copy p {
+      margin: 5px 0 0;
+      color: rgba(255,253,248,.58);
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 750;
+      word-break: keep-all;
     }
 
     .partner-logo-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      gap: 8px;
     }
 
     .partner-logo-card {
-      min-height: 118px;
-      padding: 22px 18px;
-      border: 1px solid var(--soft-line);
-      border-radius: 14px;
+      min-height: 54px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,253,248,.16);
+      border-radius: 8px;
       background: #fff;
-      box-shadow: 0 12px 28px rgba(31,28,24,.045);
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .partner-logo-card img {
       display: block;
       width: 100%;
-      max-width: 176px;
-      max-height: 58px;
+      max-width: 150px;
+      max-height: 36px;
       object-fit: contain;
     }
 
     .partner-logo-card-wide img {
-      max-width: 214px;
-      max-height: 52px;
+      max-width: 168px;
+      max-height: 32px;
     }
 
     .partner-logo-card-square img {
-      max-width: 132px;
-      max-height: 66px;
+      max-width: 92px;
+      max-height: 36px;
     }
 
     .modal-backdrop { position: fixed; inset: 0; z-index: 300; display: none; place-items: center; background: rgba(31,28,24,.62); padding: 18px; }
@@ -1193,7 +1213,7 @@
       line-height: 1.55;
     }
 
-    .footer { padding: 42px 0; background: var(--ink); color: rgba(255,253,248,.56); text-align: center; font-size: 13px; font-weight: 750; }
+    .footer { padding: 30px 0 34px; background: var(--ink); color: rgba(255,253,248,.56); text-align: center; font-size: 13px; font-weight: 750; }
 
 
 
@@ -1219,7 +1239,8 @@
       :root { --section: 78px; }
       .nav-links { display: none; }
       .hero-grid, .about-grid, .section-head, .guide-grid { grid-template-columns: 1fr; }
-      .partners-head { grid-template-columns: 1fr; gap: 14px; }
+      .partners { grid-template-columns: 1fr; gap: 14px; }
+      .partners-copy { text-align: center; min-width: 0; }
       .hero { padding-top: 104px; min-height: auto; }
       .hero-grid { gap: 34px; }
       .poster-card { min-height: 430px; }
@@ -1371,12 +1392,12 @@
       .apply h2 { font-size: clamp(36px, 11vw, 52px); line-height: 1.02; }
       .apply p { font-size: 15px; line-height: 1.52; margin-bottom: 24px; }
       .apply .btn { width: 100%; min-height: 52px; }
-      .partners-head { margin-bottom: 20px; }
-      .partner-logo-grid { gap: 10px; }
-      .partner-logo-card { min-height: 92px; padding: 16px 12px; border-radius: 12px; }
-      .partner-logo-card img { max-width: 132px; max-height: 44px; }
-      .partner-logo-card-wide img { max-width: 144px; max-height: 38px; }
-      .partner-logo-card-square img { max-width: 90px; max-height: 54px; }
+      .partners { margin-bottom: 20px; padding: 14px; }
+      .partner-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .partner-logo-card { min-height: 50px; padding: 7px 10px; }
+      .partner-logo-card img { max-width: 126px; max-height: 34px; }
+      .partner-logo-card-wide img { max-width: 132px; max-height: 30px; }
+      .partner-logo-card-square img { max-width: 72px; max-height: 34px; }
       .footer { font-size: 11px; padding: 32px 0; }
       .modal { padding: 20px; box-shadow: 0 12px 28px rgba(31,28,24,.08); }
       .modal h3 { font-size: 27px; }
