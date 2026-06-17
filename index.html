@@ -1,942 +1,1927 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project RE:DEFINE - 나에게 맞는 16주</title>
-  <meta name="description" content="공통 온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며 변화의 경험을 쌓는 16주 여정" />
-  <meta property="og:title" content="Project RE:DEFINE - 나에게 맞는 16주" />
-  <meta property="og:description" content="공통 온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며 변화의 경험을 쌓는 16주 여정" />
-  <meta property="og:type" content="website" />
- <meta property="og:image" content="https://re-define-landing.vercel.app/assets/images/og-redefine-v2.png" />
- <meta name="twitter:image" content="https://re-define-landing.vercel.app/assets/images/og-redefine-v2.png" />
- <meta name="theme-color" content="#F7F1E8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="naver-site-verification"
+      content="609d19a74da2cbd18b9acba00240902235b24bc2"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project RE:DEFINE - 나에게 맞는 16주</title>
+    <meta
+      name="description"
+      content="공통 온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며 변화의 경험을 쌓는 16주 여정"
+    />
+    <meta property="og:title" content="Project RE:DEFINE - 나에게 맞는 16주" />
+    <meta
+      property="og:description"
+      content="공통 온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며 변화의 경험을 쌓는 16주 여정"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://re-define-landing.vercel.app/assets/images/og-redefine-v2.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://re-define-landing.vercel.app/assets/images/og-redefine-v2.png"
+    />
+    <meta name="theme-color" content="#F7F1E8" />
 
- <link rel="icon" href="./assets/images/favicon.ico" sizes="any">
- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
- <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
- <link rel="manifest" href="./site.webmanifest">
+    <link rel="icon" href="./assets/images/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
 
- <script src="https://cdn.tailwindcss.com"></script>
- <script src="https://unpkg.com/lucide@latest"></script>
- <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#" class="brand">RE:DEFINE</a>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="brand">RE:DEFINE</a>
 
-    <div class="nav-links">
-      <a href="#about">소개</a>
-      <a href="#journey">16주 여정</a>
-      <a href="#orientation">오리엔테이션</a>
-      <a href="#tracks">트랙·Lab</a>
-      <a href="#info">참여 안내</a>
-      <a href="#faq">FAQ</a>
-    </div>
-
-    <div class="nav-actions">
-      <button class="btn nav-more" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobile-menu">
-        더보기 <i data-lucide="menu" width="16"></i>
-      </button>
-      <a href="#info" class="btn nav-apply">
-        <span class="nav-label-desktop">신청 안내 보기</span>
-        <span class="nav-label-mobile">신청 안내</span>
-        <i data-lucide="arrow-right" width="17"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="mobile-menu-inner">
-      <span class="mobile-menu-label">페이지 바로가기</span>
-      <a href="#about" onclick="closeMobileMenu()">소개</a>
-      <a href="#journey" onclick="closeMobileMenu()">16주 여정</a>
-      <a href="#orientation" onclick="closeMobileMenu()">오리엔테이션</a>
-      <a href="#tracks" onclick="closeMobileMenu()">트랙·Lab</a>
-      <a href="#info" onclick="closeMobileMenu()">참여 안내</a>
-      <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
-    </div>
-  </div>
-</nav>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="label"><i data-lucide="sparkles" width="14"></i> Project RE:DEFINE 2026</span>
-          <h1>정해진 답보다, 선택으로 만드는 <span class="orange">16주</span></h1>
-          <p class="hero-lead">리디파인은 정해진 프로그램을 따라가는 16주가 아닙니다. 공통 온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며 변화의 경험을 쌓아가는 여정입니다.</p>
-          <div class="hero-actions">
-            <a href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing" class="btn" target="_blank" rel="noopener noreferrer">신청서 작성하기 <i data-lucide="external-link" width="19"></i></a>
-            <a href="#tracks" class="btn">나에게 맞는 참여 방식 보기 <i data-lucide="arrow-up-right" width="19"></i></a>
-            <a href="#journey" class="btn btn-ghost">16주 흐름 자세히 보기 <i data-lucide="calendar-days" width="18"></i></a>
-          </div>
-          <div class="hero-chips" aria-label="프로그램 핵심 정보">
-            <span class="info-chip">전 과정 무료</span>
-            <span class="info-chip">60명 모집</span>
-            <span class="info-chip">6월 중 모집</span>
-          </div>
+        <div class="nav-links">
+          <a href="#about">소개</a>
+          <a href="#journey">16주 여정</a>
+          <a href="#orientation">오리엔테이션</a>
+          <a href="#tracks">트랙·Lab</a>
+          <a href="#info">참여 안내</a>
+          <a href="#faq">FAQ</a>
         </div>
 
-       <aside class="poster-card poster-card-clean" aria-label="RE:DEFINE 포스터형 요약 비주얼">
-  <div class="poster-top">
-    <span class="poster-brand">RE:DEFINE</span>
-    <span class="poster-meta-small">GWANGMYEONG<br>YOUTHZONE · 2026</span>
-  </div>
-
-  <div class="poster-number">16</div>
-
-  <div class="poster-title">
-    내가 고른 방식으로<br>
-    다음 장면을 만드는 여정
-  </div>
-
-  <div class="poster-line"></div>
-
-  <div class="poster-bottom">
-    <div class="poster-box">
-      <strong>공통 온보딩</strong>
-      <span>디스코드와 72시간 적응</span>
-    </div>
-    <div class="poster-box">
-      <strong>선택형 여정</strong>
-      <span>트랙·Lab 조합하기</span>
-    </div>
-  </div>
-</aside>
-      </div>
-    </section>
-
-    <section class="section empathy">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Why it matters</span>
-          <div class="empathy-quote">
-            <h2 class="section-title">멈춘 시간에도 다음 장면은 만들어질 수 있습니다.</h2>
-            <p class="section-desc">리디파인은 멈춤을 실패로 단정하지 않습니다. 지금의 나에게 덜 부담스러운 방식부터 작게 시작합니다.</p>
-          </div>
-        </div>
-        <div class="empathy-grid">
-          <article class="soft-card empathy-card"><i data-lucide="message-circle-off" width="28"></i><h3>말하지 않아도 시작할 수 있게</h3><p>지금의 마음을 다 설명하지 않아도 괜찮습니다.</p></article>
-          <article class="soft-card empathy-card"><i data-lucide="eye" width="28"></i><h3>내 속도를 존중하는 방식</h3><p>준비 중인 시간을 실패로만 보지 않습니다.</p></article>
-          <article class="soft-card empathy-card"><i data-lucide="link-2-off" width="28"></i><h3>느슨하게 연결되는 시간</h3><p>부담 없이 만나고, 천천히 이어지는 관계를 만듭니다.</p></article>
-          <article class="soft-card empathy-card"><i data-lucide="loader" width="28"></i><h3>작은 선택부터 시작</h3><p>어디서부터 시작할지 모를 때, 가벼운 활동부터 고릅니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div>
-          <span class="label">ABOUT</span>
-          <h2>같은 프로그램을 따라가는 대신, <span class="orange">나에게 맞는 여정</span>을 설계합니다.</h2>
-          <p>리디파인은 빠르게 바뀌라고 말하지 않습니다. 먼저 온라인 디스코드에서 분위기를 익히고, 1~3주차 공통 온보딩에서 나의 현재 상태와 참여 방식을 살펴봅니다. 그다음 경험 트랙과 Redefine Lab을 선택하며 16주를 나에게 맞는 방식으로 구성합니다.</p>
-        </div>
-        <aside class="about-poster" aria-label="브랜드 선언 포스터">
-          <div class="poster-tag-row"><span>PROJECT STATEMENT</span><div class="orange-block"></div></div>
-          <h3>NOT A<br>FIXED<br>ANSWER,<br><span class="outline-text">BUT A<br>FITTED<br>JOURNEY.</span></h3>
-          <div class="about-poster-foot"><span>RE:DEFINE</span><span>ONBOARD · DESIGN · CHOOSE · TRY</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="benefits">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">What you get</span>
-          <div>
-            <h2 class="section-title">리디파인에서 경험하는 것</h2>
-            <p class="section-desc">처음부터 큰 변화를 요구하지 않습니다. 부담 낮은 시작, 천천히 적응하는 시간, 선택 가능한 활동, 기록과 공유를 통해 지금의 나에게 맞는 방식으로 참여합니다.</p>
-          </div>
-        </div>
-        <div class="benefits-grid">
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="wallet"></i></div><h3>부담 낮은 시작</h3><p>전 과정 무료로 참여하며, 처음부터 큰 변화나 빠른 친밀감을 요구하지 않습니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="layout-template"></i></div><h3>천천히 적응하는 시간</h3><p>디스코드와 공통 온보딩을 통해 프로그램 분위기와 사람들에게 천천히 익숙해집니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="compass"></i></div><h3>나에게 맞는 활동 선택</h3><p>경험 트랙과 Redefine Lab 중 지금의 나에게 맞는 방식을 선택합니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="archive"></i></div><h3>나의 방식으로 남기는 기록</h3><p>16주 동안의 시도와 변화를 아카이빙하고, Redefine Day에서 각자의 방식으로 정리합니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section journey" id="journey">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">16-week Journey</span>
-          <div>
-            <h2 class="section-title">공통으로 시작하고, 나에게 맞게 선택합니다.</h2>
-            <p class="section-desc">신청 이후 바로 하나의 트랙을 확정하지 않습니다. 먼저 디스코드 적응과 긍정심리학 기반 온보딩을 거친 뒤, 내가 해보고 싶은 경험 트랙과 Redefine Lab을 조합해 16주를 만들어갑니다.</p>
-          </div>
-        </div>
-        <div class="journey-grid">
-          <article class="brutal-card journey-card"><div><div class="journey-no">01</div><div class="tag-row"><span class="tag">1~3주차</span><span class="tag">공통 온보딩</span></div></div><div><h3>함께 시작하기</h3><p>전체 참여자가 함께 프로그램과 디스코드 커뮤니티에 적응합니다. 긍정심리학 기반 활동으로 느슨한 관계를 만들고, 현재 상태와 나에게 맞는 참여 방식을 살펴봅니다.</p><div class="card-line"></div></div></article>
-          <article class="brutal-card journey-card"><div><div class="journey-no">02</div><div class="tag-row"><span class="tag">4~13주차</span><span class="tag">트랙·Lab 선택</span></div></div><div><h3>내 방식으로 쌓아가기</h3><p>온보딩 이후 나에게 맞는 경험 트랙과 Redefine Lab을 선택합니다. 각 활동 안에서 작은 시도와 기록을 남깁니다.</p><div class="card-line"></div></div></article>
-          <article class="brutal-card journey-card"><div><div class="journey-no">03</div><div class="tag-row"><span class="tag">14~16주차</span><span class="tag">Peak-End</span></div></div><div><h3>변화의 장면 남기기</h3><p>마지막 3주는 지나온 시간을 정리하고 Redefine Day를 준비합니다. 아카이빙, 경험 트랙 공연, 활동 공유, 회고파티로 각자의 변화 경험을 남깁니다.</p><div class="card-line"></div></div></article>
-        </div>
-
-        <div class="schedule-mini brutal-card" aria-label="2026 운영 예정 일정">
-          <div class="schedule-mini-copy">
-            <span class="club-note-label">2026 Schedule</span>
-            <h3>2026 운영 예정 일정</h3>
-            <p>리디파인은 7월 오리엔테이션을 시작으로, 긍정심리학 기반 온보딩과 경험 트랙·Lab 활동을 거쳐 10월 말 리디파인 데이로 이어집니다.</p>
-            <p class="schedule-mini-note">전체 운영은 화~토 기준으로 진행될 예정이며, 세부 일정은 신청 및 오리엔테이션 이후 최종 안내됩니다.</p>
-          </div>
-          <ol class="schedule-list">
-            <li><strong>OT</strong><span>7/10(금) 또는 7/11(토) 예정</span></li>
-            <li><strong>공통 온보딩</strong><span>7/14(화) ~ 8/8(토)</span></li>
-            <li><strong>메인 활동</strong><span>8/11(화) ~ 10/24(토)</span></li>
-            <li><strong>추석 주간</strong><span>9/22(화) ~ 9/26(토) 쉬어갑니다</span></li>
-            <li><strong>리디파인 데이</strong><span>10/30(금) 또는 10/31(토) 예정</span></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="orientation">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Orientation</span>
-          <div>
-            <h2 class="section-title">16주를 시작하기 전, 오리엔테이션이 진행됩니다</h2>
-            <p class="section-desc">리디파인은 신청만으로 바로 활동을 고르는 방식이 아닙니다. 먼저 오리엔테이션을 통해 전체 프로그램의 흐름을 이해하고, 나에게 맞는 참여 방식과 현재 상태를 함께 확인합니다.</p>
-            <p class="section-desc">오리엔테이션에서는 참여자의 현재 상태와 필요를 이해하기 위한 심리검사 및 사전 확인이 진행됩니다. 이 과정은 참여자를 평가하거나 낙인찍기 위한 절차가 아니라, 이후 16주 동안 무리 없이 참여할 수 있는 방식과 필요한 지원을 함께 살펴보기 위한 과정입니다.</p>
-            <p class="section-desc">검사 결과와 응답 내용은 프로그램 운영 목적 범위 안에서만 활용되며, 프로그램 종료 후 내부 개인정보 처리 기준에 따라 안전하게 폐기됩니다.</p>
-          </div>
-        </div>
-        <div class="benefits-grid">
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="map"></i></div><h3>16주 프로그램 전체 안내</h3><p>공통 온보딩부터 경험 트랙, Redefine Lab, 리디파인 데이까지 전체 흐름을 안내합니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="clipboard-check"></i></div><h3>심리검사 및 사전 확인</h3><p>참여자의 현재 상태와 필요를 이해하기 위한 심리검사와 사전 확인을 진행합니다. 결과는 평가나 낙인이 아니라 참여 방식과 필요한 지원을 확인하기 위한 참고 자료로 활용됩니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="users-round"></i></div><h3>1~3주차 필수 온보딩 안내</h3><p>프로그램 적응, 디스코드 커뮤니티 적응, 참여자 간 느슨한 관계 형성, 긍정심리학 기반 프로그램으로 이어지는 필수 온보딩 과정을 안내합니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="calendar-check"></i></div><h3>나에게 맞는 참여 방식 확인</h3><p>관심 활동, 참여 가능 일정, 현재 생활 리듬을 함께 살펴보며 이후 참여 방향을 정리합니다.</p></article>
-        </div>
-        <article class="soft-card onboarding-card" role="button" tabindex="0" onclick="openModal('positiveOnboarding')" onkeydown="handleModalCardKeydown(event, 'positiveOnboarding')">
-          <div class="icon-soft"><i data-lucide="heart-handshake"></i></div>
-          <div>
-            <span class="onboarding-card-label">Common Onboarding</span>
-            <h3>긍정심리학 기반 온보딩</h3>
-            <strong>나의 현재 상태와 강점, 관계의 감각을 천천히 살펴보는 공통 과정</strong>
-            <p>리디파인은 바로 트랙을 선택하기보다, 먼저 공통 온보딩을 통해 나의 현재 상태와 참여 방식을 살펴봅니다. 긍정심리학 기반 활동을 통해 나를 이해하고, 이후 나에게 맞는 경험 트랙과 Lab을 선택할 수 있도록 준비합니다.</p>
-          </div>
-          <div class="row-action">
-            <span>자세히 보기</span><i data-lucide="arrow-right" width="16"></i>
-          </div>
-        </article>
-      </div>
-    </section>
-
-        <section class="section" id="tracks">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Tracks & Labs</span>
-          <div>
-            <h2 class="section-title">내가 선택할 수 있는 경험 트랙과 Redefine Lab</h2>
-            <p class="section-desc">공통 온보딩 이후 4~13주차에는 경험 트랙과 Redefine Lab을 선택합니다. Redefine Lab은 Writer’s Room, Band Session을 중심으로 운영하며, 직장인 Lab과 추가 Lab은 세부 내용 확정 후 순차 공개될 예정입니다.</p>
-            <p class="tap-hint-pill"><i data-lucide="hand-pointer" width="14"></i>카드를 탭하면 자세한 설명을 볼 수 있습니다.</p>
-          </div>
-        </div>
-        <div class="tracks-split">
-          <div class="track-group">
-            <div class="group-head">
-              <h3>경험 트랙</h3>
-              <span>Main Track</span>
-            </div>
-            <div class="main-tracks">
-              <article class="soft-card row-card" onclick="openModal('dance')">
-                <div class="row-icon"><i data-lucide="activity"></i></div>
-                <div class="row-text">
-                  <h4>무용극</h4>
-                  <p>감각과 움직임으로 쓰는 12주</p>
-                </div>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-right" width="16"></i>
-                </div>
-              </article>
-              <article class="soft-card row-card" onclick="openModal('trpg')">
-                <div class="row-icon"><i data-lucide="swords"></i></div>
-                <div class="row-text">
-                  <h4>TRPG</h4>
-                  <p>가상 역할과 선택으로 쓰는 10주</p>
-                </div>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-right" width="16"></i>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="track-group">
-            <div class="group-head">
-              <h3>Redefine Lab</h3>
-              <span>Lab Activity</span>
-            </div>
-            <div class="lab-tracks">
-              <article class="soft-card grid-card" onclick="openModal('writer')">
-                <div class="row-icon"><i data-lucide="book-open"></i></div>
-                <h4 class="text-balance">Writer’s Room</h4>
-                <p>함께 엮는 공동 글쓰기</p>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-up-right" width="14"></i>
-                </div>
-              </article>
-              <article class="soft-card grid-card" onclick="openModal('band')">
-                <div class="row-icon"><i data-lucide="music"></i></div>
-                <h4 class="text-balance">Band Session</h4>
-                <p>소리로 연결되는 합주</p>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-up-right" width="14"></i>
-                </div>
-              </article>
-              <article class="soft-card grid-card" onclick="openModal('workerLab')">
-                <div class="row-icon"><i data-lucide="briefcase-business"></i></div>
-                <h4 class="text-balance">직장인 Lab</h4>
-                <p>회사 밖 관계와 리듬을 탐색</p>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-up-right" width="14"></i>
-                </div>
-              </article>
-              <article class="soft-card grid-card" onclick="openModal('comingLab')">
-                <div class="row-icon"><i data-lucide="sparkles"></i></div>
-                <h4 class="text-balance">추가 Lab</h4>
-                <p>강사 섭외 후 순차 공개</p>
-                <div class="row-action">
-                  <span>자세히 보기</span><i data-lucide="arrow-up-right" width="14"></i>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section clubs" id="clubs">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Discord Club</span>
-          <div>
-            <h2 class="section-title">디스코드 기반 클럽 활동</h2>
-            <p class="section-desc">리디파인에서는 트랙과 Lab 외에도, 디스코드 안에서 가볍게 참여할 수 있는 클럽 활동이 함께 운영됩니다.</p>
-            <p class="section-desc">클럽 활동은 생활 리듬을 회복하고, 관심사를 매개로 느슨하게 연결되며, 작은 인증과 기록을 쌓아가는 방식으로 진행됩니다.</p>
-          </div>
-        </div>
-
-        <div class="club-grid discord-club-grid" aria-label="디스코드 기반 클럽 활동">
-          <article class="soft-card club-card">
-            <div class="club-icon"><i data-lucide="sunrise"></i></div>
-            <span class="club-tag">Life Rhythm</span>
-            <h3>라이프 리듬 클럽</h3>
-            <p>일어나는 시간, 생활 리듬, 작은 인증을 함께 쌓아가는 기본 클럽입니다.</p>
-            <p class="club-card-sub">디스코드 안에서 가벼운 인증을 남기며 소정의 포인트를 쌓을 수 있습니다.</p>
-          </article>
-
-          <article class="soft-card club-card">
-            <div class="club-icon"><i data-lucide="book-heart"></i></div>
-            <span class="club-tag">Social Taste</span>
-            <h3>소셜 클럽</h3>
-            <p>책과 영화를 매개로 느슨하게 연결되는 취향 기반 클럽입니다.</p>
-            <p class="club-card-sub">밀리의 서재 구독 클럽, 왓챠 같이 보기 클럽 등을 예산 범위 안에서 운영할 예정입니다.</p>
-          </article>
-
-          <article class="soft-card club-card">
-            <div class="club-icon"><i data-lucide="footprints"></i></div>
-            <span class="club-tag">Walk Log</span>
-            <h3>산책 로그</h3>
-            <p>키로 앱을 활용해 내가 걸은 길을 기록하고, 광명의 공간을 하나씩 열어보는 걷기 클럽입니다.</p>
-            <p class="club-card-sub">걷기 기록과 산책 인증을 디스코드에 남기며 일상의 리듬을 회복하고 작은 포인트를 쌓아갑니다.</p>
-          </article>
-
-          <article class="soft-card club-card">
-            <div class="club-icon"><i data-lucide="lightbulb"></i></div>
-            <span class="club-tag">Open Club</span>
-            <h3>내가 열어보는 클럽</h3>
-            <p>관심 있는 주제나 해보고 싶은 활동을 작은 클럽으로 제안해볼 수 있습니다.</p>
-            <p class="club-card-sub">운영진과 함께 무리 없는 방식으로 참여 범위와 진행 방법을 정해갑니다.</p>
-          </article>
-        </div>
-
-        <div class="soft-card club-note discord-club-note">
-          <div>
-            <span class="club-note-label">Club Guide</span>
-            <h3>참여 안내</h3>
-          </div>
-          <p>세부 클럽 구성과 참여 방식은 디스코드 커뮤니티 안에서 순차적으로 안내됩니다. 일부 클럽은 포인트, 선착순, 예산 범위에 따라 참여 방식이 달라질 수 있습니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section staff-operators" id="staff-operators">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">PROJECT RE:DEFINE TEAM</span>
-          <div>
-            <h2 class="section-title">함께 운영하는 사람들</h2>
-            <p class="section-desc">리디파인은 청년동 운영진과 트랙 운영자가 함께 참여자의 속도에 맞는 경험을 만들어갑니다.</p>
-            <p class="section-desc staff-operators-desc">청년동 운영진은 참여 안내, 공간 운영, 커뮤니티 운영을 함께 담당합니다.</p>
-          </div>
-        </div>
-
-        <div class="soft-card staff-summary" role="button" tabindex="0" onclick="openStaffModal()" onkeydown="handleStaffSummaryKeydown(event)">
-          <div>
-            <span>청년동 운영진</span>
-            <p>프로그램 전체의 안내, 공간, 커뮤니티 운영은 별도의 운영진이 함께 맡습니다.</p>
-          </div>
-          <button class="btn btn-ghost" type="button" onclick="event.stopPropagation(); openStaffModal()">
-            운영진 자세히 보기 <i data-lucide="arrow-up-right" width="18"></i>
+        <div class="nav-actions">
+          <button
+            class="btn nav-more"
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            더보기 <i data-lucide="menu" width="16"></i>
           </button>
+          <a href="#info" class="btn nav-apply">
+            <span class="nav-label-desktop">신청 안내 보기</span>
+            <span class="nav-label-mobile">신청 안내</span>
+            <i data-lucide="arrow-right" width="17"></i>
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="ai-guide">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">AI Guide</span>
-          <div>
-            <h2 class="section-title">나에게 어떤 활동이 어울릴까요?</h2>
-            <p class="section-desc">요즘 상태나 관심을 적으면, 어울릴 수 있는 활동을 가볍게 살펴봅니다. 진단이나 상담이 아니라 참고용 안내입니다.</p>
-          </div>
-        </div>
-        <div class="soft-card ai-box">
-          <textarea id="ai-input" placeholder="예: 사람 만나는 건 부담스럽지만, 무언가 만들어보고 싶어요."></textarea>
-          <div class="hero-actions" style="justify-content:flex-end; margin:16px 0 0;"><button class="btn" id="ai-btn" type="button">활동 추천 받아보기 <i data-lucide="arrow-right" width="17"></i></button></div>
-          <div class="ai-result" id="ai-result">
-            <strong id="ai-empathy"></strong>
-            <div class="result-tags"><span class="tag" id="ai-track"></span><span class="tag" id="ai-lab"></span></div>
-            <p id="ai-reason"></p>
-          </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+          <span class="mobile-menu-label">페이지 바로가기</span>
+          <a href="#about" onclick="closeMobileMenu()">소개</a>
+          <a href="#journey" onclick="closeMobileMenu()">16주 여정</a>
+          <a href="#orientation" onclick="closeMobileMenu()">오리엔테이션</a>
+          <a href="#tracks" onclick="closeMobileMenu()">트랙·Lab</a>
+          <a href="#info" onclick="closeMobileMenu()">참여 안내</a>
+          <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="section" id="guides">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Care System</span>
-          <div>
-            <h2 class="section-title">안전하게 함께하기 위한 운영 구조</h2>
-            <p class="section-desc">리디파인은 한 명의 강사가 모든 것을 끌고 가는 프로그램이 아닙니다. 경험 설계, 트랙·Lab 진행, 운영 매니징, 협력기관 연계를 나누어 참여자의 속도와 안전을 함께 살핍니다.</p>
-          </div>
-        </div>
-        <div class="benefits-grid">
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="layout-template"></i></div><h3>총괄 경험설계</h3><p>16주의 온보딩, 참여 방식 탐색, 선택, 회고 흐름을 설계하고 전체 여정의 방향을 조율합니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="sparkles"></i></div><h3>트랙·Lab 진행자</h3><p>무용극·TRPG와 Redefine Lab의 안전한 참여, 표현, 결과물 제작을 돕습니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="heart-handshake"></i></div><h3>운영 매니저</h3><p>디스코드 안내, 일정 조율, 출석, 컨디션 확인을 통해 참여자가 무리 없이 이어갈 수 있도록 돕습니다.</p></article>
-          <article class="soft-card benefit-card"><div class="icon-soft"><i data-lucide="shield-check"></i></div><h3>협력기관 연계</h3><p>필요한 경우 정신건강·복지 협력기관과 연결해 프로그램 밖의 안전망까지 함께 확인합니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-<section class="section" id="expected">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Expected Changes</span>
-          <div>
-            <h2 class="section-title">참여 후 기대할 수 있는 변화</h2>
-            <p class="section-desc">가상의 후기 대신, 리디파인에서 실제로 기대할 수 있는 작고 현실적인 변화를 정직하게 안내합니다.</p>
-          </div>
-        </div>
-        <div class="expected-grid">
-          <article class="soft-card expected-card"><strong>01 RHYTHM</strong><h3>무너진 생활 리듬을 조금씩 다시 잡습니다.</h3><p>매일 완벽해지는 것이 아니라, 나에게 맞는 속도와 반복을 찾아갑니다.</p></article>
-          <article class="soft-card expected-card"><strong>02 EXPRESSION</strong><h3>말하지 못했던 마음을 다른 방식으로 꺼내봅니다.</h3><p>문장, 움직임, 역할, 소리, 기록처럼 나에게 덜 부담스러운 표현 방식을 경험합니다.</p></article>
-          <article class="soft-card expected-card"><strong>03 CONNECTION</strong><h3>혼자가 아닌 감각을 다시 연습합니다.</h3><p>큰 관계를 바로 만들기보다, 안전한 거리에서 함께 있는 경험을 쌓습니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-<section class="section evidence" id="evidence">
-  <div class="container">
-    <div class="section-head">
-      <span class="kicker">Previous Signals</span>
-      <div>
-        <h2 class="section-title">지난 참여자들이 남긴 변화의 단서</h2>
-        <p class="section-desc">
-          2025년 Be:er Foundation 참여자 사후 응답을 바탕으로,
-          참여자들이 어떤 지점에서 안전함과 변화 가능성을 느꼈는지 정리했습니다.
-        </p>
-      </div>
-    </div>
-
-    <div class="soft-card evidence-overview">
-      <div>
-        <span class="evidence-overview-label">전체 만족도</span>
-        <strong>8.95 / 10</strong>
-      </div>
-      <div class="evidence-overview-copy">
-  <strong>전반적 경험에 대한 긍정 응답</strong>
-  <p>이 응답을 바탕으로, 리디파인은 더 느슨하고 선택 가능한 16주 여정으로 확장되었습니다.</p>
-</div>
-    </div>
-
-    <div class="evidence-grid" aria-label="지난 참여자 사후 응답 주요 지표">
-      <article class="soft-card evidence-stat">
-        <span class="evidence-stat-label">SAFETY</span>
-        <strong>9.15 / 10</strong>
-        <h3>안전하게 머물 수 있었다</h3>
-        <p>참여자들은 평가보다 존중받는 감각과 편안한 분위기를 높게 느꼈습니다.</p>
-      </article>
-
-      <article class="soft-card evidence-stat">
-        <span class="evidence-stat-label">RETURN</span>
-        <strong>9.62 / 10</strong>
-        <h3>다시 오고 싶었다</h3>
-        <p>한 번의 참여로 끝나는 경험이 아니라, 다시 이어질 수 있는 경험으로 읽혔습니다.</p>
-      </article>
-
-      <article class="soft-card evidence-stat">
-        <span class="evidence-stat-label">RECOMMEND</span>
-        <strong>9.23 / 10</strong>
-        <h3>비슷한 사람에게 권하고 싶었다</h3>
-        <p>비슷한 상황의 청년에게도 이 경험을 건네고 싶다는 응답이 높았습니다.</p>
-      </article>
-    </div>
-
-    <div class="voice-grid" aria-label="지난 참여자 익명 후기">
-      <article class="soft-card voice-card">
-        <span>VOICE 01</span>
-        <p>“비슷한 나이와 공감대를 가진 청년들과의 교류가 가장 의미 있었어요.”</p>
-      </article>
-
-      <article class="soft-card voice-card">
-        <span>VOICE 02</span>
-        <p>“방 안에만 있다가도 프로그램에 신청하면서 세상 밖으로 나올 수 있다는 걸 느꼈어요.”</p>
-      </article>
-
-      <article class="soft-card voice-card">
-        <span>VOICE 03</span>
-        <p>“나를 존중하면서 천천히 돌아보던 시간이 편안했습니다.”</p>
-      </article>
-    </div>
-
-    <p class="evidence-note">
-      ※ 2025년 Be:er Foundation 참여자 사후 응답 기준으로 익명화·요약한 내용입니다. 개인별 경험과 변화 정도는 다를 수 있습니다.
-    </p>
-  </div>
-</section>
-
-    <section class="section redefine-day" id="redefine-day">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Peak-End Experience</span>
-          <div>
-            <h2 class="section-title">16주의 마지막 장면, Redefine Day</h2>
-            <p class="section-desc">리디파인의 마지막은 평가가 아니라 목격의 시간입니다. 16주 동안 쌓아온 시도와 기록을 아카이빙, 경험 트랙 공연, 활동 공유, 회고파티의 형태로 나누며 나의 변화를 하나의 장면으로 남깁니다.</p>
-          </div>
-        </div>
-
-        <div class="day-hero brutal-card">
-          <div>
-            <span class="day-label">RE:DEFINE DAY</span>
-            <h3>완성도를 겨루는 자리가 아니라, 지나온 시간을 함께 확인하는 자리</h3>
-          </div>
-          <p>누군가는 무대에서, 누군가는 부스와 기록으로, 또 누군가는 조용한 회고로 자신의 변화를 남깁니다. 가족과 친구는 조언하거나 평가하기보다 참여자가 지나온 16주를 함께 목격하는 사람으로 초대됩니다.</p>
-        </div>
-
-        <div class="day-grid" aria-label="Redefine Day 구성">
-          <article class="soft-card day-card">
-            <strong>01 Archive</strong>
-            <div class="day-icon"><i data-lucide="film"></i></div>
-            <h3>Before / After 아카이빙</h3>
-            <p>처음의 나와 지금의 나를 비교하는 영상과 기록을 함께 돌아봅니다. 변화는 거창한 결과보다 지나온 흔적에서 발견됩니다.</p>
-          </article>
-
-          <article class="soft-card day-card">
-            <strong>02 Stage</strong>
-            <div class="day-icon"><i data-lucide="theater"></i></div>
-            <h3>경험 트랙 공연</h3>
-            <p>무용극, TRPG에서 만든 장면을 각자의 방식으로 나눕니다. 무대는 평가의 공간이 아니라 선택과 시도를 보여주는 장면입니다.</p>
-          </article>
-
-          <article class="soft-card day-card">
-            <strong>03 Booth</strong>
-            <div class="day-icon"><i data-lucide="blocks"></i></div>
-            <h3>활동 공유</h3>
-            <p>Writer’s Room, Band Session 등 Redefine Lab에서 남긴 문장, 소리, 기록을 나눕니다. 결과물의 완성도보다 지나온 시도와 연결을 함께 확인합니다.</p>
-          </article>
-
-          <article class="soft-card day-card">
-            <strong>04 Record</strong>
-            <div class="day-icon"><i data-lucide="notebook-tabs"></i></div>
-            <h3>활동 기록 공유</h3>
-            <p>각 활동에서 남긴 작은 변화와 연결을 공유합니다. 조용한 참여도 하나의 중요한 기록이 됩니다.</p>
-          </article>
-
-          <article class="soft-card day-card">
-            <strong>05 Invite</strong>
-            <div class="day-icon"><i data-lucide="send"></i></div>
-            <h3>가족·친구 초대</h3>
-            <p>가족과 친구는 걱정이나 조언을 하기보다, 참여자의 변화를 목격하는 사람으로 초대됩니다. 초대 방식은 참여자의 속도와 선택을 존중합니다.</p>
-          </article>
-
-          <article class="soft-card day-card day-card-dark">
-            <strong>06 Closing</strong>
-            <div class="day-icon"><i data-lucide="party-popper"></i></div>
-            <h3>회고파티</h3>
-            <p>16주 동안의 시도와 관계를 편안하게 정리하고, 서로의 다음 장면을 응원합니다. 끝이 아니라 다음 선택을 준비하는 시간입니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="info">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">How to Join</span>
-          <div>
-            <h2 class="section-title">신청은, 함께 확인하는 첫 단계입니다.</h2>
-            <p class="section-desc">신청은 선발 시험이 아니라, 현재 상태와 참여 방식을 함께 확인하는 과정입니다. 신청서를 작성한 뒤에는 오리엔테이션에서 프로그램 흐름을 먼저 살펴보고, 1~3주차 공통 온보딩을 거쳐 나에게 맞는 참여 방식을 천천히 정합니다.</p>
-            <p class="section-desc"><a href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing" class="btn" target="_blank" rel="noopener noreferrer">신청서 작성하기 <i data-lucide="external-link" width="18"></i></a></p>
-          </div>
-        </div>
-
-        <div class="join-grid">
-          <aside class="join-side">
-            <div class="soft-card join-note join-note-dark">
-              <span class="label"><i data-lucide="info" width="14"></i> Before Apply</span>
-              <h3>잘 보이기 위한 신청서가 아닙니다</h3>
-              <p>운영진은 신청 내용을 바탕으로 현재 상태, 참여 가능성, 나에게 맞는 참여 방식과 필요한 안내를 준비합니다.</p>
-              <ul>
-                <li>사전 질문은 진단이나 상담을 대체하지 않습니다.</li>
-                <li>신청 내용은 오리엔테이션과 공통 온보딩 안내를 준비하는 데 활용됩니다.</li>
-                <li>프로그램 규모와 참여 가능성을 함께 고려해 필요한 안내가 진행됩니다.</li>
-              </ul>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="label"
+              ><i data-lucide="sparkles" width="14"></i> Project RE:DEFINE
+              2026</span
+            >
+            <h1>
+              정해진 답보다, 선택으로 만드는 <span class="orange">16주</span>
+            </h1>
+            <p class="hero-lead">
+              리디파인은 정해진 프로그램을 따라가는 16주가 아닙니다. 공통
+              온보딩을 거친 뒤, 나에게 맞는 경험 트랙과 Redefine Lab을 선택하며
+              변화의 경험을 쌓아가는 여정입니다.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >신청서 작성하기 <i data-lucide="external-link" width="19"></i
+              ></a>
+              <a href="#tracks" class="btn"
+                >나에게 맞는 참여 방식 보기
+                <i data-lucide="arrow-up-right" width="19"></i
+              ></a>
+              <a href="#journey" class="btn btn-ghost"
+                >16주 흐름 자세히 보기
+                <i data-lucide="calendar-days" width="18"></i
+              ></a>
             </div>
-            <div class="soft-card join-note">
-              <span class="label"><i data-lucide="check-circle-2" width="14"></i> 신청 전 안내</span>
-              <h3>신청 전 알아두면 좋아요</h3>
-              <p>신청 안내 확인, 신청 폼 작성, 오리엔테이션 참여, 1~3주차 공통 온보딩을 거쳐 선택 활동으로 연결합니다. 오리엔테이션 일자와 세부 안내는 신청 이후 순차적으로 안내될 예정입니다.</p>
-              <ul>
-                <li>6월 중 모집 시작 예정</li>
-                <li><a href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing" target="_blank" rel="noopener noreferrer">신청서 작성하기</a></li>
-                <li>오리엔테이션 후 1~3주차 공통 온보딩 진행 예정</li>
-              </ul>
+            <div class="hero-chips" aria-label="프로그램 핵심 정보">
+              <span class="info-chip">전 과정 무료</span>
+              <span class="info-chip">60명 모집</span>
+              <span class="info-chip">6월 중 모집</span>
+            </div>
+          </div>
+
+          <aside
+            class="poster-card poster-card-clean"
+            aria-label="RE:DEFINE 포스터형 요약 비주얼"
+          >
+            <div class="poster-top">
+              <span class="poster-brand">RE:DEFINE</span>
+              <span class="poster-meta-small"
+                >GWANGMYEONG<br />YOUTHZONE · 2026</span
+              >
+            </div>
+
+            <div class="poster-number">16</div>
+
+            <div class="poster-title">
+              내가 고른 방식으로<br />
+              다음 장면을 만드는 여정
+            </div>
+
+            <div class="poster-line"></div>
+
+            <div class="poster-bottom">
+              <div class="poster-box">
+                <strong>공통 온보딩</strong>
+                <span>디스코드와 72시간 적응</span>
+              </div>
+              <div class="poster-box">
+                <strong>선택형 여정</strong>
+                <span>트랙·Lab 조합하기</span>
+              </div>
             </div>
           </aside>
+        </div>
+      </section>
 
-          <div class="join-steps">
-            <article class="soft-card join-step">
-              <div class="join-no">01</div>
-              <div>
-                <h3>신청 안내 확인</h3>
-                <p>신청서 작성 전 프로그램 흐름과 참여 안내를 확인합니다. 신청 이후 오리엔테이션 안내가 순차적으로 진행됩니다.</p>
-              </div>
+      <section class="section empathy">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Why it matters</span>
+            <div class="empathy-quote">
+              <h2 class="section-title">
+                멈춘 시간에도 다음 장면은 만들어질 수 있습니다.
+              </h2>
+              <p class="section-desc">
+                리디파인은 멈춤을 실패로 단정하지 않습니다. 지금의 나에게 덜
+                부담스러운 방식부터 작게 시작합니다.
+              </p>
+            </div>
+          </div>
+          <div class="empathy-grid">
+            <article class="soft-card empathy-card">
+              <i data-lucide="message-circle-off" width="28"></i>
+              <h3>말하지 않아도 시작할 수 있게</h3>
+              <p>지금의 마음을 다 설명하지 않아도 괜찮습니다.</p>
             </article>
-            <article class="soft-card join-step">
-              <div class="join-no">02</div>
-              <div>
-                <h3>신청 폼 작성</h3>
-                <p>생활 리듬, 관심 활동, 참여 가능한 시간대 등을 편하게 적습니다. 잘 보이기 위한 답보다 현재 상태를 알려주는 내용이면 충분합니다.</p>
-              </div>
+            <article class="soft-card empathy-card">
+              <i data-lucide="eye" width="28"></i>
+              <h3>내 속도를 존중하는 방식</h3>
+              <p>준비 중인 시간을 실패로만 보지 않습니다.</p>
             </article>
-            <article class="soft-card join-step">
-              <div class="join-no">03</div>
-              <div>
-                <h3>오리엔테이션 참여</h3>
-                <p>전체 프로그램 흐름과 디스코드 사용 방법을 안내받고, 현재 상태와 관심 활동을 바탕으로 무리 없는 참여 방식을 함께 살펴봅니다.</p>
-              </div>
+            <article class="soft-card empathy-card">
+              <i data-lucide="link-2-off" width="28"></i>
+              <h3>느슨하게 연결되는 시간</h3>
+              <p>부담 없이 만나고, 천천히 이어지는 관계를 만듭니다.</p>
             </article>
-            <article class="soft-card join-step">
-              <div class="join-no">04</div>
-              <div>
-                <h3>1~3주차 공통 온보딩 참여</h3>
-                <p>디스코드 커뮤니티에 천천히 적응하고, 긍정심리학 기반 활동을 통해 나의 관심, 속도, 생활 리듬을 살펴봅니다.</p>
-              </div>
-            </article>
-            <article class="soft-card join-step">
-              <div class="join-no">05</div>
-              <div>
-                <h3>선택 활동 시작</h3>
-                <p>공통 온보딩 이후 경험 트랙과 Redefine Lab 중 지금의 나에게 맞는 활동을 선택해 16주 여정을 이어갑니다.</p>
-              </div>
+            <article class="soft-card empathy-card">
+              <i data-lucide="loader" width="28"></i>
+              <h3>작은 선택부터 시작</h3>
+              <p>어디서부터 시작할지 모를 때, 가벼운 활동부터 고릅니다.</p>
             </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">FAQ</span>
+      <section class="section about" id="about">
+        <div class="container about-grid">
           <div>
-            <h2 class="section-title">자주 묻는 질문</h2>
-            <p class="section-desc">참여 전 궁금할 수 있는 내용을 주제별로 정리했습니다. 원하는 카테고리를 눌러 필요한 질문만 먼저 확인해보세요.</p>
+            <span class="label">ABOUT</span>
+            <h2>
+              같은 프로그램을 따라가는 대신,
+              <span class="orange">나에게 맞는 여정</span>을 설계합니다.
+            </h2>
+            <p>
+              리디파인은 빠르게 바뀌라고 말하지 않습니다. 먼저 온라인
+              디스코드에서 분위기를 익히고, 1~3주차 공통 온보딩에서 나의 현재
+              상태와 참여 방식을 살펴봅니다. 그다음 경험 트랙과 Redefine Lab을
+              선택하며 16주를 나에게 맞는 방식으로 구성합니다.
+            </p>
+          </div>
+          <aside class="about-poster" aria-label="브랜드 선언 포스터">
+            <div class="poster-tag-row">
+              <span>PROJECT STATEMENT</span>
+              <div class="orange-block"></div>
+            </div>
+            <h3>
+              NOT A<br />FIXED<br />ANSWER,<br /><span class="outline-text"
+                >BUT A<br />FITTED<br />JOURNEY.</span
+              >
+            </h3>
+            <div class="about-poster-foot">
+              <span>RE:DEFINE</span><span>ONBOARD · DESIGN · CHOOSE · TRY</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="benefits">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">What you get</span>
+            <div>
+              <h2 class="section-title">리디파인에서 경험하는 것</h2>
+              <p class="section-desc">
+                처음부터 큰 변화를 요구하지 않습니다. 부담 낮은 시작, 천천히
+                적응하는 시간, 선택 가능한 활동, 기록과 공유를 통해 지금의
+                나에게 맞는 방식으로 참여합니다.
+              </p>
+            </div>
+          </div>
+          <div class="benefits-grid">
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="wallet"></i></div>
+              <h3>부담 낮은 시작</h3>
+              <p>
+                전 과정 무료로 참여하며, 처음부터 큰 변화나 빠른 친밀감을
+                요구하지 않습니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="layout-template"></i></div>
+              <h3>천천히 적응하는 시간</h3>
+              <p>
+                디스코드와 공통 온보딩을 통해 프로그램 분위기와 사람들에게
+                천천히 익숙해집니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="compass"></i></div>
+              <h3>나에게 맞는 활동 선택</h3>
+              <p>
+                경험 트랙과 Redefine Lab 중 지금의 나에게 맞는 방식을
+                선택합니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="archive"></i></div>
+              <h3>나의 방식으로 남기는 기록</h3>
+              <p>
+                16주 동안의 시도와 변화를 아카이빙하고, Redefine Day에서 각자의
+                방식으로 정리합니다.
+              </p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="faq-category-wrap" aria-label="FAQ 카테고리 선택">
-          <button class="faq-tab active" type="button" data-faq-category="apply" onclick="switchFaqCategory('apply')">신청</button>
-          <button class="faq-tab" type="button" data-faq-category="program" onclick="switchFaqCategory('program')">프로그램</button>
-          <button class="faq-tab" type="button" data-faq-category="operation" onclick="switchFaqCategory('operation')">운영</button>
-          <button class="faq-tab" type="button" data-faq-category="safe" onclick="switchFaqCategory('safe')">안전·기타</button>
+      <section class="section journey" id="journey">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">16-week Journey</span>
+            <div>
+              <h2 class="section-title">
+                공통으로 시작하고, 나에게 맞게 선택합니다.
+              </h2>
+              <p class="section-desc">
+                신청 이후 바로 하나의 트랙을 확정하지 않습니다. 먼저 디스코드
+                적응과 긍정심리학 기반 온보딩을 거친 뒤, 내가 해보고 싶은 경험
+                트랙과 Redefine Lab을 조합해 16주를 만들어갑니다.
+              </p>
+            </div>
+          </div>
+          <div class="journey-grid">
+            <article class="brutal-card journey-card">
+              <div>
+                <div class="journey-no">01</div>
+                <div class="tag-row">
+                  <span class="tag">1~3주차</span
+                  ><span class="tag">공통 온보딩</span>
+                </div>
+              </div>
+              <div>
+                <h3>함께 시작하기</h3>
+                <p>
+                  전체 참여자가 함께 프로그램과 디스코드 커뮤니티에 적응합니다.
+                  긍정심리학 기반 활동으로 느슨한 관계를 만들고, 현재 상태와
+                  나에게 맞는 참여 방식을 살펴봅니다.
+                </p>
+                <div class="card-line"></div>
+              </div>
+            </article>
+            <article class="brutal-card journey-card">
+              <div>
+                <div class="journey-no">02</div>
+                <div class="tag-row">
+                  <span class="tag">4~13주차</span
+                  ><span class="tag">트랙·Lab 선택</span>
+                </div>
+              </div>
+              <div>
+                <h3>내 방식으로 쌓아가기</h3>
+                <p>
+                  온보딩 이후 나에게 맞는 경험 트랙과 Redefine Lab을 선택합니다.
+                  각 활동 안에서 작은 시도와 기록을 남깁니다.
+                </p>
+                <div class="card-line"></div>
+              </div>
+            </article>
+            <article class="brutal-card journey-card">
+              <div>
+                <div class="journey-no">03</div>
+                <div class="tag-row">
+                  <span class="tag">14~16주차</span
+                  ><span class="tag">Peak-End</span>
+                </div>
+              </div>
+              <div>
+                <h3>변화의 장면 남기기</h3>
+                <p>
+                  마지막 3주는 지나온 시간을 정리하고 Redefine Day를 준비합니다.
+                  아카이빙, 경험 트랙 공연, 활동 공유, 회고파티로 각자의 변화
+                  경험을 남깁니다.
+                </p>
+                <div class="card-line"></div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="schedule-mini brutal-card"
+            aria-label="2026 운영 예정 일정"
+          >
+            <div class="schedule-mini-copy">
+              <span class="club-note-label">2026 Schedule</span>
+              <h3>2026 운영 예정 일정</h3>
+              <p>
+                리디파인은 7월 오리엔테이션을 시작으로, 긍정심리학 기반 온보딩과
+                경험 트랙·Lab 활동을 거쳐 10월 말 리디파인 데이로 이어집니다.
+              </p>
+              <p class="schedule-mini-note">
+                전체 운영은 화~토 기준으로 진행될 예정이며, 세부 일정은 신청 및
+                오리엔테이션 이후 최종 안내됩니다.
+              </p>
+            </div>
+            <ol class="schedule-list">
+              <li>
+                <strong>OT</strong><span>7/10(금) 또는 7/11(토) 예정</span>
+              </li>
+              <li>
+                <strong>공통 온보딩</strong><span>7/14(화) ~ 8/8(토)</span>
+              </li>
+              <li>
+                <strong>메인 활동</strong><span>8/11(화) ~ 10/24(토)</span>
+              </li>
+              <li>
+                <strong>추석 주간</strong
+                ><span>9/22(화) ~ 9/26(토) 쉬어갑니다</span>
+              </li>
+              <li>
+                <strong>리디파인 데이</strong
+                ><span>10/30(금) 또는 10/31(토) 예정</span>
+              </li>
+            </ol>
+          </div>
         </div>
+      </section>
 
-        <div class="faq-list faq-category-list">
-          <div class="faq-panel active" data-faq-panel="apply">
-            <div class="faq-category-head">
-              <span>APPLY</span>
-              <strong>신청과 안내 과정</strong>
+      <section class="section" id="orientation">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Orientation</span>
+            <div>
+              <h2 class="section-title">
+                16주를 시작하기 전, 오리엔테이션이 진행됩니다
+              </h2>
+              <p class="section-desc">
+                리디파인은 신청만으로 바로 활동을 고르는 방식이 아닙니다. 먼저
+                오리엔테이션을 통해 전체 프로그램의 흐름을 이해하고, 나에게 맞는
+                참여 방식과 현재 상태를 함께 확인합니다.
+              </p>
+              <p class="section-desc">
+                오리엔테이션에서는 참여자의 현재 상태와 필요를 이해하기 위한
+                심리검사 및 사전 확인이 진행됩니다. 이 과정은 참여자를
+                평가하거나 낙인찍기 위한 절차가 아니라, 이후 16주 동안 무리 없이
+                참여할 수 있는 방식과 필요한 지원을 함께 살펴보기 위한
+                과정입니다.
+              </p>
+              <p class="section-desc">
+                검사 결과와 응답 내용은 프로그램 운영 목적 범위 안에서만
+                활용되며, 프로그램 종료 후 내부 개인정보 처리 기준에 따라
+                안전하게 폐기됩니다.
+              </p>
             </div>
-            <details class="faq"><summary>제가 대상자인지 잘 모르겠는데 신청해도 되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>괜찮습니다. 신청서는 선발 시험이라기보다 지금의 상태와 참여 방식을 함께 확인하기 위한 첫 단계입니다. 쉬었음, 고립감, 관계 단절, 새로운 생활 리듬에 대한 고민이 있다면 부담 없이 작성해보세요.</p></details>
-            <details class="faq"><summary>일을 하고 있어도 신청할 수 있나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>가능합니다. 현재 일을 하고 있더라도 회사 밖 관계가 단절되었거나 나에게 맞는 다음 장면을 찾고 있다면 신청할 수 있습니다. 다만 일정과 참여 가능 방식은 신청 과정에서 함께 확인합니다.</p></details>
-            <details class="faq"><summary>광명시에 살지 않아도 신청할 수 있나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>거주지만으로 바로 판단하기보다 실제 참여 가능성과 이동 가능성을 함께 봅니다. 모집 기준이나 운영 장소에 따라 안내가 달라질 수 있으니, 애매하다면 신청서에 현재 상황을 적어주세요.</p></details>
-            <details class="faq"><summary>신청하면 바로 참여가 확정되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>신청서 제출만으로 바로 확정되는 방식은 아닙니다. 신청 내용, 참여 가능 일정, 모집 상황을 확인한 뒤 개별 안내가 진행됩니다. 이 과정은 누군가를 평가하기보다 무리 없는 참여 방식을 확인하기 위한 절차입니다.</p></details>
-            <details class="faq"><summary>신청서에는 어떤 내용을 쓰게 되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>기본 정보, 참여를 고민하게 된 이유, 관심 있는 활동, 참여 가능한 시간대 등을 적게 됩니다. 긴 자기소개서나 정답을 요구하는 문항이 아니라, 운영진이 필요한 안내를 준비하기 위한 질문에 가깝습니다. 잘 보이려고 쓰기보다 현재 상태를 편하게 적어주시면 됩니다.</p></details>
           </div>
-
-          <div class="faq-panel" data-faq-panel="program">
-            <div class="faq-category-head">
-              <span>PROGRAM</span>
-              <strong>16주 여정과 활동 선택</strong>
-            </div>
-            <details class="faq"><summary>16주를 모두 참여해야 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>16주는 변화를 천천히 쌓아가기 위한 전체 여정이라 가능한 꾸준한 참여를 권장합니다. 다만 모든 순간을 완벽하게 해내야 한다는 뜻은 아닙니다. 일정이나 컨디션이 걱정된다면 신청 과정에서 함께 확인할 수 있습니다.</p></details>
-            <details class="faq"><summary>트랙은 신청할 때 바로 정해야 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>바로 정하지 않아도 됩니다. 1~3주차 공통 온보딩에서 나의 관심, 속도, 생활 리듬, 참여 가능 방식을 살펴본 뒤 더 맞는 방향을 함께 찾아갑니다. 신청서에는 지금 끌리는 활동을 가볍게 적어주시면 됩니다.</p></details>
-            <details class="faq"><summary>1~3주차 공통 온보딩은 꼭 참여해야 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>네. 1~3주차 공통 온보딩은 전체 참여자가 함께하는 필수 과정입니다. 이 기간에는 리디파인 프로그램의 흐름을 이해하고, 디스코드 커뮤니티에 적응하며, 이후 선택 활동에 참여하기 위한 기본 안내와 관계 형성 프로그램이 진행됩니다.</p></details>
-            <details class="faq"><summary>말을 많이 하거나 무대에 꼭 서야 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>그렇지 않습니다. 발표나 공연만이 참여 방식은 아니며, 기록, 제작, 기획, 전시, 작은 공유처럼 여러 방식이 가능합니다. 처음부터 많은 말을 하도록 요구하지 않고 각자에게 맞는 표현 방식을 찾습니다.</p></details>
-            <details class="faq"><summary>사람 많은 자리가 부담스러워도 괜찮나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>괜찮습니다. 리디파인은 활발한 사람만을 위한 자리가 아니라, 각자의 속도로 다시 연결되는 경험을 만들어보는 프로그램입니다. 부담이 큰 상황은 운영진과 상의하며 참여 방식을 조정할 수 있습니다.</p></details>
-            <details class="faq"><summary>Redefine Lab만 참여할 수도 있나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>Redefine Lab은 경험 트랙과 함께 선택 가능한 활동입니다. 다만 전체 운영 흐름과 모집 방식에 따라 참여 조건이 달라질 수 있어, 신청 후 안내를 통해 가능한 방식을 확인합니다.</p></details>
+          <div class="benefits-grid">
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="map"></i></div>
+              <h3>16주 프로그램 전체 안내</h3>
+              <p>
+                공통 온보딩부터 경험 트랙, Redefine Lab, 리디파인 데이까지 전체
+                흐름을 안내합니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="clipboard-check"></i></div>
+              <h3>심리검사 및 사전 확인</h3>
+              <p>
+                참여자의 현재 상태와 필요를 이해하기 위한 심리검사와 사전 확인을
+                진행합니다. 결과는 평가나 낙인이 아니라 참여 방식과 필요한
+                지원을 확인하기 위한 참고 자료로 활용됩니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="users-round"></i></div>
+              <h3>1~3주차 필수 온보딩 안내</h3>
+              <p>
+                프로그램 적응, 디스코드 커뮤니티 적응, 참여자 간 느슨한 관계
+                형성, 긍정심리학 기반 프로그램으로 이어지는 필수 온보딩 과정을
+                안내합니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="calendar-check"></i></div>
+              <h3>나에게 맞는 참여 방식 확인</h3>
+              <p>
+                관심 활동, 참여 가능 일정, 현재 생활 리듬을 함께 살펴보며 이후
+                참여 방향을 정리합니다.
+              </p>
+            </article>
           </div>
-
-          <div class="faq-panel" data-faq-panel="operation">
-            <div class="faq-category-head">
-              <span>OPERATION</span>
-              <strong>디스코드·출석·일정 운영</strong>
+          <article
+            class="soft-card onboarding-card"
+            role="button"
+            tabindex="0"
+            onclick="openModal('positiveOnboarding')"
+            onkeydown="handleModalCardKeydown(event, 'positiveOnboarding')"
+          >
+            <div class="icon-soft"><i data-lucide="heart-handshake"></i></div>
+            <div>
+              <span class="onboarding-card-label">Common Onboarding</span>
+              <h3>긍정심리학 기반 온보딩</h3>
+              <strong
+                >나의 현재 상태와 강점, 관계의 감각을 천천히 살펴보는 공통
+                과정</strong
+              >
+              <p>
+                리디파인은 바로 트랙을 선택하기보다, 먼저 공통 온보딩을 통해
+                나의 현재 상태와 참여 방식을 살펴봅니다. 긍정심리학 기반 활동을
+                통해 나를 이해하고, 이후 나에게 맞는 경험 트랙과 Lab을 선택할 수
+                있도록 준비합니다.
+              </p>
             </div>
-            <details class="faq"><summary>디스코드를 처음 써도 괜찮나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>괜찮습니다. 디스코드는 공지, 일정 안내, 운영진과의 소통을 위한 기본 공간으로 사용됩니다. 처음 쓰는 분도 확인해야 할 채널과 기본 사용 방법을 안내받을 수 있습니다.</p></details>
-            <details class="faq"><summary>일정은 언제쯤 진행되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>세부 일정은 모집과 운영 준비가 확정되는 대로 신청자에게 안내됩니다. 오프라인 활동, 온라인 안내, 선택 프로그램이 섞일 수 있어 회차별 시간이 다를 수 있습니다. 신청서에서 참여 가능한 시간대를 확인해 운영 안내에 참고합니다.</p></details>
-            <details class="faq"><summary>프로그램은 매주 언제 진행되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>리디파인은 화~토 운영 기간을 기준으로 진행됩니다. 세부 참여 일정은 트랙과 Lab별로 다를 수 있으며, 오리엔테이션 이후 최종 안내됩니다.</p></details>
-            <details class="faq"><summary>추석 주간에도 프로그램이 진행되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>9/22(화)~9/26(토) 추석 주간은 쉬어갑니다.</p></details>
-            <details class="faq"><summary>중간에 빠지는 날이 생기면 어떻게 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>일정이나 컨디션 때문에 빠지는 날이 생길 수 있습니다. 중요한 것은 말없이 끊기기보다 운영진에게 상황을 알려 조정하는 것입니다. 가능한 참여 방식은 프로그램 흐름에 맞춰 함께 확인합니다.</p></details>
-            <details class="faq"><summary>신청 후 연락은 어떻게 오나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>신청서에 남긴 연락처를 기준으로 개별 안내가 진행됩니다. 안내 방식과 일정은 모집 상황에 따라 달라질 수 있으며, 필요한 경우 추가 확인 연락이 갈 수 있습니다. 연락을 받을 수 있는 정보를 정확히 적어주세요.</p></details>
+            <div class="row-action">
+              <span>자세히 보기</span
+              ><i data-lucide="arrow-right" width="16"></i>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tracks">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Tracks & Labs</span>
+            <div>
+              <h2 class="section-title">
+                내가 선택할 수 있는 경험 트랙과 Redefine Lab
+              </h2>
+              <p class="section-desc">
+                공통 온보딩 이후 4~13주차에는 경험 트랙과 Redefine Lab을
+                선택합니다. Redefine Lab은 Writer’s Room, Band Session을
+                중심으로 운영하며, 직장인 Lab과 추가 Lab은 세부 내용 확정 후
+                순차 공개될 예정입니다.
+              </p>
+              <p class="tap-hint-pill">
+                <i data-lucide="hand-pointer" width="14"></i>카드를 탭하면
+                자세한 설명을 볼 수 있습니다.
+              </p>
+            </div>
           </div>
-
-          <div class="faq-panel" data-faq-panel="safe">
-            <div class="faq-category-head">
-              <span>CARE & ETC</span>
-              <strong>안전한 참여와 기타 안내</strong>
+          <div class="tracks-split">
+            <div class="track-group">
+              <div class="group-head">
+                <h3>경험 트랙</h3>
+                <span>Main Track</span>
+              </div>
+              <div class="main-tracks">
+                <article
+                  class="soft-card row-card"
+                  onclick="openModal('dance')"
+                >
+                  <div class="row-icon"><i data-lucide="activity"></i></div>
+                  <div class="row-text">
+                    <h4>무용극</h4>
+                    <p>감각과 움직임으로 쓰는 12주</p>
+                  </div>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-right" width="16"></i>
+                  </div>
+                </article>
+                <article class="soft-card row-card" onclick="openModal('trpg')">
+                  <div class="row-icon"><i data-lucide="swords"></i></div>
+                  <div class="row-text">
+                    <h4>TRPG</h4>
+                    <p>가상 역할과 선택으로 쓰는 10주</p>
+                  </div>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-right" width="16"></i>
+                  </div>
+                </article>
+              </div>
             </div>
-            <details class="faq"><summary>상담이나 치료 프로그램인가요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>리디파인은 심리상담이나 의학적 치료를 대체하지 않습니다. 리디파인은 경험 설계, 관계 회복, 자기이해, 작은 시도를 통해 준비중·고립 청년의 관계 회복과 사회적 연결을 돕는 16주 여정입니다. 각 활동은 진단, 상담, 치료, 위기개입을 대신하지 않습니다. 전문적인 지원이 필요한 경우 관련 기관이나 전문가의 도움을 함께 고려해야 합니다.</p></details>
-            <details class="faq"><summary>오리엔테이션에서 심리검사를 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>네. 오리엔테이션에서는 참여자의 현재 상태와 필요를 이해하기 위한 심리검사 및 사전 확인이 진행될 예정입니다. 이는 참여자를 평가하거나 낙인찍기 위한 절차가 아니라, 이후 프로그램에서 나에게 맞는 참여 방식과 필요한 지원을 함께 확인하기 위한 과정입니다. 검사 결과와 응답 내용은 프로그램 운영 목적 범위 안에서만 활용되며, 프로그램 종료 후 내부 개인정보 처리 기준에 따라 안전하게 폐기됩니다.</p></details>
-            <details class="faq"><summary>개인정보와 신청서 내용은 어떻게 활용되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>개인정보와 신청서 내용은 참여 방식 확인, 일정 안내, 안전한 운영 준비를 위해 활용됩니다. 프로그램 운영 목적을 벗어나 불필요하게 공유하지 않습니다. 세부 수집 항목과 보관 기준은 신청폼에서 확인할 수 있도록 안내됩니다.</p></details>
-            <details class="faq"><summary>힘든 상태가 심하면 어떻게 하나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>지금의 상태가 많이 힘들다면 신청서에 솔직하게 적어주세요. 참여가 도움이 될지, 먼저 다른 지원이 필요한지 함께 확인하는 과정이 필요할 수 있습니다. 위기 상황이거나 즉각적인 도움이 필요하다면 지역 상담기관이나 긴급 지원을 우선 이용해주세요.</p></details>
-            <details class="faq"><summary>가족에게 프로그램 내용이 공유되나요?<i class="chev" data-lucide="chevron-down" width="18"></i></summary><p>기본적으로 신청 내용과 참여 내용은 본인의 동의 없이 가족에게 공유하지 않습니다. 다만 안전과 관련해 별도 확인이 필요한 예외 상황은 신청 및 운영 안내에서 기준을 설명합니다. 걱정되는 부분이 있다면 신청서나 이후 안내 과정에서 미리 말해주셔도 됩니다.</p></details>
+
+            <div class="track-group">
+              <div class="group-head">
+                <h3>Redefine Lab</h3>
+                <span>Lab Activity</span>
+              </div>
+              <div class="lab-tracks">
+                <article
+                  class="soft-card grid-card"
+                  onclick="openModal('writer')"
+                >
+                  <div class="row-icon"><i data-lucide="book-open"></i></div>
+                  <h4 class="text-balance">Writer’s Room</h4>
+                  <p>함께 엮는 공동 글쓰기</p>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-up-right" width="14"></i>
+                  </div>
+                </article>
+                <article
+                  class="soft-card grid-card"
+                  onclick="openModal('band')"
+                >
+                  <div class="row-icon"><i data-lucide="music"></i></div>
+                  <h4 class="text-balance">Band Session</h4>
+                  <p>소리로 연결되는 합주</p>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-up-right" width="14"></i>
+                  </div>
+                </article>
+                <article
+                  class="soft-card grid-card"
+                  onclick="openModal('workerLab')"
+                >
+                  <div class="row-icon">
+                    <i data-lucide="briefcase-business"></i>
+                  </div>
+                  <h4 class="text-balance">직장인 Lab</h4>
+                  <p>회사 밖 관계와 리듬을 탐색</p>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-up-right" width="14"></i>
+                  </div>
+                </article>
+                <article
+                  class="soft-card grid-card"
+                  onclick="openModal('comingLab')"
+                >
+                  <div class="row-icon"><i data-lucide="sparkles"></i></div>
+                  <h4 class="text-balance">추가 Lab</h4>
+                  <p>강사 섭외 후 순차 공개</p>
+                  <div class="row-action">
+                    <span>자세히 보기</span
+                    ><i data-lucide="arrow-up-right" width="14"></i>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section apply" id="apply">
-  <div class="container">
-    <h2>신청은,<br><span class="orange">나를 알아보는 첫 단계</span>입니다.</h2>
-    <p>
-      신청서는 선발 시험이 아니라,<br>
-      현재 상태와 관심 활동을 함께 확인하기 위한 질문입니다.<br>
-      이후 디스코드 온보딩과 1~3주 공통 온보딩을 거쳐<br>
-      나에게 맞는 16주 여정을 함께 정합니다.
-    </p>
-    <p>
-      전 과정 무료 · 60명 모집 · 6월 중 모집 예정
-    </p>
-    <a class="btn btn-orange" href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing" target="_blank" rel="noopener noreferrer">
-  신청서 작성하기 <i data-lucide="external-link" width="20"></i>
-</a>
-  </div>
-</section>
+      <section class="section clubs" id="clubs">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Discord Club</span>
+            <div>
+              <h2 class="section-title">디스코드 기반 클럽 활동</h2>
+              <p class="section-desc">
+                리디파인에서는 트랙과 Lab 외에도, 디스코드 안에서 가볍게 참여할
+                수 있는 클럽 활동이 함께 운영됩니다.
+              </p>
+              <p class="section-desc">
+                클럽 활동은 생활 리듬을 회복하고, 관심사를 매개로 느슨하게
+                연결되며, 작은 인증과 기록을 쌓아가는 방식으로 진행됩니다.
+              </p>
+            </div>
+          </div>
 
-    <section class="section partners" aria-labelledby="partners-title">
+          <div
+            class="club-grid discord-club-grid"
+            aria-label="디스코드 기반 클럽 활동"
+          >
+            <article class="soft-card club-card">
+              <div class="club-icon"><i data-lucide="sunrise"></i></div>
+              <span class="club-tag">Life Rhythm</span>
+              <h3>라이프 리듬 클럽</h3>
+              <p>
+                일어나는 시간, 생활 리듬, 작은 인증을 함께 쌓아가는 기본
+                클럽입니다.
+              </p>
+              <p class="club-card-sub">
+                디스코드 안에서 가벼운 인증을 남기며 소정의 포인트를 쌓을 수
+                있습니다.
+              </p>
+            </article>
+
+            <article class="soft-card club-card">
+              <div class="club-icon"><i data-lucide="book-heart"></i></div>
+              <span class="club-tag">Social Taste</span>
+              <h3>소셜 클럽</h3>
+              <p>책과 영화를 매개로 느슨하게 연결되는 취향 기반 클럽입니다.</p>
+              <p class="club-card-sub">
+                밀리의 서재 구독 클럽, 왓챠 같이 보기 클럽 등을 예산 범위 안에서
+                운영할 예정입니다.
+              </p>
+            </article>
+
+            <article class="soft-card club-card">
+              <div class="club-icon"><i data-lucide="footprints"></i></div>
+              <span class="club-tag">Walk Log</span>
+              <h3>산책 로그</h3>
+              <p>
+                키로 앱을 활용해 내가 걸은 길을 기록하고, 광명의 공간을 하나씩
+                열어보는 걷기 클럽입니다.
+              </p>
+              <p class="club-card-sub">
+                걷기 기록과 산책 인증을 디스코드에 남기며 일상의 리듬을 회복하고
+                작은 포인트를 쌓아갑니다.
+              </p>
+            </article>
+
+            <article class="soft-card club-card">
+              <div class="club-icon"><i data-lucide="lightbulb"></i></div>
+              <span class="club-tag">Open Club</span>
+              <h3>내가 열어보는 클럽</h3>
+              <p>
+                관심 있는 주제나 해보고 싶은 활동을 작은 클럽으로 제안해볼 수
+                있습니다.
+              </p>
+              <p class="club-card-sub">
+                운영진과 함께 무리 없는 방식으로 참여 범위와 진행 방법을
+                정해갑니다.
+              </p>
+            </article>
+          </div>
+
+          <div class="soft-card club-note discord-club-note">
+            <div>
+              <span class="club-note-label">Club Guide</span>
+              <h3>참여 안내</h3>
+            </div>
+            <p>
+              세부 클럽 구성과 참여 방식은 디스코드 커뮤니티 안에서 순차적으로
+              안내됩니다. 일부 클럽은 포인트, 선착순, 예산 범위에 따라 참여
+              방식이 달라질 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section staff-operators" id="staff-operators">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">PROJECT RE:DEFINE TEAM</span>
+            <div>
+              <h2 class="section-title">함께 운영하는 사람들</h2>
+              <p class="section-desc">
+                리디파인은 청년동 운영진과 트랙 운영자가 함께 참여자의 속도에
+                맞는 경험을 만들어갑니다.
+              </p>
+              <p class="section-desc staff-operators-desc">
+                청년동 운영진은 참여 안내, 공간 운영, 커뮤니티 운영을 함께
+                담당합니다.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="soft-card staff-summary"
+            role="button"
+            tabindex="0"
+            onclick="openStaffModal()"
+            onkeydown="handleStaffSummaryKeydown(event)"
+          >
+            <div>
+              <span>청년동 운영진</span>
+              <p>
+                프로그램 전체의 안내, 공간, 커뮤니티 운영은 별도의 운영진이 함께
+                맡습니다.
+              </p>
+            </div>
+            <button
+              class="btn btn-ghost"
+              type="button"
+              onclick="
+                event.stopPropagation();
+                openStaffModal();
+              "
+            >
+              운영진 자세히 보기 <i data-lucide="arrow-up-right" width="18"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ai-guide">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">AI Guide</span>
+            <div>
+              <h2 class="section-title">나에게 어떤 활동이 어울릴까요?</h2>
+              <p class="section-desc">
+                요즘 상태나 관심을 적으면, 어울릴 수 있는 활동을 가볍게
+                살펴봅니다. 진단이나 상담이 아니라 참고용 안내입니다.
+              </p>
+            </div>
+          </div>
+          <div class="soft-card ai-box">
+            <textarea
+              id="ai-input"
+              placeholder="예: 사람 만나는 건 부담스럽지만, 무언가 만들어보고 싶어요."
+            ></textarea>
+            <div
+              class="hero-actions"
+              style="justify-content: flex-end; margin: 16px 0 0"
+            >
+              <button class="btn" id="ai-btn" type="button">
+                활동 추천 받아보기 <i data-lucide="arrow-right" width="17"></i>
+              </button>
+            </div>
+            <div class="ai-result" id="ai-result">
+              <strong id="ai-empathy"></strong>
+              <div class="result-tags">
+                <span class="tag" id="ai-track"></span
+                ><span class="tag" id="ai-lab"></span>
+              </div>
+              <p id="ai-reason"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="guides">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Care System</span>
+            <div>
+              <h2 class="section-title">안전하게 함께하기 위한 운영 구조</h2>
+              <p class="section-desc">
+                리디파인은 한 명의 강사가 모든 것을 끌고 가는 프로그램이
+                아닙니다. 경험 설계, 트랙·Lab 진행, 운영 매니징, 협력기관 연계를
+                나누어 참여자의 속도와 안전을 함께 살핍니다.
+              </p>
+            </div>
+          </div>
+          <div class="benefits-grid">
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="layout-template"></i></div>
+              <h3>총괄 경험설계</h3>
+              <p>
+                16주의 온보딩, 참여 방식 탐색, 선택, 회고 흐름을 설계하고 전체
+                여정의 방향을 조율합니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="sparkles"></i></div>
+              <h3>트랙·Lab 진행자</h3>
+              <p>
+                무용극·TRPG와 Redefine Lab의 안전한 참여, 표현, 결과물 제작을
+                돕습니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="heart-handshake"></i></div>
+              <h3>운영 매니저</h3>
+              <p>
+                디스코드 안내, 일정 조율, 출석, 컨디션 확인을 통해 참여자가 무리
+                없이 이어갈 수 있도록 돕습니다.
+              </p>
+            </article>
+            <article class="soft-card benefit-card">
+              <div class="icon-soft"><i data-lucide="shield-check"></i></div>
+              <h3>협력기관 연계</h3>
+              <p>
+                필요한 경우 정신건강·복지 협력기관과 연결해 프로그램 밖의
+                안전망까지 함께 확인합니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="expected">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Expected Changes</span>
+            <div>
+              <h2 class="section-title">참여 후 기대할 수 있는 변화</h2>
+              <p class="section-desc">
+                가상의 후기 대신, 리디파인에서 실제로 기대할 수 있는 작고
+                현실적인 변화를 정직하게 안내합니다.
+              </p>
+            </div>
+          </div>
+          <div class="expected-grid">
+            <article class="soft-card expected-card">
+              <strong>01 RHYTHM</strong>
+              <h3>무너진 생활 리듬을 조금씩 다시 잡습니다.</h3>
+              <p>
+                매일 완벽해지는 것이 아니라, 나에게 맞는 속도와 반복을
+                찾아갑니다.
+              </p>
+            </article>
+            <article class="soft-card expected-card">
+              <strong>02 EXPRESSION</strong>
+              <h3>말하지 못했던 마음을 다른 방식으로 꺼내봅니다.</h3>
+              <p>
+                문장, 움직임, 역할, 소리, 기록처럼 나에게 덜 부담스러운 표현
+                방식을 경험합니다.
+              </p>
+            </article>
+            <article class="soft-card expected-card">
+              <strong>03 CONNECTION</strong>
+              <h3>혼자가 아닌 감각을 다시 연습합니다.</h3>
+              <p>
+                큰 관계를 바로 만들기보다, 안전한 거리에서 함께 있는 경험을
+                쌓습니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section evidence" id="evidence">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Previous Signals</span>
+            <div>
+              <h2 class="section-title">지난 참여자들이 남긴 변화의 단서</h2>
+              <p class="section-desc">
+                2025년 Be:er Foundation 참여자 사후 응답을 바탕으로, 참여자들이
+                어떤 지점에서 안전함과 변화 가능성을 느꼈는지 정리했습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card evidence-overview">
+            <div>
+              <span class="evidence-overview-label">전체 만족도</span>
+              <strong>8.95 / 10</strong>
+            </div>
+            <div class="evidence-overview-copy">
+              <strong>전반적 경험에 대한 긍정 응답</strong>
+              <p>
+                이 응답을 바탕으로, 리디파인은 더 느슨하고 선택 가능한 16주
+                여정으로 확장되었습니다.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="evidence-grid"
+            aria-label="지난 참여자 사후 응답 주요 지표"
+          >
+            <article class="soft-card evidence-stat">
+              <span class="evidence-stat-label">SAFETY</span>
+              <strong>9.15 / 10</strong>
+              <h3>안전하게 머물 수 있었다</h3>
+              <p>
+                참여자들은 평가보다 존중받는 감각과 편안한 분위기를 높게
+                느꼈습니다.
+              </p>
+            </article>
+
+            <article class="soft-card evidence-stat">
+              <span class="evidence-stat-label">RETURN</span>
+              <strong>9.62 / 10</strong>
+              <h3>다시 오고 싶었다</h3>
+              <p>
+                한 번의 참여로 끝나는 경험이 아니라, 다시 이어질 수 있는
+                경험으로 읽혔습니다.
+              </p>
+            </article>
+
+            <article class="soft-card evidence-stat">
+              <span class="evidence-stat-label">RECOMMEND</span>
+              <strong>9.23 / 10</strong>
+              <h3>비슷한 사람에게 권하고 싶었다</h3>
+              <p>
+                비슷한 상황의 청년에게도 이 경험을 건네고 싶다는 응답이
+                높았습니다.
+              </p>
+            </article>
+          </div>
+
+          <div class="voice-grid" aria-label="지난 참여자 익명 후기">
+            <article class="soft-card voice-card">
+              <span>VOICE 01</span>
+              <p>
+                “비슷한 나이와 공감대를 가진 청년들과의 교류가 가장 의미
+                있었어요.”
+              </p>
+            </article>
+
+            <article class="soft-card voice-card">
+              <span>VOICE 02</span>
+              <p>
+                “방 안에만 있다가도 프로그램에 신청하면서 세상 밖으로 나올 수
+                있다는 걸 느꼈어요.”
+              </p>
+            </article>
+
+            <article class="soft-card voice-card">
+              <span>VOICE 03</span>
+              <p>“나를 존중하면서 천천히 돌아보던 시간이 편안했습니다.”</p>
+            </article>
+          </div>
+
+          <p class="evidence-note">
+            ※ 2025년 Be:er Foundation 참여자 사후 응답 기준으로 익명화·요약한
+            내용입니다. 개인별 경험과 변화 정도는 다를 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="section redefine-day" id="redefine-day">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Peak-End Experience</span>
+            <div>
+              <h2 class="section-title">16주의 마지막 장면, Redefine Day</h2>
+              <p class="section-desc">
+                리디파인의 마지막은 평가가 아니라 목격의 시간입니다. 16주 동안
+                쌓아온 시도와 기록을 아카이빙, 경험 트랙 공연, 활동 공유,
+                회고파티의 형태로 나누며 나의 변화를 하나의 장면으로 남깁니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="day-hero brutal-card">
+            <div>
+              <span class="day-label">RE:DEFINE DAY</span>
+              <h3>
+                완성도를 겨루는 자리가 아니라, 지나온 시간을 함께 확인하는 자리
+              </h3>
+            </div>
+            <p>
+              누군가는 무대에서, 누군가는 부스와 기록으로, 또 누군가는 조용한
+              회고로 자신의 변화를 남깁니다. 가족과 친구는 조언하거나
+              평가하기보다 참여자가 지나온 16주를 함께 목격하는 사람으로
+              초대됩니다.
+            </p>
+          </div>
+
+          <div class="day-grid" aria-label="Redefine Day 구성">
+            <article class="soft-card day-card">
+              <strong>01 Archive</strong>
+              <div class="day-icon"><i data-lucide="film"></i></div>
+              <h3>Before / After 아카이빙</h3>
+              <p>
+                처음의 나와 지금의 나를 비교하는 영상과 기록을 함께 돌아봅니다.
+                변화는 거창한 결과보다 지나온 흔적에서 발견됩니다.
+              </p>
+            </article>
+
+            <article class="soft-card day-card">
+              <strong>02 Stage</strong>
+              <div class="day-icon"><i data-lucide="theater"></i></div>
+              <h3>경험 트랙 공연</h3>
+              <p>
+                무용극, TRPG에서 만든 장면을 각자의 방식으로 나눕니다. 무대는
+                평가의 공간이 아니라 선택과 시도를 보여주는 장면입니다.
+              </p>
+            </article>
+
+            <article class="soft-card day-card">
+              <strong>03 Booth</strong>
+              <div class="day-icon"><i data-lucide="blocks"></i></div>
+              <h3>활동 공유</h3>
+              <p>
+                Writer’s Room, Band Session 등 Redefine Lab에서 남긴 문장, 소리,
+                기록을 나눕니다. 결과물의 완성도보다 지나온 시도와 연결을 함께
+                확인합니다.
+              </p>
+            </article>
+
+            <article class="soft-card day-card">
+              <strong>04 Record</strong>
+              <div class="day-icon"><i data-lucide="notebook-tabs"></i></div>
+              <h3>활동 기록 공유</h3>
+              <p>
+                각 활동에서 남긴 작은 변화와 연결을 공유합니다. 조용한 참여도
+                하나의 중요한 기록이 됩니다.
+              </p>
+            </article>
+
+            <article class="soft-card day-card">
+              <strong>05 Invite</strong>
+              <div class="day-icon"><i data-lucide="send"></i></div>
+              <h3>가족·친구 초대</h3>
+              <p>
+                가족과 친구는 걱정이나 조언을 하기보다, 참여자의 변화를 목격하는
+                사람으로 초대됩니다. 초대 방식은 참여자의 속도와 선택을
+                존중합니다.
+              </p>
+            </article>
+
+            <article class="soft-card day-card day-card-dark">
+              <strong>06 Closing</strong>
+              <div class="day-icon"><i data-lucide="party-popper"></i></div>
+              <h3>회고파티</h3>
+              <p>
+                16주 동안의 시도와 관계를 편안하게 정리하고, 서로의 다음 장면을
+                응원합니다. 끝이 아니라 다음 선택을 준비하는 시간입니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="info">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">How to Join</span>
+            <div>
+              <h2 class="section-title">
+                신청은, 함께 확인하는 첫 단계입니다.
+              </h2>
+              <p class="section-desc">
+                신청은 선발 시험이 아니라, 현재 상태와 참여 방식을 함께 확인하는
+                과정입니다. 신청서를 작성한 뒤에는 오리엔테이션에서 프로그램
+                흐름을 먼저 살펴보고, 1~3주차 공통 온보딩을 거쳐 나에게 맞는
+                참여 방식을 천천히 정합니다.
+              </p>
+              <p class="section-desc">
+                <a
+                  href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >신청서 작성하기 <i data-lucide="external-link" width="18"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="join-grid">
+            <aside class="join-side">
+              <div class="soft-card join-note join-note-dark">
+                <span class="label"
+                  ><i data-lucide="info" width="14"></i> Before Apply</span
+                >
+                <h3>잘 보이기 위한 신청서가 아닙니다</h3>
+                <p>
+                  운영진은 신청 내용을 바탕으로 현재 상태, 참여 가능성, 나에게
+                  맞는 참여 방식과 필요한 안내를 준비합니다.
+                </p>
+                <ul>
+                  <li>사전 질문은 진단이나 상담을 대체하지 않습니다.</li>
+                  <li>
+                    신청 내용은 오리엔테이션과 공통 온보딩 안내를 준비하는 데
+                    활용됩니다.
+                  </li>
+                  <li>
+                    프로그램 규모와 참여 가능성을 함께 고려해 필요한 안내가
+                    진행됩니다.
+                  </li>
+                </ul>
+              </div>
+              <div class="soft-card join-note">
+                <span class="label"
+                  ><i data-lucide="check-circle-2" width="14"></i> 신청 전
+                  안내</span
+                >
+                <h3>신청 전 알아두면 좋아요</h3>
+                <p>
+                  신청 안내 확인, 신청 폼 작성, 오리엔테이션 참여, 1~3주차 공통
+                  온보딩을 거쳐 선택 활동으로 연결합니다. 오리엔테이션 일자와
+                  세부 안내는 신청 이후 순차적으로 안내될 예정입니다.
+                </p>
+                <ul>
+                  <li>6월 중 모집 시작 예정</li>
+                  <li>
+                    <a
+                      href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >신청서 작성하기</a
+                    >
+                  </li>
+                  <li>오리엔테이션 후 1~3주차 공통 온보딩 진행 예정</li>
+                </ul>
+              </div>
+            </aside>
+
+            <div class="join-steps">
+              <article class="soft-card join-step">
+                <div class="join-no">01</div>
+                <div>
+                  <h3>신청 안내 확인</h3>
+                  <p>
+                    신청서 작성 전 프로그램 흐름과 참여 안내를 확인합니다. 신청
+                    이후 오리엔테이션 안내가 순차적으로 진행됩니다.
+                  </p>
+                </div>
+              </article>
+              <article class="soft-card join-step">
+                <div class="join-no">02</div>
+                <div>
+                  <h3>신청 폼 작성</h3>
+                  <p>
+                    생활 리듬, 관심 활동, 참여 가능한 시간대 등을 편하게
+                    적습니다. 잘 보이기 위한 답보다 현재 상태를 알려주는
+                    내용이면 충분합니다.
+                  </p>
+                </div>
+              </article>
+              <article class="soft-card join-step">
+                <div class="join-no">03</div>
+                <div>
+                  <h3>오리엔테이션 참여</h3>
+                  <p>
+                    전체 프로그램 흐름과 디스코드 사용 방법을 안내받고, 현재
+                    상태와 관심 활동을 바탕으로 무리 없는 참여 방식을 함께
+                    살펴봅니다.
+                  </p>
+                </div>
+              </article>
+              <article class="soft-card join-step">
+                <div class="join-no">04</div>
+                <div>
+                  <h3>1~3주차 공통 온보딩 참여</h3>
+                  <p>
+                    디스코드 커뮤니티에 천천히 적응하고, 긍정심리학 기반 활동을
+                    통해 나의 관심, 속도, 생활 리듬을 살펴봅니다.
+                  </p>
+                </div>
+              </article>
+              <article class="soft-card join-step">
+                <div class="join-no">05</div>
+                <div>
+                  <h3>선택 활동 시작</h3>
+                  <p>
+                    공통 온보딩 이후 경험 트랙과 Redefine Lab 중 지금의 나에게
+                    맞는 활동을 선택해 16주 여정을 이어갑니다.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">FAQ</span>
+            <div>
+              <h2 class="section-title">자주 묻는 질문</h2>
+              <p class="section-desc">
+                참여 전 궁금할 수 있는 내용을 주제별로 정리했습니다. 원하는
+                카테고리를 눌러 필요한 질문만 먼저 확인해보세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-category-wrap" aria-label="FAQ 카테고리 선택">
+            <button
+              class="faq-tab active"
+              type="button"
+              data-faq-category="apply"
+              onclick="switchFaqCategory('apply')"
+            >
+              신청
+            </button>
+            <button
+              class="faq-tab"
+              type="button"
+              data-faq-category="program"
+              onclick="switchFaqCategory('program')"
+            >
+              프로그램
+            </button>
+            <button
+              class="faq-tab"
+              type="button"
+              data-faq-category="operation"
+              onclick="switchFaqCategory('operation')"
+            >
+              운영
+            </button>
+            <button
+              class="faq-tab"
+              type="button"
+              data-faq-category="safe"
+              onclick="switchFaqCategory('safe')"
+            >
+              안전·기타
+            </button>
+          </div>
+
+          <div class="faq-list faq-category-list">
+            <div class="faq-panel active" data-faq-panel="apply">
+              <div class="faq-category-head">
+                <span>APPLY</span>
+                <strong>신청과 안내 과정</strong>
+              </div>
+              <details class="faq">
+                <summary>
+                  제가 대상자인지 잘 모르겠는데 신청해도 되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  괜찮습니다. 신청서는 선발 시험이라기보다 지금의 상태와 참여
+                  방식을 함께 확인하기 위한 첫 단계입니다. 쉬었음, 고립감, 관계
+                  단절, 새로운 생활 리듬에 대한 고민이 있다면 부담 없이
+                  작성해보세요.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  일을 하고 있어도 신청할 수 있나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  가능합니다. 현재 일을 하고 있더라도 회사 밖 관계가
+                  단절되었거나 나에게 맞는 다음 장면을 찾고 있다면 신청할 수
+                  있습니다. 다만 일정과 참여 가능 방식은 신청 과정에서 함께
+                  확인합니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  광명시에 살지 않아도 신청할 수 있나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  거주지만으로 바로 판단하기보다 실제 참여 가능성과 이동
+                  가능성을 함께 봅니다. 모집 기준이나 운영 장소에 따라 안내가
+                  달라질 수 있으니, 애매하다면 신청서에 현재 상황을 적어주세요.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  신청하면 바로 참여가 확정되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  신청서 제출만으로 바로 확정되는 방식은 아닙니다. 신청 내용,
+                  참여 가능 일정, 모집 상황을 확인한 뒤 개별 안내가 진행됩니다.
+                  이 과정은 누군가를 평가하기보다 무리 없는 참여 방식을 확인하기
+                  위한 절차입니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  신청서에는 어떤 내용을 쓰게 되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  기본 정보, 참여를 고민하게 된 이유, 관심 있는 활동, 참여
+                  가능한 시간대 등을 적게 됩니다. 긴 자기소개서나 정답을
+                  요구하는 문항이 아니라, 운영진이 필요한 안내를 준비하기 위한
+                  질문에 가깝습니다. 잘 보이려고 쓰기보다 현재 상태를 편하게
+                  적어주시면 됩니다.
+                </p>
+              </details>
+            </div>
+
+            <div class="faq-panel" data-faq-panel="program">
+              <div class="faq-category-head">
+                <span>PROGRAM</span>
+                <strong>16주 여정과 활동 선택</strong>
+              </div>
+              <details class="faq">
+                <summary>
+                  16주를 모두 참여해야 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  16주는 변화를 천천히 쌓아가기 위한 전체 여정이라 가능한 꾸준한
+                  참여를 권장합니다. 다만 모든 순간을 완벽하게 해내야 한다는
+                  뜻은 아닙니다. 일정이나 컨디션이 걱정된다면 신청 과정에서 함께
+                  확인할 수 있습니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  트랙은 신청할 때 바로 정해야 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  바로 정하지 않아도 됩니다. 1~3주차 공통 온보딩에서 나의 관심,
+                  속도, 생활 리듬, 참여 가능 방식을 살펴본 뒤 더 맞는 방향을
+                  함께 찾아갑니다. 신청서에는 지금 끌리는 활동을 가볍게
+                  적어주시면 됩니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  1~3주차 공통 온보딩은 꼭 참여해야 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  네. 1~3주차 공통 온보딩은 전체 참여자가 함께하는 필수
+                  과정입니다. 이 기간에는 리디파인 프로그램의 흐름을 이해하고,
+                  디스코드 커뮤니티에 적응하며, 이후 선택 활동에 참여하기 위한
+                  기본 안내와 관계 형성 프로그램이 진행됩니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  말을 많이 하거나 무대에 꼭 서야 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  그렇지 않습니다. 발표나 공연만이 참여 방식은 아니며, 기록,
+                  제작, 기획, 전시, 작은 공유처럼 여러 방식이 가능합니다.
+                  처음부터 많은 말을 하도록 요구하지 않고 각자에게 맞는 표현
+                  방식을 찾습니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  사람 많은 자리가 부담스러워도 괜찮나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  괜찮습니다. 리디파인은 활발한 사람만을 위한 자리가 아니라,
+                  각자의 속도로 다시 연결되는 경험을 만들어보는 프로그램입니다.
+                  부담이 큰 상황은 운영진과 상의하며 참여 방식을 조정할 수
+                  있습니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  Redefine Lab만 참여할 수도 있나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  Redefine Lab은 경험 트랙과 함께 선택 가능한 활동입니다. 다만
+                  전체 운영 흐름과 모집 방식에 따라 참여 조건이 달라질 수 있어,
+                  신청 후 안내를 통해 가능한 방식을 확인합니다.
+                </p>
+              </details>
+            </div>
+
+            <div class="faq-panel" data-faq-panel="operation">
+              <div class="faq-category-head">
+                <span>OPERATION</span>
+                <strong>디스코드·출석·일정 운영</strong>
+              </div>
+              <details class="faq">
+                <summary>
+                  디스코드를 처음 써도 괜찮나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  괜찮습니다. 디스코드는 공지, 일정 안내, 운영진과의 소통을 위한
+                  기본 공간으로 사용됩니다. 처음 쓰는 분도 확인해야 할 채널과
+                  기본 사용 방법을 안내받을 수 있습니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  일정은 언제쯤 진행되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  세부 일정은 모집과 운영 준비가 확정되는 대로 신청자에게
+                  안내됩니다. 오프라인 활동, 온라인 안내, 선택 프로그램이 섞일
+                  수 있어 회차별 시간이 다를 수 있습니다. 신청서에서 참여 가능한
+                  시간대를 확인해 운영 안내에 참고합니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  프로그램은 매주 언제 진행되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  리디파인은 화~토 운영 기간을 기준으로 진행됩니다. 세부 참여
+                  일정은 트랙과 Lab별로 다를 수 있으며, 오리엔테이션 이후 최종
+                  안내됩니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  추석 주간에도 프로그램이 진행되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>9/22(화)~9/26(토) 추석 주간은 쉬어갑니다.</p>
+              </details>
+              <details class="faq">
+                <summary>
+                  중간에 빠지는 날이 생기면 어떻게 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  일정이나 컨디션 때문에 빠지는 날이 생길 수 있습니다. 중요한
+                  것은 말없이 끊기기보다 운영진에게 상황을 알려 조정하는
+                  것입니다. 가능한 참여 방식은 프로그램 흐름에 맞춰 함께
+                  확인합니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  신청 후 연락은 어떻게 오나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  신청서에 남긴 연락처를 기준으로 개별 안내가 진행됩니다. 안내
+                  방식과 일정은 모집 상황에 따라 달라질 수 있으며, 필요한 경우
+                  추가 확인 연락이 갈 수 있습니다. 연락을 받을 수 있는 정보를
+                  정확히 적어주세요.
+                </p>
+              </details>
+            </div>
+
+            <div class="faq-panel" data-faq-panel="safe">
+              <div class="faq-category-head">
+                <span>CARE & ETC</span>
+                <strong>안전한 참여와 기타 안내</strong>
+              </div>
+              <details class="faq">
+                <summary>
+                  상담이나 치료 프로그램인가요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  리디파인은 심리상담이나 의학적 치료를 대체하지 않습니다.
+                  리디파인은 경험 설계, 관계 회복, 자기이해, 작은 시도를 통해
+                  준비중·고립 청년의 관계 회복과 사회적 연결을 돕는 16주
+                  여정입니다. 각 활동은 진단, 상담, 치료, 위기개입을 대신하지
+                  않습니다. 전문적인 지원이 필요한 경우 관련 기관이나 전문가의
+                  도움을 함께 고려해야 합니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  오리엔테이션에서 심리검사를 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  네. 오리엔테이션에서는 참여자의 현재 상태와 필요를 이해하기
+                  위한 심리검사 및 사전 확인이 진행될 예정입니다. 이는 참여자를
+                  평가하거나 낙인찍기 위한 절차가 아니라, 이후 프로그램에서
+                  나에게 맞는 참여 방식과 필요한 지원을 함께 확인하기 위한
+                  과정입니다. 검사 결과와 응답 내용은 프로그램 운영 목적 범위
+                  안에서만 활용되며, 프로그램 종료 후 내부 개인정보 처리 기준에
+                  따라 안전하게 폐기됩니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  개인정보와 신청서 내용은 어떻게 활용되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  개인정보와 신청서 내용은 참여 방식 확인, 일정 안내, 안전한
+                  운영 준비를 위해 활용됩니다. 프로그램 운영 목적을 벗어나
+                  불필요하게 공유하지 않습니다. 세부 수집 항목과 보관 기준은
+                  신청폼에서 확인할 수 있도록 안내됩니다.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  힘든 상태가 심하면 어떻게 하나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  지금의 상태가 많이 힘들다면 신청서에 솔직하게 적어주세요.
+                  참여가 도움이 될지, 먼저 다른 지원이 필요한지 함께 확인하는
+                  과정이 필요할 수 있습니다. 위기 상황이거나 즉각적인 도움이
+                  필요하다면 지역 상담기관이나 긴급 지원을 우선 이용해주세요.
+                </p>
+              </details>
+              <details class="faq">
+                <summary>
+                  가족에게 프로그램 내용이 공유되나요?<i
+                    class="chev"
+                    data-lucide="chevron-down"
+                    width="18"
+                  ></i>
+                </summary>
+                <p>
+                  기본적으로 신청 내용과 참여 내용은 본인의 동의 없이 가족에게
+                  공유하지 않습니다. 다만 안전과 관련해 별도 확인이 필요한 예외
+                  상황은 신청 및 운영 안내에서 기준을 설명합니다. 걱정되는
+                  부분이 있다면 신청서나 이후 안내 과정에서 미리 말해주셔도
+                  됩니다.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section apply" id="apply">
+        <div class="container">
+          <h2>
+            신청은,<br /><span class="orange">나를 알아보는 첫 단계</span
+            >입니다.
+          </h2>
+          <p>
+            신청서는 선발 시험이 아니라,<br />
+            현재 상태와 관심 활동을 함께 확인하기 위한 질문입니다.<br />
+            이후 디스코드 온보딩과 1~3주 공통 온보딩을 거쳐<br />
+            나에게 맞는 16주 여정을 함께 정합니다.
+          </p>
+          <p>전 과정 무료 · 60명 모집 · 6월 중 모집 예정</p>
+          <a
+            class="btn btn-orange"
+            href="https://gmyouthzone.typeform.com/to/cgBjeluh?utm_source=landing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            신청서 작성하기 <i data-lucide="external-link" width="20"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="section partners" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="partners-head">
+            <span class="kicker">Partners</span>
+            <div>
+              <h2 class="section-title" id="partners-title">함께하는 기관</h2>
+              <p class="section-desc">
+                Project RE:DEFINE은 지역특화 청년사업 선정에 따라 운영됩니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-logo-grid" aria-label="함께하는 기관 로고">
+            <article class="partner-logo-card partner-logo-card-wide">
+              <img
+                src="./assets/images/logos/youth-policy-office.png"
+                alt="국무조정실 청년정책조정실 로고"
+              />
+            </article>
+            <article class="partner-logo-card partner-logo-card-wide">
+              <img
+                src="./assets/images/logos/national-youth-support-center.png"
+                alt="중앙청년지원센터 로고"
+              />
+            </article>
+            <article class="partner-logo-card">
+              <img
+                src="./assets/images/logos/korea-youth-foundation.png"
+                alt="청년재단 로고"
+              />
+            </article>
+            <article class="partner-logo-card partner-logo-card-square">
+              <img
+                src="./assets/images/logos/gmyouthzone.jpg"
+                alt="광명시 청년동 로고"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <div class="container">
-        <div class="partners-head">
-          <span class="kicker">Partners</span>
+        광명시 청년동 Be:er Foundation 2026 · Project RE:DEFINE
+      </div>
+    </footer>
+
+    <div
+      class="modal-backdrop"
+      id="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal track-modal">
+        <div class="modal-top">
           <div>
-            <h2 class="section-title" id="partners-title">함께하는 기관</h2>
-            <p class="section-desc">Project RE:DEFINE은 지역특화 청년사업 선정에 따라 운영됩니다.</p>
+            <span class="label" id="modal-tag">TRACK</span>
+            <h3 id="modal-title">트랙명</h3>
           </div>
+          <button
+            class="close-btn"
+            type="button"
+            onclick="closeModal()"
+            aria-label="닫기"
+          >
+            <i data-lucide="x" width="20"></i>
+          </button>
         </div>
-
-        <div class="partner-logo-grid" aria-label="함께하는 기관 로고">
-          <article class="partner-logo-card partner-logo-card-wide">
-            <img src="./assets/images/logos/youth-policy-office.png" alt="국무조정실 청년정책조정실 로고">
-          </article>
-          <article class="partner-logo-card partner-logo-card-wide">
-            <img src="./assets/images/logos/national-youth-support-center.png" alt="중앙청년지원센터 로고">
-          </article>
-          <article class="partner-logo-card">
-            <img src="./assets/images/logos/korea-youth-foundation.png" alt="청년재단 로고">
-          </article>
-          <article class="partner-logo-card partner-logo-card-square">
-            <img src="./assets/images/logos/gmyouthzone.jpg" alt="광명시 청년동 로고">
-          </article>
-        </div>
+        <div class="modal-body" id="modal-body"></div>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">광명시 청년동 Be:er Foundation 2026 · Project RE:DEFINE</div>
-  </footer>
-
-  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal track-modal">
-      <div class="modal-top">
-        <div><span class="label" id="modal-tag">TRACK</span><h3 id="modal-title">트랙명</h3></div>
-        <button class="close-btn" type="button" onclick="closeModal()" aria-label="닫기"><i data-lucide="x" width="20"></i></button>
-      </div>
-      <div class="modal-body" id="modal-body"></div>
     </div>
-  </div>
 
-  <script>
-    const trackDetails = {
-      positiveOnboarding: {
-        tag: 'Common Onboarding',
-        title: '긍정심리학 기반 온보딩',
-        lead: '나의 현재 상태와 강점, 관계의 감각을 천천히 살펴보는 공통 과정입니다.',
-        desc: '처음부터 큰 변화를 요구하지 않습니다. 긍정심리학 기반 활동을 통해 내가 가진 자원과 관계의 감각을 살펴보고, 이후 16주 동안 어떤 방식으로 참여하면 좋을지 함께 정리합니다.',
-        activityTitle: '이 과정에서 하는 것',
-        activities: ['나의 현재 상태와 생활 리듬 살펴보기', '내가 가진 강점과 자원 발견하기', '관계와 연결의 감각을 천천히 회복하기', '이후 참여할 경험 트랙과 Lab 선택 준비하기'],
-        recommended: ['바로 트랙을 선택하기보다 천천히 적응하고 싶은 사람', '나의 상태와 속도를 먼저 이해하고 싶은 사람', '강점과 관계의 감각을 부담 없이 살펴보고 싶은 사람'],
-        instructor: {
-          label: '함께하는 진행자',
-          name: '진행자 정보 추후 공개',
-          role: '긍정심리학 기반 온보딩 진행자',
-          bio: '참여자의 속도에 맞춰 나의 강점, 관계, 생활 리듬을 살펴보는 과정을 안내할 예정입니다.'
-        }
-      },
-      dance: {
-        tag: 'Dance Theater',
-        title: '무용극',
-        lead: '나의 몸짓으로 몰랐던 나를 찾아가는 12주 경험 트랙입니다.',
-        desc: '누군가의 말이 아닌, 나의 움직임으로 나를 표현합니다. 움직임 경험이 없어도 괜찮습니다. 감각을 깨우고, 호흡을 느끼고, 몸의 리듬을 따라가며 나와 우리의 이야기를 천천히 춤으로 만들어갑니다.',
-        activityTitle: '이 트랙에서 하는 것',
-        activities: ['몸의 감각을 깨우는 가벼운 움직임', '공간과 리듬을 활용한 표현 연습', '나와 우리의 이야기를 춤으로 풀어내는 과정', 'Redefine Day를 위한 작품 구성'],
-        recommended: ['긴장을 낮추고 내 몸의 감각을 찾고 싶은 사람', '신체적·정서적 변화의 경험을 원하는 사람', '함께 만들어가는 과정 속에서 성장하고 싶은 사람'],
-        instructors: [
-          {
-            label: '함께하는 전문가',
-            name: '김다솜',
-            role: '무용극·움직임 기반 표현 워크숍 진행자',
-            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.',
-            image: 'assets/images/people/dance-kim-dasom.png'
+    <script>
+      const trackDetails = {
+        positiveOnboarding: {
+          tag: "Common Onboarding",
+          title: "긍정심리학 기반 온보딩",
+          lead: "나의 현재 상태와 강점, 관계의 감각을 천천히 살펴보는 공통 과정입니다.",
+          desc: "처음부터 큰 변화를 요구하지 않습니다. 긍정심리학 기반 활동을 통해 내가 가진 자원과 관계의 감각을 살펴보고, 이후 16주 동안 어떤 방식으로 참여하면 좋을지 함께 정리합니다.",
+          activityTitle: "이 과정에서 하는 것",
+          activities: [
+            "나의 현재 상태와 생활 리듬 살펴보기",
+            "내가 가진 강점과 자원 발견하기",
+            "관계와 연결의 감각을 천천히 회복하기",
+            "이후 참여할 경험 트랙과 Lab 선택 준비하기",
+          ],
+          recommended: [
+            "바로 트랙을 선택하기보다 천천히 적응하고 싶은 사람",
+            "나의 상태와 속도를 먼저 이해하고 싶은 사람",
+            "강점과 관계의 감각을 부담 없이 살펴보고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 진행자",
+            name: "진행자 정보 추후 공개",
+            role: "긍정심리학 기반 온보딩 진행자",
+            bio: "참여자의 속도에 맞춰 나의 강점, 관계, 생활 리듬을 살펴보는 과정을 안내할 예정입니다.",
           },
-          {
-            label: '함께하는 전문가',
-            name: 'Rhee M J',
-            role: '무용극·움직임 기반 표현 워크숍 진행자',
-            bio: '움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.',
-            image: 'assets/images/people/dance-rhee-mj.png'
-          }
-        ]
-      },
-      trpg: {
-        tag: 'Tabletop RPG',
-        title: 'TRPG',
-        lead: '가상의 세계에서 역할과 선택을 안전하게 연습하는 10주 경험 트랙입니다.',
-        desc: '현실에서 바로 결정하기 어려웠던 선택을 가상의 역할 안에서 시도해봅니다. 정답을 맞히는 게임이 아니라, 내가 어떤 선택을 하는 사람인지 발견하는 경험입니다.',
-        activityTitle: '이 트랙에서 하는 것',
-        activities: ['캐릭터 만들기와 세계관 이해', '상황 속 선택과 역할 수행', '팀원과 함께 문제를 풀어가는 이야기 진행', '나의 선택을 돌아보는 짧은 기록'],
-        recommended: ['상상과 이야기를 통해 나를 표현하고 싶은 사람', '현실의 선택은 부담스럽지만 역할 안에서는 시도해보고 싶은 사람', '혼자보다 팀 안에서 천천히 관계를 만들고 싶은 사람'],
-        instructor: {
-          label: '함께하는 전문가',
-          name: '한필구',
-          role: 'TRPG 트랙 운영자',
-          bio: '처음 참여하는 사람도 안전하게 역할과 선택을 경험할 수 있도록 세계관, 규칙, 진행 흐름을 안내합니다.',
-          image: 'assets/images/people/staff-han-pilgoo.png'
-        }
-      },
-      writer: {
-        tag: 'Redefine Lab',
-        title: 'Writer’s Room',
-        lead: '생각보다 우리는 이미 많은 글을 쓰고 있습니다.',
-        desc: '오늘의 할 일 리스트, 배달음식 리뷰, 유튜브 댓글이나 카톡, 문자까지. 이 모든 것이 나의 글입니다. 거창한 글쓰기는 사양합니다. 소소하고 다정한 글을 만들어봅니다. 잘 쓰는 방법이나 글쓰기의 규칙을 배우기보다, 쓰는 근육을 키워보는 시간입니다. 이 과정을 통해 우리는 자기 자신과 조금 더 친해지게 됩니다.',
-        notice: '서로의 글은 평가하지 않습니다. 잘 쓰는 글보다, 나에게서 시작한 글을 함께 다룹니다.',
-        activityTitle: '이 Lab에서 하는 것',
-        activities: ['일상 속 다양한 글쓰기를 새롭게 돌아봅니다. 예: 일기, 리뷰, 감상문, 에세이, 편지글 등', '잘 써야 한다는 강박에서 벗어나, “일단 써본다!”는 마음으로 다양한 글쓰기 장르를 가볍게 경험합니다.', '여러 글쓰기 장르 중 가장 마음에 드는 분야를 골라 나만의 원 픽 원고를 완성합니다.', '제본과 인쇄를 통해 나만의 출간본을 소장합니다.'],
-        recommended: ['글쓰기를 제대로 배운 다음 정돈된 글을 써야 한다는 부담이 있는 사람', '글쓰기를 놀이처럼 경험해보고 싶은 사람', '글을 통해 나의 일상을 새롭게 바라보고 싶은 사람', '글쓰기는 두렵지만 일단 뭐라도 써보고 싶은 사람', '누군가에게 글을 평가받는 것이 두려운 사람', '다른 사람들은 어떻게 생각하고 살아가는지 궁금한 사람', '글을 통해 타인과 느슨하게 연결되고 싶은 사람'],
-        instructor: {
-          label: '함께하는 전문가',
-          name: '옥민아',
-          role: 'Writer’s Room Lab 진행자',
-          bio: '일상의 언어를 글로 꺼내고, 나만의 원고로 정리하는 과정을 함께 안내합니다.',
-          image: 'assets/images/people/writer-ok-mina.png'
-        }
-      },
-      band: {
-        tag: 'Redefine Lab',
-        title: 'Band Session',
-        lead: '악기를 잘 다루지 않아도 소리와 리듬으로 연결되는 합주 Lab입니다.',
-        desc: '정교한 연주보다 함께 리듬을 맞추는 감각에 집중합니다. 언어가 아닌 소리를 매개로 안전한 연결감과 협업의 감각을 경험합니다.',
-        activityTitle: '이 Lab에서 하는 것',
-        activities: ['간단한 리듬과 소리 만들기', '서로의 소리를 듣고 맞추는 합주', '감정과 분위기를 소리로 표현하기', '라이브 공연 또는 녹음본 형태의 결과물 준비'],
-        recommended: ['말보다 음악이나 리듬으로 마음을 꺼내고 싶은 사람', '악기 경험은 적지만 함께 소리를 만들어보고 싶은 사람', '협업의 감각을 부담 없이 경험하고 싶은 사람'],
-        instructor: {
-          label: '함께하는 전문가',
-          name: '조완',
-          role: '음악·밴드 세션 진행자',
-          bio: '싱어송라이터 조완입니다. 밴드음악을 아주 좋아합니다.',
-          image: 'assets/images/people/band_cho_wan.png'
-        }
-      },
-      workerLab: {
-        tag: 'Redefine Lab',
-        title: '직장인 Lab',
-        lead: '회사 밖 관계와 생활 리듬을 다시 살펴보는 직장인 관련 Lab입니다.',
-        desc: '현재 일을 하고 있거나 일 경험 이후 관계가 좁아졌다고 느끼는 청년을 위한 Lab으로 준비 중입니다. 구체적인 주제, 진행자, 운영 방식은 세부 내용 확정 후 순차 공개될 예정입니다.',
-        activityTitle: '준비 중인 방향',
-        activities: ['회사 밖 관계와 일상 리듬 돌아보기', '직장인 청년의 고립감과 전환 경험 다루기', '야간 또는 퇴근 후 참여 가능한 운영 방식 검토', '강사 및 세부 커리큘럼 확정 후 공개 예정'],
-        recommended: ['일은 하고 있지만 회사 밖 관계가 좁아졌다고 느끼는 사람', '퇴근 후에도 참여 가능한 활동을 찾는 사람', '비슷한 상황의 청년과 느슨하게 연결되고 싶은 사람'],
-        instructor: {
-          label: '함께하는 전문가',
-          name: '강사 정보 추후 공개',
-          role: '직장인 관련 Lab 진행자',
-          bio: '직장인 청년의 관계, 리듬, 전환 경험을 다룰 수 있는 진행자를 섭외하고 있습니다. 세부 내용은 확정 후 안내할 예정입니다.'
-        }
-      },
-      comingLab: {
-        tag: 'Redefine Lab',
-        title: '추가 Lab',
-        lead: '참여자의 관심과 프로그램 전체 흐름에 맞춰 추가 Lab을 섭외 중입니다.',
-        desc: '확정되지 않은 내용을 먼저 단정하지 않기 위해, 주제와 강사는 섭외가 완료된 뒤 공개할 예정입니다. Writer’s Room, Band Session, 직장인 Lab과 함께 선택 가능한 Lab 구조로 준비하고 있습니다.',
-        activityTitle: '공개 예정 항목',
-        activities: ['추가 Lab 주제와 진행자 섭외', '참여자에게 무리 없는 난이도와 운영 방식 검토', 'Redefine Day 공유 방식 조율', '세부 내용 확정 후 순차 공개'],
-        recommended: ['확정된 Lab 외에 다른 선택지를 기다리고 싶은 사람', '관심사에 맞는 활동이 공개되면 살펴보고 싶은 사람', '강사와 운영 방식 확정 후 참여 여부를 정하고 싶은 사람'],
-        instructor: {
-          label: '함께하는 전문가',
-          name: '강사 정보 추후 공개',
-          role: '추가 Lab 진행자',
-          bio: '참여자의 경험과 관계 회복에 맞는 주제를 기준으로 추가 Lab 강사 섭외를 진행 중입니다.'
-        }
+        },
+        dance: {
+          tag: "Dance Theater",
+          title: "무용극",
+          lead: "나의 몸짓으로 몰랐던 나를 찾아가는 12주 경험 트랙입니다.",
+          desc: "누군가의 말이 아닌, 나의 움직임으로 나를 표현합니다. 움직임 경험이 없어도 괜찮습니다. 감각을 깨우고, 호흡을 느끼고, 몸의 리듬을 따라가며 나와 우리의 이야기를 천천히 춤으로 만들어갑니다.",
+          activityTitle: "이 트랙에서 하는 것",
+          activities: [
+            "몸의 감각을 깨우는 가벼운 움직임",
+            "공간과 리듬을 활용한 표현 연습",
+            "나와 우리의 이야기를 춤으로 풀어내는 과정",
+            "Redefine Day를 위한 작품 구성",
+          ],
+          recommended: [
+            "긴장을 낮추고 내 몸의 감각을 찾고 싶은 사람",
+            "신체적·정서적 변화의 경험을 원하는 사람",
+            "함께 만들어가는 과정 속에서 성장하고 싶은 사람",
+          ],
+          instructors: [
+            {
+              label: "함께하는 전문가",
+              name: "김다솜",
+              role: "무용극·움직임 기반 표현 워크숍 진행자",
+              bio: "움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.",
+              image: "assets/images/people/dance-kim-dasom.png",
+            },
+            {
+              label: "함께하는 전문가",
+              name: "Rhee M J",
+              role: "무용극·움직임 기반 표현 워크숍 진행자",
+              bio: "움직임 경험이 없어도 참여할 수 있도록 감각, 호흡, 움직임, 표현을 만들어가는 과정을 단계적으로 안내하는 전문가를 연결할 예정입니다.",
+              image: "assets/images/people/dance-rhee-mj.png",
+            },
+          ],
+        },
+        trpg: {
+          tag: "Tabletop RPG",
+          title: "TRPG",
+          lead: "가상의 세계에서 역할과 선택을 안전하게 연습하는 10주 경험 트랙입니다.",
+          desc: "현실에서 바로 결정하기 어려웠던 선택을 가상의 역할 안에서 시도해봅니다. 정답을 맞히는 게임이 아니라, 내가 어떤 선택을 하는 사람인지 발견하는 경험입니다.",
+          activityTitle: "이 트랙에서 하는 것",
+          activities: [
+            "캐릭터 만들기와 세계관 이해",
+            "상황 속 선택과 역할 수행",
+            "팀원과 함께 문제를 풀어가는 이야기 진행",
+            "나의 선택을 돌아보는 짧은 기록",
+          ],
+          recommended: [
+            "상상과 이야기를 통해 나를 표현하고 싶은 사람",
+            "현실의 선택은 부담스럽지만 역할 안에서는 시도해보고 싶은 사람",
+            "혼자보다 팀 안에서 천천히 관계를 만들고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 전문가",
+            name: "한필구",
+            role: "TRPG 트랙 운영자",
+            bio: "처음 참여하는 사람도 안전하게 역할과 선택을 경험할 수 있도록 세계관, 규칙, 진행 흐름을 안내합니다.",
+            image: "assets/images/people/staff-han-pilgoo.png",
+          },
+        },
+        writer: {
+          tag: "Redefine Lab",
+          title: "Writer’s Room",
+          lead: "생각보다 우리는 이미 많은 글을 쓰고 있습니다.",
+          desc: "오늘의 할 일 리스트, 배달음식 리뷰, 유튜브 댓글이나 카톡, 문자까지. 이 모든 것이 나의 글입니다. 거창한 글쓰기는 사양합니다. 소소하고 다정한 글을 만들어봅니다. 잘 쓰는 방법이나 글쓰기의 규칙을 배우기보다, 쓰는 근육을 키워보는 시간입니다. 이 과정을 통해 우리는 자기 자신과 조금 더 친해지게 됩니다.",
+          notice:
+            "서로의 글은 평가하지 않습니다. 잘 쓰는 글보다, 나에게서 시작한 글을 함께 다룹니다.",
+          activityTitle: "이 Lab에서 하는 것",
+          activities: [
+            "일상 속 다양한 글쓰기를 새롭게 돌아봅니다. 예: 일기, 리뷰, 감상문, 에세이, 편지글 등",
+            "잘 써야 한다는 강박에서 벗어나, “일단 써본다!”는 마음으로 다양한 글쓰기 장르를 가볍게 경험합니다.",
+            "여러 글쓰기 장르 중 가장 마음에 드는 분야를 골라 나만의 원 픽 원고를 완성합니다.",
+            "제본과 인쇄를 통해 나만의 출간본을 소장합니다.",
+          ],
+          recommended: [
+            "글쓰기를 제대로 배운 다음 정돈된 글을 써야 한다는 부담이 있는 사람",
+            "글쓰기를 놀이처럼 경험해보고 싶은 사람",
+            "글을 통해 나의 일상을 새롭게 바라보고 싶은 사람",
+            "글쓰기는 두렵지만 일단 뭐라도 써보고 싶은 사람",
+            "누군가에게 글을 평가받는 것이 두려운 사람",
+            "다른 사람들은 어떻게 생각하고 살아가는지 궁금한 사람",
+            "글을 통해 타인과 느슨하게 연결되고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 전문가",
+            name: "옥민아",
+            role: "Writer’s Room Lab 진행자",
+            bio: "일상의 언어를 글로 꺼내고, 나만의 원고로 정리하는 과정을 함께 안내합니다.",
+            image: "assets/images/people/writer-ok-mina.png",
+          },
+        },
+        band: {
+          tag: "Redefine Lab",
+          title: "Band Session",
+          lead: "악기를 잘 다루지 않아도 소리와 리듬으로 연결되는 합주 Lab입니다.",
+          desc: "정교한 연주보다 함께 리듬을 맞추는 감각에 집중합니다. 언어가 아닌 소리를 매개로 안전한 연결감과 협업의 감각을 경험합니다.",
+          activityTitle: "이 Lab에서 하는 것",
+          activities: [
+            "간단한 리듬과 소리 만들기",
+            "서로의 소리를 듣고 맞추는 합주",
+            "감정과 분위기를 소리로 표현하기",
+            "라이브 공연 또는 녹음본 형태의 결과물 준비",
+          ],
+          recommended: [
+            "말보다 음악이나 리듬으로 마음을 꺼내고 싶은 사람",
+            "악기 경험은 적지만 함께 소리를 만들어보고 싶은 사람",
+            "협업의 감각을 부담 없이 경험하고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 전문가",
+            name: "조완",
+            role: "음악·밴드 세션 진행자",
+            bio: "싱어송라이터 조완입니다. 밴드음악을 아주 좋아합니다.",
+            image: "assets/images/people/band_cho_wan.png",
+          },
+        },
+        workerLab: {
+          tag: "Redefine Lab",
+          title: "직장인 Lab",
+          lead: "회사 밖 관계와 생활 리듬을 다시 살펴보는 직장인 관련 Lab입니다.",
+          desc: "현재 일을 하고 있거나 일 경험 이후 관계가 좁아졌다고 느끼는 청년을 위한 Lab으로 준비 중입니다. 구체적인 주제, 진행자, 운영 방식은 세부 내용 확정 후 순차 공개될 예정입니다.",
+          activityTitle: "준비 중인 방향",
+          activities: [
+            "회사 밖 관계와 일상 리듬 돌아보기",
+            "직장인 청년의 고립감과 전환 경험 다루기",
+            "야간 또는 퇴근 후 참여 가능한 운영 방식 검토",
+            "강사 및 세부 커리큘럼 확정 후 공개 예정",
+          ],
+          recommended: [
+            "일은 하고 있지만 회사 밖 관계가 좁아졌다고 느끼는 사람",
+            "퇴근 후에도 참여 가능한 활동을 찾는 사람",
+            "비슷한 상황의 청년과 느슨하게 연결되고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 전문가",
+            name: "강사 정보 추후 공개",
+            role: "직장인 관련 Lab 진행자",
+            bio: "직장인 청년의 관계, 리듬, 전환 경험을 다룰 수 있는 진행자를 섭외하고 있습니다. 세부 내용은 확정 후 안내할 예정입니다.",
+          },
+        },
+        comingLab: {
+          tag: "Redefine Lab",
+          title: "추가 Lab",
+          lead: "참여자의 관심과 프로그램 전체 흐름에 맞춰 추가 Lab을 섭외 중입니다.",
+          desc: "확정되지 않은 내용을 먼저 단정하지 않기 위해, 주제와 강사는 섭외가 완료된 뒤 공개할 예정입니다. Writer’s Room, Band Session, 직장인 Lab과 함께 선택 가능한 Lab 구조로 준비하고 있습니다.",
+          activityTitle: "공개 예정 항목",
+          activities: [
+            "추가 Lab 주제와 진행자 섭외",
+            "참여자에게 무리 없는 난이도와 운영 방식 검토",
+            "Redefine Day 공유 방식 조율",
+            "세부 내용 확정 후 순차 공개",
+          ],
+          recommended: [
+            "확정된 Lab 외에 다른 선택지를 기다리고 싶은 사람",
+            "관심사에 맞는 활동이 공개되면 살펴보고 싶은 사람",
+            "강사와 운영 방식 확정 후 참여 여부를 정하고 싶은 사람",
+          ],
+          instructor: {
+            label: "함께하는 전문가",
+            name: "강사 정보 추후 공개",
+            role: "추가 Lab 진행자",
+            bio: "참여자의 경험과 관계 회복에 맞는 주제를 기준으로 추가 Lab 강사 섭외를 진행 중입니다.",
+          },
+        },
+      };
+
+      const staffDetails = [
+        {
+          name: "정재원",
+          role: "프로젝트 리디파인 총괄 기획 및 경험 설계 디자인, 성과 관리",
+          area: "전체 프로그램 기획 및 관리",
+          quote: '"도망쳐서 도착한 곳에 낙원이란 있을 수 없는거야"',
+          image: "assets/images/people/staff-jung-jaewon.png",
+        },
+        {
+          name: "허정민",
+          role: "예산 관리, 프로그램 기획 및 운영",
+          area: "예산 관리, 프로그램 기획 및 운영",
+          quote: '"관악산 날다람쥐 지망생"',
+          image: "assets/images/people/staff-heo-jungmin.png",
+        },
+        {
+          name: "한필구",
+          role: "커뮤니티 운영, 공간 운영, 홍보 및 기록",
+          area: "온라인 커뮤니티(디스코드) 운영, 경험트랙 TRPG 운영 등",
+          quote: '"재밌는 사람들과, 재밌는 일을 만들고 있습니다"',
+          image: "assets/images/people/staff-han-pilgoo.png",
+        },
+      ];
+
+      function renderList(items) {
+        return items.map((item) => `<li>${item}</li>`).join("");
       }
-    };
 
-    const staffDetails = [
-      {
-        name: '정재원',
-        role: '프로젝트 리디파인 총괄 기획 및 경험 설계 디자인, 성과 관리',
-        area: '전체 프로그램 기획 및 관리',
-        quote: '"도망쳐서 도착한 곳에 낙원이란 있을 수 없는거야"',
-        image: 'assets/images/people/staff-jung-jaewon.png'
-      },
-      {
-        name: '허정민',
-        role: '예산 관리, 프로그램 기획 및 운영',
-        area: '예산 관리, 프로그램 기획 및 운영',
-        quote: '"관악산 날다람쥐 지망생"',
-        image: 'assets/images/people/staff-heo-jungmin.png'
-      },
-      {
-        name: '한필구',
-        role: '커뮤니티 운영, 공간 운영, 홍보 및 기록',
-        area: '온라인 커뮤니티(디스코드) 운영, 경험트랙 TRPG 운영 등',
-        quote: '"재밌는 사람들과, 재밌는 일을 만들고 있습니다"',
-        image: 'assets/images/people/staff-han-pilgoo.png'
-      }
-    ];
-
-    function renderList(items) {
-      return items.map((item) => `<li>${item}</li>`).join('');
-    }
-
-    function renderStaffCards() {
-      return staffDetails.map((staff) => `
+      function renderStaffCards() {
+        return staffDetails
+          .map(
+            (staff) => `
         <article class="staff-modal-card">
           <img src="${staff.image}" alt="${staff.name} 프로필 사진" class="staff-modal-photo">
           <div class="staff-modal-info">
@@ -947,17 +1932,23 @@
             <blockquote>${staff.quote}</blockquote>
           </div>
         </article>
-      `).join('');
-    }
+      `,
+          )
+          .join("");
+      }
 
-    function renderInstructorCards(data) {
-      const instructors = data.instructors || [data.instructor];
-      return instructors.map((instructor) => `
+      function renderInstructorCards(data) {
+        const instructors = data.instructors || [data.instructor];
+        return instructors
+          .map(
+            (instructor) => `
         <section class="instructor-card">
-          <div class="instructor-photo" aria-label="${instructor.image ? `${instructor.name} 프로필 이미지` : '강사 프로필 이미지 준비 중'}">
-            ${instructor.image
-              ? `<img src="${instructor.image}" alt="${instructor.name} 프로필 사진">`
-              : '<i data-lucide="user-round" width="24"></i><span>IMAGE<br>COMING SOON</span>'}
+          <div class="instructor-photo" aria-label="${instructor.image ? `${instructor.name} 프로필 이미지` : "강사 프로필 이미지 준비 중"}">
+            ${
+              instructor.image
+                ? `<img src="${instructor.image}" alt="${instructor.name} 프로필 사진">`
+                : '<i data-lucide="user-round" width="24"></i><span>IMAGE<br>COMING SOON</span>'
+            }
           </div>
           <div class="instructor-info">
             <span>${instructor.label}</span>
@@ -966,21 +1957,23 @@
             <p>${instructor.bio}</p>
           </div>
         </section>
-      `).join('');
-    }
+      `,
+          )
+          .join("");
+      }
 
-    function openModal(id) {
-      const data = trackDetails[id];
-      if (!data) return;
-      document.getElementById('modal-tag').textContent = data.tag;
-      document.getElementById('modal-title').textContent = data.title;
-      document.getElementById('modal-body').innerHTML = `
+      function openModal(id) {
+        const data = trackDetails[id];
+        if (!data) return;
+        document.getElementById("modal-tag").textContent = data.tag;
+        document.getElementById("modal-title").textContent = data.title;
+        document.getElementById("modal-body").innerHTML = `
         <p class="modal-lead">${data.lead}</p>
         <p class="modal-desc-text">${data.desc}</p>
-        ${data.notice ? `<p class="modal-desc-text">${data.notice}</p>` : ''}
+        ${data.notice ? `<p class="modal-desc-text">${data.notice}</p>` : ""}
         <div class="modal-info-grid">
           <section class="modal-info-block">
-            <h4>${data.activityTitle || '이 프로그램에서 하는 것'}</h4>
+            <h4>${data.activityTitle || "이 프로그램에서 하는 것"}</h4>
             <ul>${renderList(data.activities)}</ul>
           </section>
           <section class="modal-info-block">
@@ -990,122 +1983,183 @@
         </div>
         ${renderInstructorCards(data)}
       `;
-      document.getElementById('modal-backdrop').classList.add('show');
-      document.body.style.overflow = 'hidden';
-      lucide.createIcons();
-    }
+        document.getElementById("modal-backdrop").classList.add("show");
+        document.body.style.overflow = "hidden";
+        lucide.createIcons();
+      }
 
-    function openStaffModal() {
-      document.getElementById('modal-tag').textContent = 'PROJECT RE:DEFINE TEAM';
-      document.getElementById('modal-title').textContent = '청년동 운영진';
-      document.getElementById('modal-body').innerHTML = `
+      function openStaffModal() {
+        document.getElementById("modal-tag").textContent =
+          "PROJECT RE:DEFINE TEAM";
+        document.getElementById("modal-title").textContent = "청년동 운영진";
+        document.getElementById("modal-body").innerHTML = `
         <p class="modal-lead">리디파인은 청년동 운영진과 함께 참여 안내, 공간 운영, 커뮤니티 운영을 준비합니다.</p>
         <div class="staff-modal-list">
           ${renderStaffCards()}
         </div>
       `;
-      document.getElementById('modal-backdrop').classList.add('show');
-      document.body.style.overflow = 'hidden';
-      lucide.createIcons();
-    }
+        document.getElementById("modal-backdrop").classList.add("show");
+        document.body.style.overflow = "hidden";
+        lucide.createIcons();
+      }
 
-    function handleStaffSummaryKeydown(event) {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      event.preventDefault();
-      openStaffModal();
-    }
+      function handleStaffSummaryKeydown(event) {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openStaffModal();
+      }
 
-    function handleModalCardKeydown(event, id) {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      event.preventDefault();
-      openModal(id);
-    }
+      function handleModalCardKeydown(event, id) {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openModal(id);
+      }
 
-    function closeModal() {
-      document.getElementById('modal-backdrop').classList.remove('show');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('modal-backdrop').addEventListener('click', (event) => {
-      if (event.target.id === 'modal-backdrop') closeModal();
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeModal();
-    });
-
-    function switchFaqCategory(category) {
-      document.querySelectorAll('.faq-tab').forEach((tab) => {
-        const active = tab.dataset.faqCategory === category;
-        tab.classList.toggle('active', active);
-        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      function closeModal() {
+        document.getElementById("modal-backdrop").classList.remove("show");
+        document.body.style.overflow = "";
+      }
+      document
+        .getElementById("modal-backdrop")
+        .addEventListener("click", (event) => {
+          if (event.target.id === "modal-backdrop") closeModal();
+        });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeModal();
       });
 
-      document.querySelectorAll('.faq-panel').forEach((panel) => {
-        const active = panel.dataset.faqPanel === category;
-        panel.classList.toggle('active', active);
-        if (!active) {
-          panel.querySelectorAll('details[open]').forEach((item) => {
-            item.removeAttribute('open');
-          });
+      function switchFaqCategory(category) {
+        document.querySelectorAll(".faq-tab").forEach((tab) => {
+          const active = tab.dataset.faqCategory === category;
+          tab.classList.toggle("active", active);
+          tab.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        document.querySelectorAll(".faq-panel").forEach((panel) => {
+          const active = panel.dataset.faqPanel === category;
+          panel.classList.toggle("active", active);
+          if (!active) {
+            panel.querySelectorAll("details[open]").forEach((item) => {
+              item.removeAttribute("open");
+            });
+          }
+        });
+
+        lucide.createIcons();
+      }
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.querySelector(".nav-more");
+        const open = menu.classList.toggle("open");
+
+        if (btn) {
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
         }
+
+        lucide.createIcons();
+      }
+
+      function closeMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.querySelector(".nav-more");
+
+        if (menu) {
+          menu.classList.remove("open");
+        }
+
+        if (btn) {
+          btn.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      function recommend(input) {
+        const value = input.toLowerCase();
+        if (
+          value.includes("몸") ||
+          value.includes("움직") ||
+          value.includes("감각") ||
+          value.includes("춤")
+        ) {
+          return {
+            empathy:
+              "말보다 감각이 먼저 떠오른다면, 몸의 속도부터 살펴보는 방식이 어울릴 수 있어요.",
+            track: "추천 트랙: 무용극",
+            lab: "추천 Lab: Band Session",
+            reason:
+              "무용극은 말로 정리되지 않은 감정을 움직임으로 탐색하고, Band Session은 감각과 리듬을 소리로 살피는 데 도움이 됩니다.",
+          };
+        }
+        if (
+          value.includes("게임") ||
+          value.includes("선택") ||
+          value.includes("상상") ||
+          value.includes("역할")
+        ) {
+          return {
+            empathy:
+              "현실에서 바로 결정하기 어렵다면, 가상의 상황 안에서 작은 선택을 연습해볼 수 있어요.",
+            track: "추천 트랙: TRPG",
+            lab: "추천 Lab: Writer's Room",
+            reason:
+              "TRPG는 역할과 선택을 통해 나의 판단 방식을 발견하고, Writer's Room은 그 경험을 이야기로 정리하는 데 어울립니다.",
+          };
+        }
+        if (
+          value.includes("그림") ||
+          value.includes("사진") ||
+          value.includes("기록") ||
+          value.includes("저널") ||
+          value.includes("콜라주")
+        ) {
+          return {
+            empathy:
+              "말로 설명하기 어려운 마음은 짧은 기록과 활동 공유로 남겨볼 수도 있어요.",
+            track: "추천 활동: Writer's Room",
+            lab: "추천 Lab: Writer's Room",
+            reason:
+              "Writer's Room은 짧은 문장과 장면을 함께 엮어 변화의 조각을 기록하고, 이후 나에게 맞는 방식으로 공유해보는 활동입니다.",
+          };
+        }
+        if (
+          value.includes("회사") ||
+          value.includes("퇴근") ||
+          value.includes("직장") ||
+          value.includes("일 ")
+        ) {
+          return {
+            empathy:
+              "일은 하고 있어도 회사 밖 연결이 좁아질 수 있어요. 퇴근 후 가능한 방식부터 살펴볼 수 있습니다.",
+            track: "추천 활동: 직장인 Lab",
+            lab: "추천 Lab: Writer’s Room",
+            reason:
+              "직장인 Lab은 회사 밖 관계와 생활 리듬을 다루는 방향으로 준비 중이고, Writer’s Room은 일상의 경험을 문장으로 정리하는 데 어울립니다.",
+          };
+        }
+        return {
+          empathy:
+            "지금의 마음을 바로 설명하지 못해도 괜찮아요. 공통 온보딩에서 나의 속도를 먼저 살펴볼 수 있습니다.",
+          track: "추천 과정: 긍정심리학 기반 온보딩",
+          lab: "추천 Lab: Writer's Room",
+          reason:
+            "공통 온보딩은 현재 상태와 강점, 생활 리듬을 먼저 살펴보는 과정이고, Writer's Room은 그 경험을 짧은 문장으로 천천히 정리하는 데 어울립니다.",
+        };
+      }
+
+      document.getElementById("ai-btn").addEventListener("click", () => {
+        const input = document.getElementById("ai-input").value.trim();
+        if (!input) {
+          document.getElementById("ai-input").focus();
+          return;
+        }
+        const result = recommend(input);
+        document.getElementById("ai-empathy").textContent = result.empathy;
+        document.getElementById("ai-track").textContent = result.track;
+        document.getElementById("ai-lab").textContent = result.lab;
+        document.getElementById("ai-reason").textContent = result.reason;
+        document.getElementById("ai-result").classList.add("show");
       });
 
       lucide.createIcons();
-    }
-          function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu'); 
-  const btn = document.querySelector('.nav-more');
-  const open = menu.classList.toggle('open');
-
-  if (btn) {
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-
-  lucide.createIcons();
-}
-
-function closeMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const btn = document.querySelector('.nav-more');
-
-  if (menu) {
-    menu.classList.remove('open');
-  }
-
-  if (btn) {
-    btn.setAttribute('aria-expanded', 'false');
-  }
-}
-
-    function recommend(input) {
-      const value = input.toLowerCase();
-      if (value.includes('몸') || value.includes('움직') || value.includes('감각') || value.includes('춤')) {
-        return { empathy: '말보다 감각이 먼저 떠오른다면, 몸의 속도부터 살펴보는 방식이 어울릴 수 있어요.', track: '추천 트랙: 무용극', lab: '추천 Lab: Band Session', reason: '무용극은 말로 정리되지 않은 감정을 움직임으로 탐색하고, Band Session은 감각과 리듬을 소리로 살피는 데 도움이 됩니다.' };
-      }
-      if (value.includes('게임') || value.includes('선택') || value.includes('상상') || value.includes('역할')) {
-        return { empathy: '현실에서 바로 결정하기 어렵다면, 가상의 상황 안에서 작은 선택을 연습해볼 수 있어요.', track: '추천 트랙: TRPG', lab: '추천 Lab: Writer\'s Room', reason: 'TRPG는 역할과 선택을 통해 나의 판단 방식을 발견하고, Writer\'s Room은 그 경험을 이야기로 정리하는 데 어울립니다.' };
-      }
-      if (value.includes('그림') || value.includes('사진') || value.includes('기록') || value.includes('저널') || value.includes('콜라주')) {
-        return { empathy: '말로 설명하기 어려운 마음은 짧은 기록과 활동 공유로 남겨볼 수도 있어요.', track: '추천 활동: Writer\'s Room', lab: '추천 Lab: Writer\'s Room', reason: 'Writer\'s Room은 짧은 문장과 장면을 함께 엮어 변화의 조각을 기록하고, 이후 나에게 맞는 방식으로 공유해보는 활동입니다.' };
-      }
-      if (value.includes('회사') || value.includes('퇴근') || value.includes('직장') || value.includes('일 ')) {
-        return { empathy: '일은 하고 있어도 회사 밖 연결이 좁아질 수 있어요. 퇴근 후 가능한 방식부터 살펴볼 수 있습니다.', track: '추천 활동: 직장인 Lab', lab: '추천 Lab: Writer’s Room', reason: '직장인 Lab은 회사 밖 관계와 생활 리듬을 다루는 방향으로 준비 중이고, Writer’s Room은 일상의 경험을 문장으로 정리하는 데 어울립니다.' };
-      }
-      return { empathy: '지금의 마음을 바로 설명하지 못해도 괜찮아요. 공통 온보딩에서 나의 속도를 먼저 살펴볼 수 있습니다.', track: '추천 과정: 긍정심리학 기반 온보딩', lab: '추천 Lab: Writer\'s Room', reason: '공통 온보딩은 현재 상태와 강점, 생활 리듬을 먼저 살펴보는 과정이고, Writer\'s Room은 그 경험을 짧은 문장으로 천천히 정리하는 데 어울립니다.' };
-    }
-
-
-    document.getElementById('ai-btn').addEventListener('click', () => {
-      const input = document.getElementById('ai-input').value.trim();
-      if (!input) { document.getElementById('ai-input').focus(); return; }
-      const result = recommend(input);
-      document.getElementById('ai-empathy').textContent = result.empathy;
-      document.getElementById('ai-track').textContent = result.track;
-      document.getElementById('ai-lab').textContent = result.lab;
-      document.getElementById('ai-reason').textContent = result.reason;
-      document.getElementById('ai-result').classList.add('show');
-    });
-
-    lucide.createIcons();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
