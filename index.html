@@ -113,10 +113,15 @@
           >
             더보기 <i data-lucide="menu" width="16"></i>
           </button>
-          <a href="#info" class="btn nav-apply">
-            <span class="nav-label-desktop">신청 안내 보기</span>
-            <span class="nav-label-mobile">신청 안내</span>
-            <i data-lucide="arrow-right" width="17"></i>
+          <a
+            href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
+            class="btn nav-apply"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="nav-label-desktop">신청서 작성하기</span>
+            <span class="nav-label-mobile">신청하기</span>
+            <i data-lucide="external-link" width="17"></i>
           </a>
         </div>
       </div>
@@ -1740,6 +1745,25 @@
       </div>
     </footer>
 
+    <aside
+      class="sticky-apply-cta"
+      id="sticky-apply-cta"
+      aria-label="신청서 작성 바로가기"
+    >
+      <div class="sticky-apply-copy">
+        <strong>신청서 작성하기</strong>
+        <span>선발 시험이 아니라 함께 확인하는 첫 단계예요</span>
+      </div>
+      <a
+        class="btn btn-orange"
+        href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        신청하기 <i data-lucide="external-link" width="16"></i>
+      </a>
+    </aside>
+
     <div
       class="modal-backdrop"
       id="modal-backdrop"
@@ -2194,6 +2218,24 @@
         }
       }
 
+      function updateStickyApplyCta() {
+        const cta = document.getElementById("sticky-apply-cta");
+        const hero = document.querySelector(".hero");
+        const apply = document.getElementById("apply");
+
+        if (!cta || !hero || !apply) return;
+
+        const isCompact = window.matchMedia("(max-width: 980px)").matches;
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const applyRect = apply.getBoundingClientRect();
+        const shouldShow =
+          isCompact &&
+          heroBottom < 120 &&
+          (applyRect.top > window.innerHeight || applyRect.bottom < 0);
+
+        cta.classList.toggle("show", shouldShow);
+      }
+
       function recommend(input) {
         const value = input.toLowerCase().trim();
         const hasAny = (keywords) =>
@@ -2625,6 +2667,10 @@
           document.getElementById("ai-input").focus();
         });
       });
+
+      updateStickyApplyCta();
+      window.addEventListener("scroll", updateStickyApplyCta, { passive: true });
+      window.addEventListener("resize", updateStickyApplyCta);
 
       lucide.createIcons();
     </script>

@@ -1293,6 +1293,65 @@
 
     .footer { padding: 30px 0 34px; background: var(--ink); color: rgba(255,253,248,.56); text-align: center; font-size: 13px; font-weight: 750; }
 
+    .sticky-apply-cta {
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 560;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 12px;
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 253, 248, .96);
+      box-shadow: 6px 6px 0 rgba(36, 33, 29, .18);
+      transform: translateY(calc(100% + 28px));
+      opacity: 0;
+      pointer-events: none;
+      transition: transform .24s ease, opacity .2s ease;
+    }
+
+    .sticky-apply-cta.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sticky-apply-copy {
+      display: grid;
+      gap: 3px;
+      text-align: left;
+    }
+
+    .sticky-apply-copy strong {
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 950;
+      letter-spacing: -.035em;
+      word-break: keep-all;
+    }
+
+    .sticky-apply-copy span {
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.35;
+      font-weight: 750;
+      word-break: keep-all;
+    }
+
+    .sticky-apply-cta .btn {
+      min-height: 42px;
+      padding: 0 14px;
+      font-size: 13px;
+      box-shadow: 3px 3px 0 rgba(36, 33, 29, .18);
+    }
+
 
 
     /* 신청 안내 섹션 상세화 */
@@ -1316,6 +1375,7 @@
     @media (max-width: 980px) {
       :root { --section: 78px; }
       .nav-links { display: none; }
+      .sticky-apply-cta { display: flex; }
       .hero-grid, .about-grid, .section-head, .guide-grid { grid-template-columns: 1fr; }
       .partners { grid-template-columns: 1fr; gap: 14px; }
       .partners-copy { text-align: center; min-width: 0; }
@@ -1342,6 +1402,10 @@
       .nav .btn svg { display: none; }
       .nav-label-desktop { display: none; }
       .nav-label-mobile { display: inline; }
+      .sticky-apply-cta { left: 10px; right: 10px; bottom: 10px; padding: 10px; border-radius: 12px; gap: 10px; }
+      .sticky-apply-copy span { font-size: 11px; }
+      .sticky-apply-cta .btn { min-height: 40px; padding: 0 12px; font-size: 12.5px; }
+      .sticky-apply-cta .btn svg { width: 14px; height: 14px; }
 
       .hero { padding: 82px 0 44px; align-items: flex-start; }
       .hero-grid { gap: 24px; }
