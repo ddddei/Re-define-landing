@@ -85,7 +85,6 @@
     />
     <link rel="manifest" href="./site.webmanifest" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -118,6 +117,8 @@
             class="btn nav-apply"
             target="_blank"
             rel="noopener noreferrer"
+            data-cta-id="nav_apply"
+            data-cta-section="nav"
           >
             <span class="nav-label-desktop">신청서 확인하기</span>
             <span class="nav-label-mobile">신청 확인</span>
@@ -161,6 +162,8 @@
                 class="btn btn-orange"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta-id="hero_apply"
+                data-cta-section="hero"
                 >신청서 먼저 확인하기 <i data-lucide="external-link" width="19"></i
               ></a>
               <a href="#tracks" class="btn btn-ghost"
@@ -555,7 +558,7 @@
                 순차 공개될 예정입니다.
               </p>
               <p class="tap-hint-pill">
-                <i data-lucide="hand-pointer" width="14"></i>카드를 탭하면
+                <i data-lucide="mouse-pointer-click" width="14"></i>카드를 탭하면
                 자세한 설명을 볼 수 있습니다.
               </p>
             </div>
@@ -1149,6 +1152,8 @@
                   class="btn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta-id="info_intro_apply"
+                  data-cta-section="info"
                   >신청서 먼저 확인하기 <i data-lucide="external-link" width="18"></i
                 ></a>
               </p>
@@ -1196,6 +1201,8 @@
                       href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-cta-id="info_note_apply"
+                      data-cta-section="info"
                       >신청서 먼저 확인하기</a
                     >
                   </li>
@@ -1404,6 +1411,8 @@
                   href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta-id="faq_apply"
+                  data-cta-section="faq"
                 >
                   신청서 먼저 확인하기
                   <i data-lucide="external-link" width="16"></i>
@@ -1710,6 +1719,8 @@
             href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
             target="_blank"
             rel="noopener noreferrer"
+            data-cta-id="apply_section_apply"
+            data-cta-section="apply"
           >
             신청서 먼저 확인하기 <i data-lucide="external-link" width="20"></i>
           </a>
@@ -1785,6 +1796,8 @@
         href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
         target="_blank"
         rel="noopener noreferrer"
+        data-cta-id="sticky_apply"
+        data-cta-section="sticky"
       >
         확인하기 <i data-lucide="external-link" width="16"></i>
       </a>
@@ -2244,6 +2257,39 @@
         }
       }
 
+      function enhanceApplyCtas() {
+        document.querySelectorAll("a[data-cta-id]").forEach((link) => {
+          const ctaId = link.dataset.ctaId;
+          const ctaSection = link.dataset.ctaSection || "";
+
+          if (ctaId) {
+            const url = new URL(link.href);
+            url.searchParams.set("utm_content", ctaId);
+            link.href = url.toString();
+          }
+
+          link.addEventListener("click", () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: "cta_click",
+              cta_id: ctaId,
+              cta_section: ctaSection,
+              cta_text: link.textContent.trim().replace(/\s+/g, " "),
+              cta_href: link.href,
+            });
+            window.dispatchEvent(
+              new CustomEvent("redefine:cta-click", {
+                detail: {
+                  id: ctaId,
+                  section: ctaSection,
+                  href: link.href,
+                },
+              })
+            );
+          });
+        });
+      }
+
       function updateStickyApplyCta() {
         const cta = document.getElementById("sticky-apply-cta");
         const hero = document.querySelector(".hero");
@@ -2694,6 +2740,7 @@
         });
       });
 
+      enhanceApplyCtas();
       updateStickyApplyCta();
       window.addEventListener("scroll", updateStickyApplyCta, { passive: true });
       window.addEventListener("resize", updateStickyApplyCta);
@@ -2702,9 +2749,14 @@
     </script>
     <script>
       (function () {
+        var allowedHosts = ["project-redefine.com", "www.project-redefine.com"];
+        if (!allowedHosts.includes(window.location.hostname)) {
+          return;
+        }
+
         var w = window;
         if (w.ChannelIO) {
-          return w.console.error("ChannelIO script included twice.");
+          return;
         }
         var ch = function () {
           ch.c(arguments);
@@ -2734,11 +2786,11 @@
           w.addEventListener("DOMContentLoaded", l);
           w.addEventListener("load", l);
         }
-      })();
 
-      ChannelIO("boot", {
-        pluginKey: "5c920505-3a6c-4ede-a6e4-f09e7b13d7c3",
-      });
+        w.ChannelIO("boot", {
+          pluginKey: "5c920505-3a6c-4ede-a6e4-f09e7b13d7c3",
+        });
+      })();
     </script>
   </body>
 </html>

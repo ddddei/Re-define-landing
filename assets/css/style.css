@@ -26,7 +26,10 @@
       min-width: 0; 
     }
     
-    html { scroll-behavior: smooth; }
+    html,
+    .scroll-smooth { scroll-behavior: smooth; }
+
+    .text-balance { text-wrap: balance; }
     
     body {
       margin: 0;
