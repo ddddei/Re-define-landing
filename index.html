@@ -1783,6 +1783,27 @@
     </footer>
 
     <aside
+      class="desktop-floating-apply"
+      id="desktop-floating-apply"
+      aria-label="신청서 확인 바로가기"
+    >
+      <div class="desktop-floating-copy">
+        <strong>신청서 먼저 확인하기</strong>
+        <span>전 과정 무료 · 운영진이 차근히 안내해요</span>
+      </div>
+      <a
+        class="btn"
+        href="https://gmyouthzone.typeform.com/ProjectRedefine?utm_source=landing"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cta-id="desktop_floating_apply"
+        data-cta-section="desktop_floating"
+      >
+        확인하기 <i data-lucide="external-link" width="16"></i>
+      </a>
+    </aside>
+
+    <aside
       class="sticky-apply-cta"
       id="sticky-apply-cta"
       aria-label="신청서 작성 바로가기"
@@ -2291,21 +2312,25 @@
       }
 
       function updateStickyApplyCta() {
-        const cta = document.getElementById("sticky-apply-cta");
+        const mobileCta = document.getElementById("sticky-apply-cta");
+        const desktopCta = document.getElementById("desktop-floating-apply");
         const hero = document.querySelector(".hero");
         const apply = document.getElementById("apply");
 
-        if (!cta || !hero || !apply) return;
+        if (!mobileCta || !desktopCta || !hero || !apply) return;
 
         const isCompact = window.matchMedia("(max-width: 980px)").matches;
         const heroBottom = hero.getBoundingClientRect().bottom;
         const applyRect = apply.getBoundingClientRect();
-        const shouldShow =
+        const shouldShowMobile =
           isCompact &&
           heroBottom < 120 &&
           (applyRect.top > window.innerHeight || applyRect.bottom < 0);
+        const shouldShowDesktop =
+          !isCompact && heroBottom < 120 && applyRect.top > window.innerHeight - 180;
 
-        cta.classList.toggle("show", shouldShow);
+        mobileCta.classList.toggle("show", shouldShowMobile);
+        desktopCta.classList.toggle("show", shouldShowDesktop);
       }
 
       function recommend(input) {
