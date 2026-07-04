@@ -112,6 +112,41 @@ Mac: Cmd + Shift + R
 
 ---
 
+## 5-1. 전환 추적 구성
+
+현재 랜딩페이지에는 Google Tag Manager 컨테이너 `GTM-N7V567LT`가 설치되어 있습니다.
+
+신청 CTA 클릭은 `index.html`에서 `dataLayer` 이벤트 `cta_click`으로 전송합니다. 버튼별로 `cta_id`, `cta_section`, `cta_label`, `cta_variant` 값을 함께 담고, Typeform 링크에는 유입 UTM과 CTA 맥락을 URL 파라미터로 유지합니다.
+
+Typeform 제출 완료는 `apply-complete.html`에서 `typeform_submit_complete` 이벤트로 전송합니다. Typeform의 제출 후 리다이렉트 URL은 다음 주소를 사용합니다.
+
+```txt
+https://www.project-redefine.com/apply-complete.html?typeform_complete=1
+```
+
+CTA와 UTM 값을 완료 이벤트에 함께 남기려면 Typeform의 Pull data in에 다음 URL 파라미터를 추가합니다.
+
+```txt
+cta_id
+cta_section
+cta_label
+cta_variant
+utm_source
+utm_medium
+utm_campaign
+utm_term
+utm_content
+utm_id
+gclid
+fbclid
+```
+
+이후 Redirect URL에서 필요한 쿼리값 뒤에 Typeform의 Recall information 메뉴(`/@`)로 같은 이름의 URL 파라미터를 선택합니다.
+
+GA4에서 실제 전환으로 보려면 GTM에 `typeform_submit_complete` 맞춤 이벤트 트리거와 GA4 이벤트 태그를 추가한 뒤, GA4 관리 화면에서 해당 이벤트를 주요 이벤트로 표시합니다.
+
+---
+
 ## 6. 콘텐츠 수정 가이드
 
 ### 6-1. 히어로 문구 수정

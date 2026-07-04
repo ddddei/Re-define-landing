@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N7V567LT");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>신청서가 잘 도착했어요 | Project RE:DEFINE</title>
+    <meta
+      name="description"
+      content="Project RE:DEFINE 신청서 제출 완료 안내 페이지입니다."
+    />
+    <link rel="canonical" href="https://www.project-redefine.com/apply-complete.html" />
+    <meta name="theme-color" content="#F7F1E8" />
+    <link rel="icon" href="./assets/images/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="complete-body">
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N7V567LT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
+    <main class="complete-page">
+      <section class="complete-card" aria-labelledby="complete-title">
+        <a class="complete-brand" href="./index.html">RE:DEFINE</a>
+        <span class="label complete-label">
+          <i data-lucide="check" width="14"></i>
+          신청서 제출 완료
+        </span>
+        <h1 id="complete-title">신청서가 잘 도착했어요.</h1>
+        <p>
+          남겨주신 내용을 운영진이 확인한 뒤, 다음 안내를 차분히 전달드릴게요.
+          신청만으로 바로 참여가 확정되는 것은 아니며, 안내 과정에서 참여 방식과
+          필요한 내용을 함께 확인합니다.
+        </p>
+        <div class="complete-actions">
+          <a class="btn btn-orange" href="./index.html">
+            랜딩페이지로 돌아가기 <i data-lucide="arrow-left" width="18"></i>
+          </a>
+        </div>
+        <p class="complete-note">
+          이 페이지는 제출 완료 확인을 위해서만 사용되며, 개인정보를 화면에 표시하지 않습니다.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const completionTrackingParamNames = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "utm_id",
+        "gclid",
+        "fbclid",
+      ];
+
+      function readStoredApplyContext() {
+        try {
+          return JSON.parse(sessionStorage.getItem("redefine_apply_context") || "{}");
+        } catch (error) {
+          return {};
+        }
+      }
+
+      function markTypeformCompletionTracked() {
+        try {
+          sessionStorage.setItem("redefine_typeform_submit_tracked", "1");
+        } catch (error) {
+          // Storage can be blocked in some private browsing modes.
+        }
+      }
+
+      function wasTypeformCompletionTracked() {
+        try {
+          return sessionStorage.getItem("redefine_typeform_submit_tracked") === "1";
+        } catch (error) {
+          return false;
+        }
+      }
+
+      function trackTypeformCompletion() {
+        const params = new URLSearchParams(window.location.search);
+        const isTypeformCompletion = params.get("typeform_complete") === "1";
+
+        if (!isTypeformCompletion || wasTypeformCompletionTracked()) return;
+
+        const storedContext = readStoredApplyContext();
+        const eventData = {
+          event: "typeform_submit_complete",
+          form_provider: "typeform",
+          form_id: "ProjectRedefine",
+          form_name: "Project RE:DEFINE 신청서",
+          page_path: window.location.pathname,
+          cta_id: params.get("cta_id") || storedContext.cta_id || "",
+          cta_section: params.get("cta_section") || storedContext.cta_section || "",
+          cta_label: params.get("cta_label") || storedContext.cta_label || "",
+          cta_variant: params.get("cta_variant") || storedContext.cta_variant || "",
+        };
+
+        completionTrackingParamNames.forEach((name) => {
+          eventData[name] = params.get(name) || storedContext[name] || "";
+        });
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(eventData);
+        markTypeformCompletionTracked();
+      }
+
+      trackTypeformCompletion();
+
+      window.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

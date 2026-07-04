@@ -2340,37 +2340,117 @@
         }
       }
 
+      const applyTrackingParamNames = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "utm_id",
+        "gclid",
+        "fbclid",
+      ];
+
+      function buildApplyTrackingContext(link, ctaId, ctaSection, ctaLabel, ctaVariant) {
+        const pageParams = new URLSearchParams(window.location.search);
+        const url = new URL(link.href);
+        const context = {
+          cta_id: ctaId || "",
+          cta_section: ctaSection || "",
+          cta_label: ctaLabel || "",
+          cta_variant: ctaVariant || "",
+        };
+
+        applyTrackingParamNames.forEach((name) => {
+          const value = pageParams.get(name) || url.searchParams.get(name);
+          if (value) {
+            context[name] = value;
+          }
+        });
+
+        if (!context.utm_source) context.utm_source = "landing";
+        if (!context.utm_medium) context.utm_medium = "website";
+        if (!context.utm_campaign) context.utm_campaign = "redefine_2026";
+        if (!context.utm_content) context.utm_content = ctaId || "apply_cta";
+
+        applyTrackingParamNames.forEach((name) => {
+          if (context[name]) {
+            url.searchParams.set(name, context[name]);
+          }
+        });
+
+        const hiddenParams = new URLSearchParams(url.hash.replace(/^#/, ""));
+        ["cta_id", "cta_section", "cta_label", "cta_variant"].forEach((name) => {
+          if (context[name]) {
+            hiddenParams.set(name, context[name]);
+          }
+        });
+        applyTrackingParamNames.forEach((name) => {
+          if (context[name]) {
+            hiddenParams.set(name, context[name]);
+          }
+        });
+        url.hash = hiddenParams.toString();
+
+        return { context, url };
+      }
+
+      function rememberApplyContext(context) {
+        try {
+          sessionStorage.setItem(
+            "redefine_apply_context",
+            JSON.stringify({
+              ...context,
+              captured_at: new Date().toISOString(),
+            })
+          );
+          sessionStorage.removeItem("redefine_typeform_submit_tracked");
+        } catch (error) {
+          // Storage can be blocked in some private browsing modes.
+        }
+      }
+
       function enhanceApplyCtas() {
         document.querySelectorAll("a[data-cta-id]").forEach((link) => {
           const ctaId = link.dataset.ctaId;
           const ctaSection = link.dataset.ctaSection || "";
           const ctaLabel = link.dataset.ctaLabel || "";
           const ctaVariant = link.dataset.ctaVariant || "";
+          const { context, url } = buildApplyTrackingContext(
+            link,
+            ctaId,
+            ctaSection,
+            ctaLabel,
+            ctaVariant
+          );
 
-          if (ctaId) {
-            const url = new URL(link.href);
-            url.searchParams.set("utm_content", ctaId);
-            link.href = url.toString();
-          }
+          link.href = url.toString();
 
           link.addEventListener("click", () => {
+            const ctaText = link.textContent.trim().replace(/\s+/g, " ");
+            rememberApplyContext({
+              ...context,
+              cta_text: ctaText,
+              cta_href: link.href,
+            });
+
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
               event: "cta_click",
-              cta_id: ctaId,
-              cta_section: ctaSection,
-              cta_text: link.textContent.trim().replace(/\s+/g, " "),
-              cta_label: ctaLabel,
-              cta_variant: ctaVariant,
+              cta_id: context.cta_id,
+              cta_section: context.cta_section,
+              cta_text: ctaText,
+              cta_label: context.cta_label,
+              cta_variant: context.cta_variant,
               cta_href: link.href,
             });
             window.dispatchEvent(
               new CustomEvent("redefine:cta-click", {
                 detail: {
-                  id: ctaId,
-                  section: ctaSection,
-                  label: ctaLabel,
-                  variant: ctaVariant,
+                  id: context.cta_id,
+                  section: context.cta_section,
+                  label: context.cta_label,
+                  variant: context.cta_variant,
                   href: link.href,
                 },
               })
